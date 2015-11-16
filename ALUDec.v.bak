@@ -1,0 +1,4 @@
+module ALUDec(input [5:0] Funct, 
+					input [1:0] ALUOp, 
+					output [2:0] ALUControl); 
+endmodule 

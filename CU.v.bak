@@ -1,0 +1,3 @@
+module CU(input [5:0] Opcode, Funct, 
+				output MemtoReg, MemWrite, Branch, ALUSrc, RegDst, RegWrite, 
+				output [1:0] ALUCtrl); 

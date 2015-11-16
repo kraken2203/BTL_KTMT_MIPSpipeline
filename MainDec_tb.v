@@ -1,0 +1,17 @@
+`timescale 10ns/1ns 
+module MainDec_tb(); 
+reg [5:0] Op; 
+wire MemtoReg, MemWrite, Branch, ALUSrc, RegDst, RegWrite; 
+wire [1:0] ALUOp; 
+//Device under test 
+MainDec DUT(.Op(Op), .MemtoReg(MemtoReg), .Branch(Branch), .ALUSrc(ALUSrc),
+           .RegDst(RegDst), .RegWrite(RegWrite), .MemWrite(MemWrite), .ALUOp(ALUOp));  
+initial  begin
+Op = 6'b00_0000; 
+#10 Op = 6'b10_0011; 
+#10 Op = 6'b10_1011; 
+#10 Op = 6'b00_0100; 
+#10 Op = 6'b00_0010; 
+#60 $finish;
+end
+endmodule 

@@ -1,0 +1,2 @@
+module shift2left(input [31:0]X, 
+						output [31:0])
