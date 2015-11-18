@@ -1,0 +1,42 @@
+library verilog;
+use verilog.vl_types.all;
+entity datapath is
+    port(
+        clk             : in     vl_logic;
+        reset_n         : in     vl_logic;
+        regwrited       : in     vl_logic;
+        memtoregd       : in     vl_logic;
+        memwrited       : in     vl_logic;
+        alusrcd         : in     vl_logic;
+        regdstd         : in     vl_logic;
+        branchd         : in     vl_logic;
+        alucontrold     : in     vl_logic_vector(2 downto 0);
+        instr           : in     vl_logic_vector(31 downto 0);
+        readdatam       : in     vl_logic_vector(31 downto 0);
+        stallf          : in     vl_logic;
+        stalld          : in     vl_logic;
+        forwardad       : in     vl_logic;
+        forwardbd       : in     vl_logic;
+        flushe          : in     vl_logic;
+        forwardae       : in     vl_logic_vector(1 downto 0);
+        forwardbe       : in     vl_logic_vector(1 downto 0);
+        rsd             : out    vl_logic_vector(4 downto 0);
+        rtd             : out    vl_logic_vector(4 downto 0);
+        rse             : out    vl_logic_vector(4 downto 0);
+        rte             : out    vl_logic_vector(4 downto 0);
+        writerege       : out    vl_logic_vector(4 downto 0);
+        memtorege       : out    vl_logic;
+        regwritee       : out    vl_logic;
+        writeregmtohz   : out    vl_logic_vector(4 downto 0);
+        regwritem       : out    vl_logic;
+        memtoregm       : out    vl_logic;
+        writeregwtohz   : out    vl_logic_vector(4 downto 0);
+        regwritewtohz   : out    vl_logic;
+        pc              : out    vl_logic_vector(31 downto 0);
+        aluoutmtodm     : out    vl_logic_vector(31 downto 0);
+        writedatamtodm  : out    vl_logic_vector(31 downto 0);
+        opinstr         : out    vl_logic_vector(5 downto 0);
+        functinstr      : out    vl_logic_vector(5 downto 0);
+        we_todm         : out    vl_logic
+    );
+end datapath;

@@ -1,1 +1,453 @@
 # Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# OpenFile {F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MIPS_tb.mpf} 
+# Loading project MIPS_tb
+vsim -voptargs=+acc work.testbench
+# vsim -voptargs=+acc work.testbench 
+# Loading work.testbench
+# Loading work.top
+# Loading work.mips
+# Loading work.CU
+# Loading work.MainDec
+# Loading work.ALUDec
+# Loading work.datapath
+# Loading work.RegFile
+# Loading work.SignEx
+# Loading work.ALU
+# Loading work.MUX4_1
+# Loading work.HazardUnit
+# Loading work.imem
+# Loading work.dmem
+# ** Warning: (vsim-3015) F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/mips.v(71): [PCDPC] - Port size (1 or 1) does not match connection size (2) for port 'forwardae'. The port definition is at: F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/datapath.v(12).
+# 
+#         Region: /testbench/DUT/MIPS/Datapath
+# ** Warning: (vsim-3015) F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/mips.v(71): [PCDPC] - Port size (1 or 1) does not match connection size (2) for port 'forwardbe'. The port definition is at: F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/datapath.v(12).
+# 
+#         Region: /testbench/DUT/MIPS/Datapath
+add wave -position insertpoint sim:/testbench/*
+run
+# Simulation failed
+# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 35
+# Error opening F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/[PCDPC] - Port size (1 or 1) does not match connection size 
+# Path name 'F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/[PCDPC] - Port size (1 or 1) does not match connection size ' doesn't exist.
+# A time value could not be extracted from the current line
+# Compile of ALU.v was successful.
+# Compile of ALUDec.v was successful.
+# Compile of ALUDec_tb.v was successful.
+# Compile of CU.v was successful.
+# Compile of datapath.v was successful.
+# Compile of dmen.v was successful.
+# Compile of HazardUnit.v was successful.
+# Compile of imem.v was successful.
+# Compile of MainDec.v was successful.
+# Compile of mips.v was successful.
+# Compile of MUX4_1.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of SignEx.v was successful.
+# Compile of testbench.v was successful.
+# Compile of top.v was successful.
+# 15 compiles, 0 failed with no errors. 
+restart
+# Loading work.testbench
+# Loading work.top
+# Loading work.mips
+# Loading work.CU
+# Loading work.MainDec
+# Loading work.ALUDec
+# Loading work.datapath
+# Loading work.RegFile
+# Loading work.SignEx
+# Loading work.ALU
+# Loading work.MUX4_1
+# Loading work.HazardUnit
+# Loading work.imem
+# Loading work.dmem
+run
+# Simulation failed
+# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 35
+# Compile of ALU.v was successful.
+# Compile of ALUDec.v was successful.
+# Compile of ALUDec_tb.v was successful.
+# Compile of CU.v was successful.
+# Compile of datapath.v was successful.
+# Compile of dmen.v was successful.
+# Compile of HazardUnit.v was successful.
+# Compile of imem.v was successful.
+# Compile of MainDec.v was successful.
+# Compile of mips.v was successful.
+# Compile of MUX4_1.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of SignEx.v was successful.
+# Compile of testbench.v was successful.
+# Compile of top.v was successful.
+# 15 compiles, 0 failed with no errors. 
+restart
+# Loading work.testbench
+# Loading work.top
+# Loading work.mips
+# Loading work.CU
+# Loading work.MainDec
+# Loading work.ALUDec
+# Loading work.datapath
+# Loading work.RegFile
+# Loading work.SignEx
+# Loading work.ALU
+# Loading work.MUX4_1
+# Loading work.HazardUnit
+# Loading work.imem
+# Loading work.dmem
+add wave -position insertpoint sim:/testbench/DUT/*
+run
+# Simulation failed
+# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 36
+vsim -voptargs=+acc work.CU
+# vsim -voptargs=+acc work.CU 
+# Loading work.CU
+# Loading work.MainDec
+# Loading work.ALUDec
+add wave -position insertpoint sim:/CU/*
+run
+vsim -voptargs=+acc work.testbench
+# vsim -voptargs=+acc work.testbench 
+# Loading work.testbench
+# Loading work.top
+# Loading work.mips
+# Loading work.CU
+# Loading work.MainDec
+# Loading work.ALUDec
+# Loading work.datapath
+# Loading work.RegFile
+# Loading work.SignEx
+# Loading work.ALU
+# Loading work.MUX4_1
+# Loading work.HazardUnit
+# Loading work.imem
+# Loading work.dmem
+add wave -position insertpoint sim:/testbench/DUT/MIPS/ControlUnit/*
+run
+# Simulation failed
+# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 36
+add wave -position insertpoint sim:/testbench/DUT/*
+restart
+run
+# Simulation failed
+# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 36
+# Compile of ALU.v was successful.
+# Compile of ALUDec.v was successful.
+# Compile of ALUDec_tb.v was successful.
+# Compile of CU.v was successful.
+# Compile of datapath.v was successful.
+# Compile of dmen.v was successful.
+# Compile of HazardUnit.v was successful.
+# Compile of imem.v was successful.
+# Compile of MainDec.v was successful.
+# Compile of mips.v was successful.
+# Compile of MUX4_1.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of SignEx.v was successful.
+# Compile of testbench.v was successful.
+# Compile of top.v was successful.
+# 15 compiles, 0 failed with no errors. 
+vsim -voptargs=+acc work.testbench
+# vsim -voptargs=+acc work.testbench 
+# Loading work.testbench
+# Loading work.top
+# Loading work.mips
+# Loading work.CU
+# Loading work.MainDec
+# Loading work.ALUDec
+# Loading work.datapath
+# Loading work.RegFile
+# Loading work.SignEx
+# Loading work.ALU
+# Loading work.MUX4_1
+# Loading work.HazardUnit
+# Loading work.imem
+# Loading work.dmem
+add wave -position insertpoint sim:/testbench/DUT/*
+run
+# Simulation failed
+# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
+#    Time: 200 ps  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
+# Compile of ALU.v was successful.
+# Compile of ALUDec.v was successful.
+# Compile of ALUDec_tb.v was successful.
+# Compile of CU.v was successful.
+# Compile of datapath.v was successful.
+# Compile of dmen.v was successful.
+# Compile of HazardUnit.v was successful.
+# Compile of imem.v was successful.
+# Compile of MainDec.v was successful.
+# Compile of mips.v was successful.
+# Compile of MUX4_1.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of SignEx.v was successful.
+# Compile of testbench.v was successful.
+# Compile of top.v was successful.
+# 15 compiles, 0 failed with no errors. 
+restart
+# Loading work.testbench
+# Loading work.top
+# Loading work.mips
+# Loading work.CU
+# Loading work.MainDec
+# Loading work.ALUDec
+# Loading work.datapath
+# Loading work.RegFile
+# Loading work.SignEx
+# Loading work.ALU
+# Loading work.MUX4_1
+# Loading work.HazardUnit
+# Loading work.imem
+# Loading work.dmem
+run
+# Simulation failed
+# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
+#    Time: 200 ps  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
+add wave -position insertpoint sim:/testbench/DUT/InstructionMemory/*
+add wave -position insertpoint sim:/testbench/DUT/DataMemory/*
+restart
+add wave -position insertpoint sim:/testbench/*
+run
+# Simulation failed
+# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
+#    Time: 200 ps  Iteration: 0  Instance: /testbench
+# WARNING: No extended dataflow license exists
+# 1
+# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
+add wave -position insertpoint sim:/testbench/DUT/MIPS/Datapath/regfile_decode/*
+restart
+run
+# Simulation failed
+# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
+#    Time: 200 ps  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
+# WARNING: No extended dataflow license exists
+# WARNING: No extended dataflow license exists
+# WARNING: No extended dataflow license exists
+# WARNING: No extended dataflow license exists
+# WARNING: No extended dataflow license exists
+# WARNING: No extended dataflow license exists
+# WARNING: No extended dataflow license exists
+# Compile of ALU.v was successful.
+# Compile of ALUDec.v was successful.
+# Compile of ALUDec_tb.v was successful.
+# Compile of CU.v was successful.
+# Compile of datapath.v was successful.
+# Compile of dmen.v was successful.
+# Compile of HazardUnit.v was successful.
+# Compile of imem.v was successful.
+# Compile of MainDec.v was successful.
+# Compile of mips.v was successful.
+# Compile of MUX4_1.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of SignEx.v was successful.
+# Compile of testbench.v was successful.
+# Compile of top.v was successful.
+# 15 compiles, 0 failed with no errors. 
+restart
+# Loading work.testbench
+# Loading work.top
+# Loading work.mips
+# Loading work.CU
+# Loading work.MainDec
+# Loading work.ALUDec
+# Loading work.datapath
+# Loading work.RegFile
+# Loading work.SignEx
+# Loading work.ALU
+# Loading work.MUX4_1
+# Loading work.HazardUnit
+# Loading work.imem
+# Loading work.dmem
+run
+# Simulation failed
+# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
+#    Time: 200 ps  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
+# Compile of ALU.v was successful.
+# Compile of ALUDec.v was successful.
+# Compile of ALUDec_tb.v was successful.
+# Compile of CU.v was successful.
+# Compile of datapath.v was successful.
+# Compile of dmen.v was successful.
+# Compile of HazardUnit.v was successful.
+# Compile of imem.v was successful.
+# Compile of MainDec.v was successful.
+# Compile of mips.v was successful.
+# Compile of MUX4_1.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of SignEx.v was successful.
+# Compile of testbench.v was successful.
+# Compile of top.v was successful.
+# 15 compiles, 0 failed with no errors. 
+restart
+# Loading work.testbench
+# Loading work.top
+# Loading work.mips
+# Loading work.CU
+# Loading work.MainDec
+# Loading work.ALUDec
+# Loading work.datapath
+# Loading work.RegFile
+# Loading work.SignEx
+# Loading work.ALU
+# Loading work.MUX4_1
+# Loading work.HazardUnit
+# Loading work.imem
+# Loading work.dmem
+run
+# Simulation failed
+# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
+#    Time: 200 ps  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
+add wave -position insertpoint sim:/testbench/DUT/MIPS/Datapath/ALU_execute/*
+restart
+run
+# Simulation failed
+# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
+#    Time: 200 ps  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
+# Compile of ALU.v was successful.
+# Compile of ALUDec.v was successful.
+# Compile of ALUDec_tb.v was successful.
+# Compile of CU.v was successful.
+# Compile of datapath.v was successful.
+# Compile of dmen.v was successful.
+# Compile of HazardUnit.v was successful.
+# Compile of imem.v was successful.
+# Compile of MainDec.v was successful.
+# Compile of mips.v was successful.
+# Compile of MUX4_1.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of SignEx.v was successful.
+# Compile of testbench.v was successful.
+# Compile of top.v was successful.
+# 15 compiles, 0 failed with no errors. 
+restart
+# Loading work.testbench
+# Loading work.top
+# Loading work.mips
+# Loading work.CU
+# Loading work.MainDec
+# Loading work.ALUDec
+# Loading work.datapath
+# Loading work.RegFile
+# Loading work.SignEx
+# Loading work.ALU
+# Loading work.MUX4_1
+# Loading work.HazardUnit
+# Loading work.imem
+# Loading work.dmem
+run
+# Simulation failed
+# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
+#    Time: 200 ps  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
+add wave -position insertpoint sim:/testbench/DUT/MIPS/ControlUnit/*
+restart
+run
+# Simulation failed
+# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
+#    Time: 200 ps  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
+# Compile of ALU.v was successful.
+# Compile of ALUDec.v was successful.
+# Compile of ALUDec_tb.v was successful.
+# Compile of CU.v was successful.
+# Compile of datapath.v was successful.
+# Compile of dmen.v was successful.
+# Compile of HazardUnit.v was successful.
+# Compile of imem.v was successful.
+# Compile of MainDec.v was successful.
+# Compile of mips.v was successful.
+# Compile of MUX4_1.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of SignEx.v was successful.
+# Compile of testbench.v was successful.
+# Compile of top.v was successful.
+# 15 compiles, 0 failed with no errors. 
+restart
+# Loading work.testbench
+# Loading work.top
+# Loading work.mips
+# Loading work.CU
+# Loading work.MainDec
+# Loading work.ALUDec
+# Loading work.datapath
+# Loading work.RegFile
+# Loading work.SignEx
+# Loading work.ALU
+# Loading work.MUX4_1
+# Loading work.HazardUnit
+# Loading work.imem
+# Loading work.dmem
+run
+# Simulation failed
+# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
+#    Time: 200 ps  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
+# Compile of ALU.v was successful.
+# Compile of ALUDec.v was successful.
+# Compile of ALUDec_tb.v was successful.
+# Compile of CU.v was successful.
+# Compile of datapath.v was successful.
+# Compile of dmen.v was successful.
+# Compile of HazardUnit.v was successful.
+# Compile of imem.v was successful.
+# Compile of MainDec.v was successful.
+# Compile of mips.v was successful.
+# Compile of MUX4_1.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of SignEx.v was successful.
+# Compile of testbench.v was successful.
+# Compile of top.v was successful.
+# 15 compiles, 0 failed with no errors. 
+restart
+# Loading work.testbench
+# Loading work.top
+# Loading work.mips
+# Loading work.CU
+# Loading work.MainDec
+# Loading work.ALUDec
+# Loading work.datapath
+# Loading work.RegFile
+# Loading work.SignEx
+# Loading work.ALU
+# Loading work.MUX4_1
+# Loading work.HazardUnit
+# Loading work.imem
+# Loading work.dmem
+run
+# Simulation failed
+# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
+#    Time: 200 ps  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
+add wave -position insertpoint sim:/testbench/DUT/MIPS/ControlUnit/*
+restart
+run
+# Simulation failed
+# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
+#    Time: 200 ps  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/testbench/DUT/MIPS/Datapath/*
+restart
+run
+# Simulation failed
+# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
+#    Time: 200 ps  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42

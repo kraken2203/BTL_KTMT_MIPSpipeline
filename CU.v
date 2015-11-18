@@ -1,5 +1,5 @@
 //Pipeline Control Unit
-module CU(input [5:0] Opcode, Funct, 
+module CU(	input [5:0] Opcode, Funct, 
 				output MemtoReg, MemWrite, Branch, ALUSrc, RegDst, RegWrite, 
 				output [2:0] ALUCtrl); 
 wire [1:0] ALUOp; 

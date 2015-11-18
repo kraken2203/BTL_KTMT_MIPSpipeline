@@ -13,10 +13,10 @@ wire C_in;
 
 assign C_in = F[2]; 
 assign BB = F[2]? ~B:B;
-assign M0 = A&BB; 
-assign M1 = A | BB; 
-assign M2 = A + BB + C_in; 
-assign M3 = {30'b0, M2[31]}; 
+assign M0 = A&BB; 				//00
+assign M1 = A | BB; 				//01
+assign M2 = A + BB + C_in; 	//10
+assign M3 = {30'b0, M2[31]}; 	//11
 
 assign ZF = (Y==0)? 1'b1 : 1'b0;
 MUX4_1 mux(M0, M1, M2, M3, F[1:0], Y); 
