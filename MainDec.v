@@ -1,3 +1,7 @@
+/*
+ *		Thiet ke MIPS pipeline
+ *		author: Nguyen Van Cao
+ */
 module MainDec(input [5:0]Op, 
 					output reg MemtoReg, 
 					output reg MemWrite, 

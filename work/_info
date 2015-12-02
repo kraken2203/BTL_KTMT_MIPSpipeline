@@ -4,21 +4,21 @@ K3
 cModel Technology
 Z0 dC:\altera\13.0sp1
 vALU
-Z1 !s100 5jo8baPW>Y6AnGS:;X8@;2
-Z2 IXTD^Vh2G>mn5<mNUm]T`h2
+Z1 !s100 zO9UBFzQV^OGD`i6GAIQ<0
+Z2 IS2`[AL2:XdzfDoaPzZ_]B2
 Z3 Vn>X2d7nR;5lakj36mdanl1
-Z4 dF:\Google Drive\SET Document\SET\Term 7\Kien truc may tinh\MIPS
-Z5 w1447771618
+Z4 dF:\GITHUB\BTL_KTMT_MIPSpipeline
+Z5 w1448368919
 Z6 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU.v
 Z7 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU.v
-L0 1
+L0 5
 Z8 OV;L;10.1d;51
 r1
 31
 Z9 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU.v|
 Z10 o-work work -O0
 Z11 n@a@l@u
-Z12 !s108 1447773025.116000
+Z12 !s108 1449022502.719000
 Z13 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU.v|
 !i10b 1
 !s85 0
@@ -26,314 +26,314 @@ Z13 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU.v|
 vALU_tb
 Z14 I3<]IOjRiV?=8d<HCNH<;W2
 Z15 VE`_QLbcAmOeKZDFMXUl3B3
-R4
-Z16 w1444809844
-Z17 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU_tb.v
-Z18 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU_tb.v
+Z16 dF:\Google Drive\SET Document\SET\Term 7\Kien truc may tinh\MIPS
+Z17 w1444809844
+Z18 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU_tb.v
+Z19 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU_tb.v
 L0 2
 R8
 r1
 31
 R10
-Z19 n@a@l@u_tb
-Z20 !s100 RX4J]J`i<FONAizlFibTe0
-Z21 !s108 1447733897.385000
-Z22 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU_tb.v|
-Z23 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU_tb.v|
+Z20 n@a@l@u_tb
+Z21 !s100 RX4J]J`i<FONAizlFibTe0
+Z22 !s108 1447733897.385000
+Z23 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU_tb.v|
+Z24 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU_tb.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vALUDec
-Z24 !s100 T<C]_:mc3c>``U9UHALdZ2
-Z25 I;A`OXM3g:O:@[:;;@OM5L0
-Z26 VZH?dF@m]W4GHQIHCDaN;g0
+Z25 !s100 R96Hc0W:Z@aBh9<HO_`Za0
+Z26 I75^hk9>?cX??lbB^_]I6C1
+Z27 VZH?dF@m]W4GHQIHCDaN;g0
 R4
-Z27 w1447731346
-Z28 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec.v
-Z29 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec.v
-L0 1
+Z28 w1448368949
+Z29 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec.v
+Z30 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec.v
+L0 5
 R8
 r1
 31
-Z30 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec.v|
+Z31 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec.v|
 R10
-Z31 n@a@l@u@dec
-Z32 !s108 1447773025.309000
-Z33 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec.v|
+Z32 n@a@l@u@dec
+Z33 !s108 1449022502.857000
+Z34 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vALUDec_tb
-Z34 !s100 _[eo@oH3RZzW_LTA>McSa2
-Z35 Ia7eDl^FBEn@a5z3N[I2Xe3
-Z36 V9@ocJ0Ol]UkHeUJ:M2l`J3
+Z35 !s100 _[eo@oH3RZzW_LTA>McSa2
+Z36 Ia7eDl^FBEn@a5z3N[I2Xe3
+Z37 V9@ocJ0Ol]UkHeUJ:M2l`J3
 R4
-Z37 w1444808658
-Z38 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec_tb.v
-Z39 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec_tb.v
+Z38 w1444808658
+Z39 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec_tb.v
+Z40 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec_tb.v
 L0 2
 R8
 r1
 31
-Z40 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec_tb.v|
+Z41 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec_tb.v|
 R10
-Z41 n@a@l@u@dec_tb
-Z42 !s108 1447773025.476000
-Z43 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec_tb.v|
+Z42 n@a@l@u@dec_tb
+Z43 !s108 1449022502.994000
+Z44 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec_tb.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vCU
-Z44 !s100 m;?0_NX]kn_O55AhSKoV50
-Z45 I95lK5132BQWinj:=]2TA30
-Z46 VSG0oWM9=_bWR=SfSiQ?O<2
+Z45 !s100 A:bd4dTYR<2gRm6nNV7Ob2
+Z46 IXiLRVogMo3SQ90iI4WR]_2
+Z47 VSCC4Skh0:_;8>]3Tk[<km3
 R4
-Z47 w1447730526
-Z48 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/CU.v
-Z49 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/CU.v
-L0 2
+Z48 w1448901932
+Z49 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/CU.v
+Z50 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/CU.v
+L0 6
 R8
 r1
 31
-Z50 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/CU.v|
+Z51 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/CU.v|
 R10
 n@c@u
-Z51 !s108 1447773025.721000
-Z52 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/CU.v|
+Z52 !s108 1449022503.139000
+Z53 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/CU.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vdatapath
-Z53 I38DMkR_ne4]R>SG_i6Q7A3
-Z54 V?3R_4;m^1QlPH^7Y4S?ES3
+Z54 !s100 [lRHK74J6Za14f]Y5c9Io0
+Z55 IzB7?mL7GMgX4J5HG]MD?d3
+Z56 Vfl_?EoB>aDo5G[ELVN:Vc2
 R4
-Z55 w1447772943
-Z56 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/datapath.v
-Z57 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/datapath.v
-L0 2
+Z57 w1448903140
+Z58 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/datapath.v
+Z59 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/datapath.v
+L0 6
 R8
 r1
 31
-Z58 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/datapath.v|
+Z60 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/datapath.v|
 R10
-Z59 !s100 gdeVjfH1DF>Ld<=Vl;OMV0
-Z60 !s108 1447773025.873000
-Z61 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/datapath.v|
+Z61 !s108 1449022503.292000
+Z62 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/datapath.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vdmem
-Z62 !s100 51>3lDH:^<TeXWG4EWIJX3
-Z63 IR>hFKiVdY[^6jbU0:n05S1
-Z64 V09OGzlPeaYS`EJSH7=l6?2
-R4
-Z65 w1447168636
-Z66 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/dmen.v
-Z67 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/dmen.v
-L0 1
-R8
-r1
-31
-Z68 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/dmen.v|
-R10
-Z69 !s108 1447773026.095000
-Z70 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/dmen.v|
 !i10b 1
-!s85 0
-!s101 -O0
-vHazardUnit
-Z71 !s100 [3bk7EH3Oh3z4I7mN:YI11
-Z72 In3GB]OgVf<D:<3MBYLSoH1
-Z73 V7Kkof_DYhPKT:97oHFeGD3
+Z63 !s100 e1NPOIV0K^<E9CRTEE>>[0
+Z64 IliHKf?LZ7cfM@Xk8l4`b=3
+Z65 V09OGzlPeaYS`EJSH7=l6?2
 R4
-Z74 w1447681191
-Z75 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/HazardUnit.v
-Z76 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/HazardUnit.v
-L0 1
+Z66 w1448990596
+Z67 8F:/GITHUB/BTL_KTMT_MIPSpipeline/dmem.v
+Z68 FF:/GITHUB/BTL_KTMT_MIPSpipeline/dmem.v
+L0 5
+R8
+r1
+!s85 0
+31
+!s108 1449022505.176000
+!s107 F:/GITHUB/BTL_KTMT_MIPSpipeline/dmem.v|
+Z69 !s90 -reportprogress|300|-work|work|F:/GITHUB/BTL_KTMT_MIPSpipeline/dmem.v|
+!s101 -O0
+R10
+vHazardUnit
+Z70 !s100 Kzc^eJC^^VG[_hDLS6JWl0
+Z71 IJg5gGD=l[HdB[L@]P_L5`1
+Z72 VU?7=HUom7MZ]2H^aJ6Sm70
+R4
+Z73 w1448987698
+Z74 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/HazardUnit.v
+Z75 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/HazardUnit.v
+L0 5
 R8
 r1
 31
-Z77 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/HazardUnit.v|
+Z76 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/HazardUnit.v|
 R10
-Z78 n@hazard@unit
-Z79 !s108 1447773026.268000
-Z80 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/HazardUnit.v|
+Z77 n@hazard@unit
+Z78 !s108 1449022503.489000
+Z79 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/HazardUnit.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vimem
-Z81 !s100 >H3]12Rjj`lfXLLe@adJE2
-Z82 ITzd2bYZMdjHaeBPAUSNFg1
-Z83 V_eezcn[fFK3m2C;IUCfT<1
+Z80 !s100 03X[g2dzN05mEV16E@@Xo1
+Z81 IK3nTS404SWgS9gYFK2bRE1
+Z82 V_eezcn[fFK3m2C;IUCfT<1
 R4
-Z84 w1447168834
-Z85 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/imem.v
-Z86 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/imem.v
-L0 1
+Z83 w1448368993
+Z84 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/imem.v
+Z85 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/imem.v
+L0 5
 R8
 r1
 31
-Z87 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/imem.v|
+Z86 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/imem.v|
 R10
-Z88 !s108 1447773026.410000
-Z89 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/imem.v|
+Z87 !s108 1449022503.714000
+Z88 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/imem.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vMainDec
-Z90 !s100 [86n@W1EzZ[XUhLJ5a[dz0
-Z91 I1^aQQP=9?^[3=F9KlB;hY0
-Z92 V9G7PCJK;mP]MUK05J4ACQ3
+Z89 !s100 KZeEKGmkd:5RfNTlFQPC?3
+Z90 I6<81Y;XKXZ[3dO;hD1F<U2
+Z91 VHZkmg567@?ZI3ZgjTTnB]2
 R4
-Z93 w1447692862
-Z94 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec.v
-Z95 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec.v
-L0 1
+Z92 w1448901459
+Z93 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec.v
+Z94 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec.v
+L0 5
 R8
 r1
 31
-Z96 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec.v|
+Z95 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec.v|
 R10
-Z97 n@main@dec
-Z98 !s108 1447773026.574000
-Z99 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec.v|
+Z96 n@main@dec
+Z97 !s108 1449022503.902000
+Z98 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vMainDec_tb
-Z100 I@j]0B@=b0F<=3GAaFi@M72
-Z101 Vn9ZZiTJ7Q4^JA3==OSiMI1
-R4
-Z102 w1444807854
-Z103 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec_tb.v
-Z104 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec_tb.v
+Z99 I@j]0B@=b0F<=3GAaFi@M72
+Z100 Vn9ZZiTJ7Q4^JA3==OSiMI1
+R16
+Z101 w1444807854
+Z102 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec_tb.v
+Z103 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec_tb.v
 L0 2
 R8
 r1
 31
 R10
-Z105 n@main@dec_tb
-Z106 !s100 L2nZdKLdPN:RX3SiTEASc2
-Z107 !s108 1447733899.037000
-Z108 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec_tb.v|
-Z109 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec_tb.v|
+Z104 n@main@dec_tb
+Z105 !s100 L2nZdKLdPN:RX3SiTEASc2
+Z106 !s108 1447733899.037000
+Z107 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec_tb.v|
+Z108 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec_tb.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vmips
-Z110 !s100 CjVf8j[ilH_6NFVR2D>DK2
-Z111 IoXU58C]nGG?Y<3P2hlFNm0
-Z112 VNTVBiVGIVg;hC5]5>B:>H1
+Z109 !s100 n70`LmoXAESFm_GO;;7kz0
+Z110 IJ^;_C@4[@mbm7DB0U?Onc2
+Z111 VNTVBiVGIVg;hC5]5>B:>H1
 R4
-Z113 w1447681348
-Z114 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/mips.v
-Z115 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/mips.v
-L0 2
+Z112 w1448902107
+Z113 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/mips.v
+Z114 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/mips.v
+L0 6
 R8
 r1
 31
-Z116 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/mips.v|
+Z115 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/mips.v|
 R10
-Z117 !s108 1447773026.748000
-Z118 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/mips.v|
+Z116 !s108 1449022504.050000
+Z117 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/mips.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vMUX4_1
-Z119 !s100 FJ3jc6GCaC[Y<43HgRl6c0
-Z120 ILDmA>=ZzRW]^=W?ZI[Hho3
-Z121 VKc>Zb`T16ekA1zfg0:2dI0
+Z118 !s100 7CjjI]1M9>bk252ilY[hS2
+Z119 Im8Qf90[g9ncMn@LbZcQ2z0
+Z120 VKc>Zb`T16ekA1zfg0:2dI0
 R4
-Z122 w1444812368
-Z123 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MUX4_1.v
-Z124 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MUX4_1.v
-L0 1
+Z121 w1448368929
+Z122 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MUX4_1.v
+Z123 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MUX4_1.v
+L0 5
 R8
 r1
 31
-Z125 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MUX4_1.v|
+Z124 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MUX4_1.v|
 R10
-Z126 n@m@u@x4_1
-Z127 !s108 1447773027.078000
-Z128 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MUX4_1.v|
+Z125 n@m@u@x4_1
+Z126 !s108 1449022504.190000
+Z127 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MUX4_1.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vRegFile
-Z129 !s100 6<;RoJC?G>;OEe1XW=GU<1
-Z130 I;Il[K8nmA<`of:M8G5O@`3
-Z131 ViESiZij[mVE7l<O=3JLj:3
+Z128 !s100 j?d9b86e5C84KL][2U5Ll3
+Z129 IN6hOaH`87P53R@P^0I9O[3
+Z130 ViESiZij[mVE7l<O=3JLj:3
 R4
-Z132 w1447693229
-Z133 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/RegFile.v
-Z134 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/RegFile.v
-L0 1
+Z131 w1448990660
+Z132 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/RegFile.v
+Z133 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/RegFile.v
+L0 5
 R8
 r1
 31
-Z135 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/RegFile.v|
+Z134 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/RegFile.v|
 R10
-Z136 n@reg@file
-Z137 !s108 1447773027.234000
-Z138 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/RegFile.v|
+Z135 n@reg@file
+Z136 !s108 1449022504.376000
+Z137 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/RegFile.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vSignEx
-Z139 !s100 Y_Pb^O0EVFaWjB0eU:RnG0
-Z140 IWADb[Bi9=NNML_7dNJiFf0
-Z141 VYh3OOhHjRkT^FX;41;z1d3
+Z138 !s100 hX3WLCR>P:aR76`=?98D^1
+Z139 IDFJWIf41AcfV:g6;JWQRM0
+Z140 VYh3OOhHjRkT^FX;41;z1d3
 R4
-Z142 w1444812057
-Z143 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/SignEx.v
-Z144 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/SignEx.v
-L0 1
+Z141 w1448368970
+Z142 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/SignEx.v
+Z143 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/SignEx.v
+L0 5
 R8
 r1
 31
-Z145 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/SignEx.v|
+Z144 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/SignEx.v|
 R10
-Z146 n@sign@ex
-Z147 !s108 1447773027.405000
-Z148 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/SignEx.v|
+Z145 n@sign@ex
+Z146 !s108 1449022504.563000
+Z147 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/SignEx.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vtestbench
-Z149 !s100 @kdQ`MYLT2^Rc1iHXQK;`1
-Z150 I:PX5lifIgN36cAQKAQ:z^0
-Z151 VhGfW:390DM[oDMzegDH9`2
+Z148 !s100 2`fU>R?<z]R1WTbnRDmSJ3
+Z149 IkdHVlX3fl2S`UOW7XiP7]2
+Z150 VhGfW:390DM[oDMzegDH9`2
 R4
-Z152 w1447752327
-Z153 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v
-Z154 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v
-L0 2
+Z151 w1448902267
+Z152 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v
+Z153 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v
+L0 6
 R8
 r1
 31
-Z155 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v|
+Z154 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v|
 R10
+Z155 !s108 1449022504.706000
+Z156 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v|
 !i10b 1
 !s85 0
-Z156 !s108 1447773027.566000
-Z157 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v|
 !s101 -O0
 vtop
-!i10b 1
-Z158 !s100 aD24b3gJ>:QMdR>hH^nh;2
-Z159 IR9L5]JmfLEoX77JLY^2>>1
-Z160 Vzi6NH4<A6i`bJRRbg2VB61
+Z157 !s100 HZdf@A[Ucj`8QfOHhUK>53
+Z158 IAiW;<cF5;j2ooSgHGhLl[1
+Z159 VZc`[W[cmX=ej<8j86lk?81
 R4
-Z161 w1447683663
-Z162 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/top.v
-Z163 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/top.v
-L0 1
+Z160 w1448426405
+Z161 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/top.v
+Z162 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/top.v
+L0 5
 R8
 r1
-!s85 0
 31
-!s108 1447773027.731000
-!s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/top.v|
-Z164 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/top.v|
-!s101 -O0
+Z163 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/top.v|
 R10
+!i10b 1
+!s85 0
+Z164 !s108 1449022504.864000
+Z165 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/top.v|
+!s101 -O0

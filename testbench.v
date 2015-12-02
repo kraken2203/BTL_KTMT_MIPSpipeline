@@ -1,17 +1,25 @@
+/*
+ *		Thiet ke MIPS pipeline
+ *		author: Luu Minh Tung
+ */
 `timescale 1ps/1ps
 module testbench;
 	reg 			clk,reset_n;
 	wire	[31:0]dataaddr,writedata;
 	wire 			memwrite;
+	wire [31:0]	pc, readdata, instr;
 	//DUT
 	top DUT(
 		.clk(clk),
 		.reset_n(reset_n),
 		.dataaddr(dataaddr),
 		.writedata(writedata),
-		.memwrite(memwrite)
+		.memwrite(memwrite),
+		.pc(pc),
+		.instr(instr),
+		.readdata(readdata)
 		);
-	//==========SIMULATION============
+	//==========SIMULATION============	
 	//initialize first
 	initial begin
 		reset_n = 1'b0; 
@@ -24,21 +32,13 @@ module testbench;
 		forever #5 clk = ~clk;
 	end
 	// check results
-always @ (negedge clk)
-begin
-	if (memwrite) begin
-		if (dataaddr === 8 & writedata === 3) begin
-			$display ("Simulation succeeded");
-			//$stop;
-		end 
-		else if (dataaddr !== 8) begin
-			$display ("Simulation failed");
-			//$stop;
-		end
-	end
+initial begin
+	//$display("=======SIMULATION BEGIN=======");
+	//$monitor($time, "\tpc = %d, instruction = %h\n \tdata address = %d, writedata = %h, memwrite = %b",pc, instr, dataaddr, writedata, memwrite);
 end
 	//End simulation
 	initial begin
-		#200 $finish;
+		#200 
+		$finish;
 	end
 endmodule

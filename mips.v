@@ -1,3 +1,7 @@
+/*
+ *		Thiet ke MIPS pipeline
+ *		author: Luu Minh Tung
+ */
 //Mips processor
 module mips(
 	input clk, reset_n,

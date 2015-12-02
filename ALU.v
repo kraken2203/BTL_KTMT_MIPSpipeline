@@ -1,3 +1,7 @@
+/*
+ *		Thiet ke MIPS pipeline
+ *		author: Nguyen Van Cao
+ */
 module ALU #(parameter N = 32) (A, B, F, Y, ZF);
 //General ALU block 
 //Using F[2:0] as control signal 

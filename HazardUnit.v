@@ -1,3 +1,7 @@
+/*
+ *		Thiet ke MIPS pipeline
+ *		author: Luu Minh Tung
+ */
 module HazardUnit(
 ForwardBE,ForwardAE,RegWriteM,RegWriteW,WriteRegM,WriteRegW,RsE,RtE,	//solve RAW
 StallF,StallD,FlushE,RsD,RtD,MemtoRegE,										//solve stall 

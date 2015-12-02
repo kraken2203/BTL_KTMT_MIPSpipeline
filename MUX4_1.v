@@ -1,3 +1,7 @@
+/*
+ *		Thiet ke MIPS pipeline
+ *		author: Nguyen Van Cao
+ */
 module MUX4_1#(parameter N = 32)(M0, M1, M2, M3, S, Y); 
 input [N-1:0] M0, M1, M2, M3; 
 input [1:0] S; 

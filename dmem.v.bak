@@ -11,10 +11,15 @@ always @ (posedge clk)
 	if (we) 
 	begin
 		RAM[a[31:2]] <= wd;
-		$display($time,"\tWrite into address: %d 	data: %d", a, wd);
-	end  
-always @ (RAM)
-	begin
-	    $writememh("DataMem.dat",RAM);
-	end   
+		$display("Write into address: %d 	data: %d", a, wd);
+	end
+initial 
+begin
+	  //$readmemh("DataMem.dat",RAM);	
+end		
+//ghi vao file
+//always @ (RAM)
+//begin
+//    $writememh("DataMem.dat",RAM);
+//end	    
 endmodule

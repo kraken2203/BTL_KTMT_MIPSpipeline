@@ -1,16 +1,16 @@
-{F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/SignEx.v} {1 {vlog -work work {F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/SignEx.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module SignEx
-
-Top level modules:
-	SignEx
-
-} {} {}} {F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/RegFile.v} {1 {vlog -work work {F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/RegFile.v}
+{F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/RegFile.v} {1 {vlog -work work {F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/RegFile.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module RegFile
 
 Top level modules:
 	RegFile
+
+} {} {}} {F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/SignEx.v} {1 {vlog -work work {F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/SignEx.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module SignEx
+
+Top level modules:
+	SignEx
 
 } {} {}} {F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec.v} {1 {vlog -work work {F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -61,9 +61,11 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	ALUDec_tb
 
-} {} {}} {F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/dmen.v} {1 {vlog -work work {F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/dmen.v}
+} {} {}} F:/GITHUB/BTL_KTMT_MIPSpipeline/dmem.v {2 {vlog -work work F:/GITHUB/BTL_KTMT_MIPSpipeline/dmem.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module dmem
+** Warning: F:/GITHUB/BTL_KTMT_MIPSpipeline/dmem.v(16): (vlog-2256) Event expressions should result in a singular type.
+
 
 Top level modules:
 	dmem

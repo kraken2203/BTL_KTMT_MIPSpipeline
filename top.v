@@ -1,9 +1,14 @@
+/*
+ *		Thiet ke MIPS pipeline
+ *		author: Luu Minh Tung
+ */
 module top(
 input clk,reset_n,
 output [31:0]	dataaddr,writedata,
-output memwrite	//enable signal allow write to data memory
+output memwrite,	//enable signal allow write to data memory
+output [31:0]	pc, readdata, instr
 );
-wire [31:0]	pc, readdata, instr;
+//wire [31:0]	pc, readdata, instr;
 mips MIPS (
 	.aluout(dataaddr),
 	.clk(clk),

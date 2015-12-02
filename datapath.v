@@ -1,3 +1,7 @@
+/*
+ *		Thiet ke MIPS pipeline
+ *		author: Luu Minh Tung
+ */
 //Pipeline datapath
 module datapath(
 	input clk, reset_n,
@@ -71,11 +75,17 @@ assign pc = regif;
 assign pcplus4f = regif + 32'd4;
 
 //Decode stage
-always @(posedge clk or negedge reset_n or posedge pcsrcd)
+always @(posedge clk or negedge reset_n)
 begin
 	if ((!reset_n) || pcsrcd) regd <= 64'd0;
-	else 	if (!stalld)	regd <= {instr,pcplus4f};
-			else	regd <= regd;
+	else 	if (!stalld)
+			begin
+				regd <= {instr,pcplus4f};
+			end
+			else if (stalld)
+			begin
+				regd <= regd;
+			end
 end
 assign instrd = regd[63:32];
 assign pcplus4d = regd[31:0];
@@ -91,7 +101,7 @@ RegFile	regfile_decode(
 	.RD2(rd2)
 	);
 SignEx	signex_decode(
-	.X(instr[15:0]),
+	.X(instrd[15:0]),
 	.Y(signimmd)
 	);
 assign pcbranchd = (signimmd << 2) + pcplus4d;
@@ -104,7 +114,7 @@ assign muxrd2 = forwardbd ? aluoutm : rd2;
 assign rsd = instrd[25:21];
 assign rtd = instrd[20:16];
 //Execute stage
-always @(posedge clk or negedge reset_n or posedge flushe)
+always @(posedge clk or negedge reset_n)
 begin
 	if ((!reset_n) || flushe) regex <= 119'd0;
 	else regex <= {regwrited,memtoregd,memwrited,alucontrold,alusrcd,regdstd,rd1,rd2,instrd[25:11],signimmd};
@@ -145,14 +155,14 @@ assign writedatamtodm = regmem[36:5];
 assign writeregmtohz = regmem[4:0];
 
 //Write back stage
-assign regwritew = regwb[70];
-assign memtoregw = regwb[69];
-assign regwritewtohz = regwritew;
 always @(posedge clk or negedge reset_n)
 begin
 	if (!reset_n) regwb <= 71'd0;
 	else regwb <= {regmem[71:70],readdatam,aluoutm,regmem[4:0]};
 end
+assign regwritew = regwb[70];
+assign memtoregw = regwb[69];
+assign regwritewtohz = regwritew;
 assign writeregwtohz = writeregw;
 assign resultw = memtoregw ? regwb[68:37] : regwb[36:5];		//memtoregw ? ReadataW : ALUOutW
 assign writeregw = regwb[4:0];

@@ -1,3 +1,7 @@
+/*
+ *		Thiet ke MIPS pipeline
+ *		author: Nguyen Van Cao
+ */
 module ALUDec(input [5:0] Funct, 
 					input [1:0] ALUOp, 
 					output reg [2:0] ALUCtrl); 

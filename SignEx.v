@@ -1,3 +1,7 @@
+/*
+ *		Thiet ke MIPS pipeline
+ *		author: Nguyen Van Cao
+ */
 module SignEx(input [15:0]X, 
 					output [31:0]Y); 
 //Sign Extend 

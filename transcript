@@ -1,41 +1,11 @@
 # Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
-# OpenFile {F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MIPS_tb.mpf} 
+# OpenFile F:/GITHUB/BTL_KTMT_MIPSpipeline/MIPS_tb.mpf 
 # Loading project MIPS_tb
-vsim -voptargs=+acc work.testbench
-# vsim -voptargs=+acc work.testbench 
-# Loading work.testbench
-# Loading work.top
-# Loading work.mips
-# Loading work.CU
-# Loading work.MainDec
-# Loading work.ALUDec
-# Loading work.datapath
-# Loading work.RegFile
-# Loading work.SignEx
-# Loading work.ALU
-# Loading work.MUX4_1
-# Loading work.HazardUnit
-# Loading work.imem
-# Loading work.dmem
-# ** Warning: (vsim-3015) F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/mips.v(71): [PCDPC] - Port size (1 or 1) does not match connection size (2) for port 'forwardae'. The port definition is at: F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/datapath.v(12).
-# 
-#         Region: /testbench/DUT/MIPS/Datapath
-# ** Warning: (vsim-3015) F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/mips.v(71): [PCDPC] - Port size (1 or 1) does not match connection size (2) for port 'forwardbe'. The port definition is at: F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/datapath.v(12).
-# 
-#         Region: /testbench/DUT/MIPS/Datapath
-add wave -position insertpoint sim:/testbench/*
-run
-# Simulation failed
-# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 35
-# Error opening F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/[PCDPC] - Port size (1 or 1) does not match connection size 
-# Path name 'F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/[PCDPC] - Port size (1 or 1) does not match connection size ' doesn't exist.
-# A time value could not be extracted from the current line
 # Compile of ALU.v was successful.
 # Compile of ALUDec.v was successful.
 # Compile of ALUDec_tb.v was successful.
 # Compile of CU.v was successful.
 # Compile of datapath.v was successful.
-# Compile of dmen.v was successful.
 # Compile of HazardUnit.v was successful.
 # Compile of imem.v was successful.
 # Compile of MainDec.v was successful.
@@ -45,107 +15,7 @@ run
 # Compile of SignEx.v was successful.
 # Compile of testbench.v was successful.
 # Compile of top.v was successful.
-# 15 compiles, 0 failed with no errors. 
-restart
-# Loading work.testbench
-# Loading work.top
-# Loading work.mips
-# Loading work.CU
-# Loading work.MainDec
-# Loading work.ALUDec
-# Loading work.datapath
-# Loading work.RegFile
-# Loading work.SignEx
-# Loading work.ALU
-# Loading work.MUX4_1
-# Loading work.HazardUnit
-# Loading work.imem
-# Loading work.dmem
-run
-# Simulation failed
-# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 35
-# Compile of ALU.v was successful.
-# Compile of ALUDec.v was successful.
-# Compile of ALUDec_tb.v was successful.
-# Compile of CU.v was successful.
-# Compile of datapath.v was successful.
-# Compile of dmen.v was successful.
-# Compile of HazardUnit.v was successful.
-# Compile of imem.v was successful.
-# Compile of MainDec.v was successful.
-# Compile of mips.v was successful.
-# Compile of MUX4_1.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of SignEx.v was successful.
-# Compile of testbench.v was successful.
-# Compile of top.v was successful.
-# 15 compiles, 0 failed with no errors. 
-restart
-# Loading work.testbench
-# Loading work.top
-# Loading work.mips
-# Loading work.CU
-# Loading work.MainDec
-# Loading work.ALUDec
-# Loading work.datapath
-# Loading work.RegFile
-# Loading work.SignEx
-# Loading work.ALU
-# Loading work.MUX4_1
-# Loading work.HazardUnit
-# Loading work.imem
-# Loading work.dmem
-add wave -position insertpoint sim:/testbench/DUT/*
-run
-# Simulation failed
-# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 36
-vsim -voptargs=+acc work.CU
-# vsim -voptargs=+acc work.CU 
-# Loading work.CU
-# Loading work.MainDec
-# Loading work.ALUDec
-add wave -position insertpoint sim:/CU/*
-run
-vsim -voptargs=+acc work.testbench
-# vsim -voptargs=+acc work.testbench 
-# Loading work.testbench
-# Loading work.top
-# Loading work.mips
-# Loading work.CU
-# Loading work.MainDec
-# Loading work.ALUDec
-# Loading work.datapath
-# Loading work.RegFile
-# Loading work.SignEx
-# Loading work.ALU
-# Loading work.MUX4_1
-# Loading work.HazardUnit
-# Loading work.imem
-# Loading work.dmem
-add wave -position insertpoint sim:/testbench/DUT/MIPS/ControlUnit/*
-run
-# Simulation failed
-# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 36
-add wave -position insertpoint sim:/testbench/DUT/*
-restart
-run
-# Simulation failed
-# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 36
-# Compile of ALU.v was successful.
-# Compile of ALUDec.v was successful.
-# Compile of ALUDec_tb.v was successful.
-# Compile of CU.v was successful.
-# Compile of datapath.v was successful.
-# Compile of dmen.v was successful.
-# Compile of HazardUnit.v was successful.
-# Compile of imem.v was successful.
-# Compile of MainDec.v was successful.
-# Compile of mips.v was successful.
-# Compile of MUX4_1.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of SignEx.v was successful.
-# Compile of testbench.v was successful.
-# Compile of top.v was successful.
+# Compile of dmem.v was successful with warnings.
 # 15 compiles, 0 failed with no errors. 
 vsim -voptargs=+acc work.testbench
 # vsim -voptargs=+acc work.testbench 
@@ -163,291 +33,116 @@ vsim -voptargs=+acc work.testbench
 # Loading work.HazardUnit
 # Loading work.imem
 # Loading work.dmem
-add wave -position insertpoint sim:/testbench/DUT/*
 run
-# Simulation failed
+#                    0	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                    0	current instruction = xxxxxxxx
+#                    0	Disable reset
+#                    5	pcnext = 00000004, instruction next = 20100001
+#                    5	current instruction = 00000000
+#                   15	pcnext = 00000004, instruction next = 20100001
+#                   15	current instruction = 00000000
+#                   25	pcnext = 00000008, instruction next = 20110002
+#                   25	current instruction = 20100001
+#                   35	pcnext = 0000000c, instruction next = 02119820
+#                   35	current instruction = 20110002
+#                   45	pcnext = 00000010, instruction next = ac130008
+#                   45	current instruction = 02119820
+#                   50	Reg address = 16, Data =          1
+#                   55	pcnext = 00000014, instruction next = 8c140008
+#                   55	current instruction = ac130008
+#                   60	Reg address = 17, Data =          2
+#                   65	pcnext = 00000018, instruction next = xxxxxxxx
+#                   65	current instruction = 8c140008
+#                   70	Reg address = 19, Data =          3
+#                   75	pcnext = 0000001c, instruction next = xxxxxxxx
+#                   75	current instruction = xxxxxxxx
+#                   75	Write into address:          8 	data:          3
+#                   85	pcnext = 0000001c, instruction next = xxxxxxxx
+#                   85	current instruction = xxxxxxxx
+#                   90	Reg address = 20, Data =          3
+#                   95	pcnext = 00000020, instruction next = xxxxxxxx
+#                   95	current instruction = xxxxxxxx
+#                  105	pcnext = 00000024, instruction next = xxxxxxxx
+#                  105	current instruction = xxxxxxxx
+#                  115	pcnext = 00000028, instruction next = xxxxxxxx
+#                  115	current instruction = xxxxxxxx
+#                  125	pcnext = 0000002c, instruction next = xxxxxxxx
+#                  125	current instruction = xxxxxxxx
+#                  135	pcnext = 00000030, instruction next = xxxxxxxx
+#                  135	current instruction = xxxxxxxx
+#                  145	pcnext = 00000034, instruction next = xxxxxxxx
+#                  145	current instruction = xxxxxxxx
+#                  155	pcnext = 00000038, instruction next = xxxxxxxx
+#                  155	current instruction = xxxxxxxx
+#                  165	pcnext = 0000003c, instruction next = xxxxxxxx
+#                  165	current instruction = xxxxxxxx
+#                  175	pcnext = 00000040, instruction next = xxxxxxxx
+#                  175	current instruction = xxxxxxxx
+#                  185	pcnext = 00000044, instruction next = xxxxxxxx
+#                  185	current instruction = xxxxxxxx
+#                  195	pcnext = 00000048, instruction next = xxxxxxxx
+#                  195	current instruction = xxxxxxxx
+#                  205	pcnext = 0000004c, instruction next = xxxxxxxx
+#                  205	current instruction = xxxxxxxx
+#                  215	pcnext = 00000050, instruction next = xxxxxxxx
+#                  215	current instruction = xxxxxxxx
+#                  225	pcnext = 00000054, instruction next = xxxxxxxx
+#                  225	current instruction = xxxxxxxx
+#                  235	pcnext = 00000058, instruction next = xxxxxxxx
+#                  235	current instruction = xxxxxxxx
+#                  245	pcnext = 0000005c, instruction next = xxxxxxxx
+#                  245	current instruction = xxxxxxxx
+#                  255	pcnext = 00000060, instruction next = xxxxxxxx
+#                  255	current instruction = xxxxxxxx
+#                  265	pcnext = 00000064, instruction next = xxxxxxxx
+#                  265	current instruction = xxxxxxxx
+#                  275	pcnext = 00000068, instruction next = xxxxxxxx
+#                  275	current instruction = xxxxxxxx
+#                  285	pcnext = 0000006c, instruction next = xxxxxxxx
+#                  285	current instruction = xxxxxxxx
+#                  295	pcnext = 00000070, instruction next = xxxxxxxx
+#                  295	current instruction = xxxxxxxx
+#                  305	pcnext = 00000074, instruction next = xxxxxxxx
+#                  305	current instruction = xxxxxxxx
+#                  315	pcnext = 00000078, instruction next = xxxxxxxx
+#                  315	current instruction = xxxxxxxx
+#                  325	pcnext = 0000007c, instruction next = xxxxxxxx
+#                  325	current instruction = xxxxxxxx
+#                  335	pcnext = 00000080, instruction next = xxxxxxxx
+#                  335	current instruction = xxxxxxxx
+#                  345	pcnext = 00000084, instruction next = xxxxxxxx
+#                  345	current instruction = xxxxxxxx
+#                  355	pcnext = 00000088, instruction next = xxxxxxxx
+#                  355	current instruction = xxxxxxxx
+#                  365	pcnext = 0000008c, instruction next = xxxxxxxx
+#                  365	current instruction = xxxxxxxx
+#                  375	pcnext = 00000090, instruction next = xxxxxxxx
+#                  375	current instruction = xxxxxxxx
+#                  385	pcnext = 00000094, instruction next = xxxxxxxx
+#                  385	current instruction = xxxxxxxx
+#                  395	pcnext = 00000098, instruction next = xxxxxxxx
+#                  395	current instruction = xxxxxxxx
+#                  405	pcnext = 0000009c, instruction next = xxxxxxxx
+#                  405	current instruction = xxxxxxxx
+#                  415	pcnext = 000000a0, instruction next = xxxxxxxx
+#                  415	current instruction = xxxxxxxx
+#                  425	pcnext = 000000a4, instruction next = xxxxxxxx
+#                  425	current instruction = xxxxxxxx
+#                  435	pcnext = 000000a8, instruction next = xxxxxxxx
+#                  435	current instruction = xxxxxxxx
+#                  445	pcnext = 000000ac, instruction next = xxxxxxxx
+#                  445	current instruction = xxxxxxxx
+#                  455	pcnext = 000000b0, instruction next = xxxxxxxx
+#                  455	current instruction = xxxxxxxx
+#                  465	pcnext = 000000b4, instruction next = xxxxxxxx
+#                  465	current instruction = xxxxxxxx
+#                  475	pcnext = 000000b8, instruction next = xxxxxxxx
+#                  475	current instruction = xxxxxxxx
+#                  485	pcnext = 000000bc, instruction next = xxxxxxxx
+#                  485	current instruction = xxxxxxxx
+#                  495	pcnext = 000000c0, instruction next = xxxxxxxx
+#                  495	current instruction = xxxxxxxx
 # ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
-#    Time: 200 ps  Iteration: 0  Instance: /testbench
-# 1
-# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
-# Compile of ALU.v was successful.
-# Compile of ALUDec.v was successful.
-# Compile of ALUDec_tb.v was successful.
-# Compile of CU.v was successful.
-# Compile of datapath.v was successful.
-# Compile of dmen.v was successful.
-# Compile of HazardUnit.v was successful.
-# Compile of imem.v was successful.
-# Compile of MainDec.v was successful.
-# Compile of mips.v was successful.
-# Compile of MUX4_1.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of SignEx.v was successful.
-# Compile of testbench.v was successful.
-# Compile of top.v was successful.
-# 15 compiles, 0 failed with no errors. 
-restart
-# Loading work.testbench
-# Loading work.top
-# Loading work.mips
-# Loading work.CU
-# Loading work.MainDec
-# Loading work.ALUDec
-# Loading work.datapath
-# Loading work.RegFile
-# Loading work.SignEx
-# Loading work.ALU
-# Loading work.MUX4_1
-# Loading work.HazardUnit
-# Loading work.imem
-# Loading work.dmem
-run
-# Simulation failed
-# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
-#    Time: 200 ps  Iteration: 0  Instance: /testbench
-# 1
-# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
-add wave -position insertpoint sim:/testbench/DUT/InstructionMemory/*
-add wave -position insertpoint sim:/testbench/DUT/DataMemory/*
-restart
-add wave -position insertpoint sim:/testbench/*
-run
-# Simulation failed
-# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
-#    Time: 200 ps  Iteration: 0  Instance: /testbench
-# WARNING: No extended dataflow license exists
-# 1
-# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
-add wave -position insertpoint sim:/testbench/DUT/MIPS/Datapath/regfile_decode/*
-restart
-run
-# Simulation failed
-# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
-#    Time: 200 ps  Iteration: 0  Instance: /testbench
-# 1
-# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
-# WARNING: No extended dataflow license exists
-# WARNING: No extended dataflow license exists
-# WARNING: No extended dataflow license exists
-# WARNING: No extended dataflow license exists
-# WARNING: No extended dataflow license exists
-# WARNING: No extended dataflow license exists
-# WARNING: No extended dataflow license exists
-# Compile of ALU.v was successful.
-# Compile of ALUDec.v was successful.
-# Compile of ALUDec_tb.v was successful.
-# Compile of CU.v was successful.
-# Compile of datapath.v was successful.
-# Compile of dmen.v was successful.
-# Compile of HazardUnit.v was successful.
-# Compile of imem.v was successful.
-# Compile of MainDec.v was successful.
-# Compile of mips.v was successful.
-# Compile of MUX4_1.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of SignEx.v was successful.
-# Compile of testbench.v was successful.
-# Compile of top.v was successful.
-# 15 compiles, 0 failed with no errors. 
-restart
-# Loading work.testbench
-# Loading work.top
-# Loading work.mips
-# Loading work.CU
-# Loading work.MainDec
-# Loading work.ALUDec
-# Loading work.datapath
-# Loading work.RegFile
-# Loading work.SignEx
-# Loading work.ALU
-# Loading work.MUX4_1
-# Loading work.HazardUnit
-# Loading work.imem
-# Loading work.dmem
-run
-# Simulation failed
-# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
-#    Time: 200 ps  Iteration: 0  Instance: /testbench
-# 1
-# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
-# Compile of ALU.v was successful.
-# Compile of ALUDec.v was successful.
-# Compile of ALUDec_tb.v was successful.
-# Compile of CU.v was successful.
-# Compile of datapath.v was successful.
-# Compile of dmen.v was successful.
-# Compile of HazardUnit.v was successful.
-# Compile of imem.v was successful.
-# Compile of MainDec.v was successful.
-# Compile of mips.v was successful.
-# Compile of MUX4_1.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of SignEx.v was successful.
-# Compile of testbench.v was successful.
-# Compile of top.v was successful.
-# 15 compiles, 0 failed with no errors. 
-restart
-# Loading work.testbench
-# Loading work.top
-# Loading work.mips
-# Loading work.CU
-# Loading work.MainDec
-# Loading work.ALUDec
-# Loading work.datapath
-# Loading work.RegFile
-# Loading work.SignEx
-# Loading work.ALU
-# Loading work.MUX4_1
-# Loading work.HazardUnit
-# Loading work.imem
-# Loading work.dmem
-run
-# Simulation failed
-# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
-#    Time: 200 ps  Iteration: 0  Instance: /testbench
-# 1
-# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
-add wave -position insertpoint sim:/testbench/DUT/MIPS/Datapath/ALU_execute/*
-restart
-run
-# Simulation failed
-# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
-#    Time: 200 ps  Iteration: 0  Instance: /testbench
-# 1
-# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
-# Compile of ALU.v was successful.
-# Compile of ALUDec.v was successful.
-# Compile of ALUDec_tb.v was successful.
-# Compile of CU.v was successful.
-# Compile of datapath.v was successful.
-# Compile of dmen.v was successful.
-# Compile of HazardUnit.v was successful.
-# Compile of imem.v was successful.
-# Compile of MainDec.v was successful.
-# Compile of mips.v was successful.
-# Compile of MUX4_1.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of SignEx.v was successful.
-# Compile of testbench.v was successful.
-# Compile of top.v was successful.
-# 15 compiles, 0 failed with no errors. 
-restart
-# Loading work.testbench
-# Loading work.top
-# Loading work.mips
-# Loading work.CU
-# Loading work.MainDec
-# Loading work.ALUDec
-# Loading work.datapath
-# Loading work.RegFile
-# Loading work.SignEx
-# Loading work.ALU
-# Loading work.MUX4_1
-# Loading work.HazardUnit
-# Loading work.imem
-# Loading work.dmem
-run
-# Simulation failed
-# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
-#    Time: 200 ps  Iteration: 0  Instance: /testbench
-# 1
-# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
-add wave -position insertpoint sim:/testbench/DUT/MIPS/ControlUnit/*
-restart
-run
-# Simulation failed
-# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
-#    Time: 200 ps  Iteration: 0  Instance: /testbench
-# 1
-# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
-# Compile of ALU.v was successful.
-# Compile of ALUDec.v was successful.
-# Compile of ALUDec_tb.v was successful.
-# Compile of CU.v was successful.
-# Compile of datapath.v was successful.
-# Compile of dmen.v was successful.
-# Compile of HazardUnit.v was successful.
-# Compile of imem.v was successful.
-# Compile of MainDec.v was successful.
-# Compile of mips.v was successful.
-# Compile of MUX4_1.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of SignEx.v was successful.
-# Compile of testbench.v was successful.
-# Compile of top.v was successful.
-# 15 compiles, 0 failed with no errors. 
-restart
-# Loading work.testbench
-# Loading work.top
-# Loading work.mips
-# Loading work.CU
-# Loading work.MainDec
-# Loading work.ALUDec
-# Loading work.datapath
-# Loading work.RegFile
-# Loading work.SignEx
-# Loading work.ALU
-# Loading work.MUX4_1
-# Loading work.HazardUnit
-# Loading work.imem
-# Loading work.dmem
-run
-# Simulation failed
-# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
-#    Time: 200 ps  Iteration: 0  Instance: /testbench
-# 1
-# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
-# Compile of ALU.v was successful.
-# Compile of ALUDec.v was successful.
-# Compile of ALUDec_tb.v was successful.
-# Compile of CU.v was successful.
-# Compile of datapath.v was successful.
-# Compile of dmen.v was successful.
-# Compile of HazardUnit.v was successful.
-# Compile of imem.v was successful.
-# Compile of MainDec.v was successful.
-# Compile of mips.v was successful.
-# Compile of MUX4_1.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of SignEx.v was successful.
-# Compile of testbench.v was successful.
-# Compile of top.v was successful.
-# 15 compiles, 0 failed with no errors. 
-restart
-# Loading work.testbench
-# Loading work.top
-# Loading work.mips
-# Loading work.CU
-# Loading work.MainDec
-# Loading work.ALUDec
-# Loading work.datapath
-# Loading work.RegFile
-# Loading work.SignEx
-# Loading work.ALU
-# Loading work.MUX4_1
-# Loading work.HazardUnit
-# Loading work.imem
-# Loading work.dmem
-run
-# Simulation failed
-# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
-#    Time: 200 ps  Iteration: 0  Instance: /testbench
-# 1
-# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
-add wave -position insertpoint sim:/testbench/DUT/MIPS/ControlUnit/*
-restart
-run
-# Simulation failed
-# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
-#    Time: 200 ps  Iteration: 0  Instance: /testbench
-# 1
-# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
-# WARNING: No extended dataflow license exists
-add wave -position insertpoint sim:/testbench/DUT/MIPS/Datapath/*
-restart
-run
-# Simulation failed
-# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
-#    Time: 200 ps  Iteration: 0  Instance: /testbench
+#    Time: 500 ps  Iteration: 0  Instance: /testbench
 # 1
 # Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42

@@ -1,3 +1,7 @@
+/*
+ *		Thiet ke MIPS pipeline
+ *		author: Nguyen Van Cao
+ */
 //Pipeline Control Unit
 module CU(	input [5:0] Opcode, Funct, 
 				output MemtoReg, MemWrite, Branch, ALUSrc, RegDst, RegWrite, 
