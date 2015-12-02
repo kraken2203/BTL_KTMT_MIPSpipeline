@@ -10,7 +10,6 @@ entity CU is
         ALUSrc          : out    vl_logic;
         RegDst          : out    vl_logic;
         RegWrite        : out    vl_logic;
-        Jump            : out    vl_logic;
         ALUCtrl         : out    vl_logic_vector(2 downto 0)
     );
 end CU;

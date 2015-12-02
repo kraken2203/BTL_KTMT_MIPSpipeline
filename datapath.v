@@ -63,7 +63,7 @@ wire regwritew, memtoregw;
 
 
 assign pcnext = pcsrcd ? pcbranchd : pcplus4f;
-assign equald = (muxrd1 ^ muxrd2) ? 1'b1 : 1'b0;
+
 //Fetch stage
 always @(posedge clk or negedge reset_n)
 begin
@@ -104,7 +104,7 @@ SignEx	signex_decode(
 	.X(instrd[15:0]),
 	.Y(signimmd)
 	);
-assign pcbranchd = (signimmd << 2) + pcplus4d;
+assign pcbranchd = {signimmd[29:0],2'b00} + pcplus4d;
 assign opinstr = instrd[31:26];
 assign functinstr = instrd[5:0];
 assign pcsrcd = branchd & equald;
@@ -113,11 +113,13 @@ assign muxrd2 = forwardbd ? aluoutm : rd2;
 
 assign rsd = instrd[25:21];
 assign rtd = instrd[20:16];
+assign equald = (muxrd1 == muxrd2) ? 1'b1 : 1'b0;
 //Execute stage
 always @(posedge clk or negedge reset_n)
 begin
 	if ((!reset_n) || flushe) regex <= 119'd0;
 	else regex <= {regwrited,memtoregd,memwrited,alucontrold,alusrcd,regdstd,rd1,rd2,instrd[25:11],signimmd};
+	$display($time,"\tRegister execute = %h", regex);
 end
 assign alucontrole = regex[115:113];
 assign alusrce = regex[112];

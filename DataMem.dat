@@ -3,7 +3,6 @@
 // format=hex addressradix=h dataradix=h version=1.0 wordsperline=1 noaddress
 xxxxxxxx
 xxxxxxxx
-00000003
 xxxxxxxx
 xxxxxxxx
 xxxxxxxx
@@ -22,7 +21,8 @@ xxxxxxxx
 xxxxxxxx
 xxxxxxxx
 xxxxxxxx
-xxxxxxxx
+00000007
+00000007
 xxxxxxxx
 xxxxxxxx
 xxxxxxxx

@@ -21,7 +21,6 @@ entity HazardUnit is
         BranchD         : in     vl_logic;
         RegWriteE       : in     vl_logic;
         WriteRegE       : in     vl_logic_vector(4 downto 0);
-        MemtoRegM       : in     vl_logic;
-        JumpD           : in     vl_logic
+        MemtoRegM       : in     vl_logic
     );
 end HazardUnit;
