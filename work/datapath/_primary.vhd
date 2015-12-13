@@ -12,6 +12,7 @@ entity datapath is
         branchd_beq     : in     vl_logic;
         branchd_bne     : in     vl_logic;
         jumpd           : in     vl_logic;
+        aluselectshilfd : in     vl_logic;
         alucontrold     : in     vl_logic_vector(3 downto 0);
         instr           : in     vl_logic_vector(31 downto 0);
         readdatam       : in     vl_logic_vector(31 downto 0);

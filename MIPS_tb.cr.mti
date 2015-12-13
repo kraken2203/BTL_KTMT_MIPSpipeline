@@ -1,4 +1,11 @@
-{F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec.v} {1 {vlog -work work {F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec.v}
+{F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/signExt_shamt.v} {1 {vlog -work work {F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/signExt_shamt.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module signExt_shamt
+
+Top level modules:
+	signExt_shamt
+
+} {} {}} {F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec.v} {1 {vlog -work work {F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module ALUDec
 
@@ -90,6 +97,13 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 
 Top level modules:
 	mips
+
+} {} {}} {F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec.v} {1 {vlog -work work {F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module MainDec
+
+Top level modules:
+	MainDec
 
 } {} {}} {F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU.v} {1 {vlog -work work {F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012

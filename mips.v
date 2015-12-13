@@ -12,7 +12,7 @@ module mips(
 	input [31:0] readdata
 );
 //Tin hieu trung gian cho khoi Control Unit
-wire RegWriteD,MemtoRegD,MemWriteD,ALUSrcD,RegDstD,BranchD_beq,BranchD_bne,JumpD;
+wire RegWriteD,MemtoRegD,MemWriteD,ALUSrcD,RegDstD,BranchD_beq,BranchD_bne,JumpD,ALUSelectShilfD;
 wire [3:0]ALUCtrlD;
 wire [5:0]Opcode,Funct;
 //Tin hieu trung gian cho Hazard Unit
@@ -35,12 +35,14 @@ CU ControlUnit (
 	.Opcode(Opcode),
 	.Funct(Funct),
 	.Jump(JumpD),
-	.BranchD(BranchD)
+	.BranchD(BranchD),
+	.ALUSelectShilfD(ALUSelectShilfD)
 );
 
 //assign BranchD = BranchD_beq | BranchD_bne;
 
 datapath Datapath ( 
+	.aluselectshilfd(ALUSelectShilfD),
 	.alucontrold(ALUCtrlD),
 	.aluoutmtodm(aluout),
 	.alusrcd(ALUSrcD),

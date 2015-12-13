@@ -13,6 +13,7 @@ entity CU is
         RegWrite        : out    vl_logic;
         Jump            : out    vl_logic;
         BranchD         : out    vl_logic;
+        ALUSelectShilfD : out    vl_logic;
         ALUCtrl         : out    vl_logic_vector(3 downto 0)
     );
 end CU;

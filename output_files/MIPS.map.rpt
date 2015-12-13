@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS
-Sun Dec 13 22:04:25 2015
+Mon Dec 14 00:40:40 2015
 Quartus II 32-bit Version 12.0 Build 178 05/31/2012 SJ Web Edition
 
 
@@ -13,15 +13,20 @@ Quartus II 32-bit Version 12.0 Build 178 05/31/2012 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: ALU:ALU_execute
- 13. Port Connectivity Checks: "ALU:ALU_execute"
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
- 16. Analysis & Synthesis Suppressed Messages
+  8. Analysis & Synthesis RAM Summary
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Registers Added for RAM Pass-Through Logic
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for dmem:DataMemory|altsyncram:RAM_rtl_0|altsyncram_g8c1:auto_generated
+ 15. Parameter Settings for User Entity Instance: mips:MIPS|datapath:Datapath|ALU:ALU_execute
+ 16. Parameter Settings for Inferred Entity Instance: dmem:DataMemory|altsyncram:RAM_rtl_0
+ 17. altsyncram Parameter Settings by Entity Instance
+ 18. Port Connectivity Checks: "mips:MIPS|datapath:Datapath|ALU:ALU_execute"
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
+ 21. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -47,18 +52,18 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +------------------------------------+------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Dec 13 22:04:25 2015    ;
+; Analysis & Synthesis Status        ; Successful - Mon Dec 14 00:40:39 2015    ;
 ; Quartus II 32-bit Version          ; 12.0 Build 178 05/31/2012 SJ Web Edition ;
 ; Revision Name                      ; MIPS                                     ;
-; Top-level Entity Name              ; datapath                                 ;
+; Top-level Entity Name              ; top                                      ;
 ; Family                             ; Cyclone II                               ;
-; Total logic elements               ; 3,680                                    ;
-;     Total combinational functions  ; 2,646                                    ;
-;     Dedicated logic registers      ; 1,325                                    ;
-; Total registers                    ; 1325                                     ;
-; Total pins                         ; 236                                      ;
+; Total logic elements               ; 1,924                                    ;
+;     Total combinational functions  ; 1,363                                    ;
+;     Dedicated logic registers      ; 816                                      ;
+; Total registers                    ; 816                                      ;
+; Total pins                         ; 163                                      ;
 ; Total virtual pins                 ; 0                                        ;
-; Total memory bits                  ; 0                                        ;
+; Total memory bits                  ; 2,048                                    ;
 ; Embedded Multiplier 9-bit elements ; 0                                        ;
 ; Total PLLs                         ; 0                                        ;
 +------------------------------------+------------------------------------------+
@@ -70,7 +75,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C35F672C6       ;                    ;
-; Top-level entity name                                                      ; datapath           ; MIPS               ;
+; Top-level entity name                                                      ; top                ; MIPS               ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -159,16 +164,36 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                             ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                               ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
-; ALU.v                            ; yes             ; User Verilog HDL File  ; F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU.v      ;         ;
-; SignEx.v                         ; yes             ; User Verilog HDL File  ; F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/SignEx.v   ;         ;
-; RegFile.v                        ; yes             ; User Verilog HDL File  ; F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/RegFile.v  ;         ;
-; datapath.v                       ; yes             ; User Verilog HDL File  ; F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/datapath.v ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                               ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                           ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
+; signExt_shamt.v                  ; yes             ; User Verilog HDL File        ; F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/signExt_shamt.v        ;         ;
+; dmem.v                           ; yes             ; User Verilog HDL File        ; F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/dmem.v                 ;         ;
+; ALU.v                            ; yes             ; User Verilog HDL File        ; F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU.v                  ;         ;
+; MainDec.v                        ; yes             ; User Verilog HDL File        ; F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec.v              ;         ;
+; ALUDec.v                         ; yes             ; User Verilog HDL File        ; F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec.v               ;         ;
+; CU.v                             ; yes             ; User Verilog HDL File        ; F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/CU.v                   ;         ;
+; SignEx.v                         ; yes             ; User Verilog HDL File        ; F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/SignEx.v               ;         ;
+; RegFile.v                        ; yes             ; User Verilog HDL File        ; F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/RegFile.v              ;         ;
+; imem.v                           ; yes             ; User Verilog HDL File        ; F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/imem.v                 ;         ;
+; HazardUnit.v                     ; yes             ; User Verilog HDL File        ; F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/HazardUnit.v           ;         ;
+; datapath.v                       ; yes             ; User Verilog HDL File        ; F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/datapath.v             ;         ;
+; mips.v                           ; yes             ; User Verilog HDL File        ; F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/mips.v                 ;         ;
+; top.v                            ; yes             ; User Verilog HDL File        ; F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/top.v                  ;         ;
+; memfile.dat                      ; yes             ; Auto-Found Unspecified File  ; F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/memfile.dat            ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/altera/12.0/quartus/libraries/megafunctions/altsyncram.tdf                          ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/altera/12.0/quartus/libraries/megafunctions/stratix_ram_block.inc                   ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_mux.inc                             ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_decode.inc                          ;         ;
+; aglobal120.inc                   ; yes             ; Megafunction                 ; c:/altera/12.0/quartus/libraries/megafunctions/aglobal120.inc                          ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/altera/12.0/quartus/libraries/megafunctions/a_rdenreg.inc                           ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; c:/altera/12.0/quartus/libraries/megafunctions/altrom.inc                              ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; c:/altera/12.0/quartus/libraries/megafunctions/altram.inc                              ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/altera/12.0/quartus/libraries/megafunctions/altdpram.inc                            ;         ;
+; db/altsyncram_g8c1.tdf           ; yes             ; Auto-Generated Megafunction  ; F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/db/altsyncram_g8c1.tdf ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -176,100 +201,809 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 3,680 ;
+; Estimated Total logic elements              ; 1,924 ;
 ;                                             ;       ;
-; Total combinational functions               ; 2646  ;
+; Total combinational functions               ; 1363  ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 2121  ;
-;     -- 3 input functions                    ; 436   ;
-;     -- <=2 input functions                  ; 89    ;
+;     -- 4 input functions                    ; 814   ;
+;     -- 3 input functions                    ; 478   ;
+;     -- <=2 input functions                  ; 71    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 2525  ;
-;     -- arithmetic mode                      ; 121   ;
+;     -- normal mode                          ; 1271  ;
+;     -- arithmetic mode                      ; 92    ;
 ;                                             ;       ;
-; Total registers                             ; 1325  ;
-;     -- Dedicated logic registers            ; 1325  ;
+; Total registers                             ; 816   ;
+;     -- Dedicated logic registers            ; 816   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 236   ;
+; I/O pins                                    ; 163   ;
+; Total memory bits                           ; 2048  ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 1325  ;
-; Total fan-out                               ; 15259 ;
-; Average fan-out                             ; 3.63  ;
+; Maximum fan-out                             ; 848   ;
+; Total fan-out                               ; 8435  ;
+; Average fan-out                             ; 3.55  ;
 +---------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                       ;
-+-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
-; Compilation Hierarchy Node  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name              ; Library Name ;
-+-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
-; |datapath                   ; 2646 (642)        ; 1325 (333)   ; 0           ; 0            ; 0       ; 0         ; 236  ; 0            ; |datapath                        ;              ;
-;    |ALU:ALU_execute|        ; 686 (686)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALU_execute        ;              ;
-;    |RegFile:regfile_decode| ; 1318 (1318)       ; 992 (992)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RegFile:regfile_decode ;              ;
-+-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                             ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                      ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+--------------+
+; |top                                      ; 1363 (0)          ; 816 (0)      ; 2048        ; 0            ; 0       ; 0         ; 163  ; 0            ; |top                                                                     ;              ;
+;    |dmem:DataMemory|                      ; 70 (70)           ; 72 (72)      ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|dmem:DataMemory                                                     ;              ;
+;       |altsyncram:RAM_rtl_0|              ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|dmem:DataMemory|altsyncram:RAM_rtl_0                                ;              ;
+;          |altsyncram_g8c1:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|dmem:DataMemory|altsyncram:RAM_rtl_0|altsyncram_g8c1:auto_generated ;              ;
+;    |imem:InstructionMemory|               ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|imem:InstructionMemory                                              ;              ;
+;    |mips:MIPS|                            ; 1273 (0)          ; 744 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mips:MIPS                                                           ;              ;
+;       |CU:ControlUnit|                    ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mips:MIPS|CU:ControlUnit                                            ;              ;
+;          |ALUDec:ALUDecoder|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mips:MIPS|CU:ControlUnit|ALUDec:ALUDecoder                          ;              ;
+;       |HazardUnit:Hazard|                 ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mips:MIPS|HazardUnit:Hazard                                         ;              ;
+;       |datapath:Datapath|                 ; 1256 (673)        ; 744 (264)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mips:MIPS|datapath:Datapath                                         ;              ;
+;          |ALU:ALU_execute|                ; 562 (562)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mips:MIPS|datapath:Datapath|ALU:ALU_execute                         ;              ;
+;          |RegFile:regfile_decode|         ; 21 (21)           ; 480 (480)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mips:MIPS|datapath:Datapath|RegFile:regfile_decode                  ;              ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                    ;
-+-----------------------------------------+---------------------------------------------+
-; Register name                           ; Reason for Removal                          ;
-+-----------------------------------------+---------------------------------------------+
-; regif[1]                                ; Merged with regif[0]                        ;
-; regd[1]                                 ; Merged with regd[0]                         ;
-; regex[16..31,36]                        ; Merged with regex[15]                       ;
-; regex[35]                               ; Merged with regex[14]                       ;
-; regex[34]                               ; Merged with regex[13]                       ;
-; regex[33]                               ; Merged with regex[12]                       ;
-; regex[32]                               ; Merged with regex[11]                       ;
-; RegFile:regfile_decode|Registers[0][31] ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][30] ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][29] ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][28] ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][27] ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][26] ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][25] ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][24] ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][23] ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][22] ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][21] ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][20] ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][19] ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][18] ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][17] ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][16] ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][15] ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][14] ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][13] ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][12] ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][11] ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][10] ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][9]  ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][8]  ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][7]  ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][6]  ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][5]  ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][4]  ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][3]  ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][2]  ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][1]  ; Stuck at GND due to stuck port clock_enable ;
-; RegFile:regfile_decode|Registers[0][0]  ; Stuck at GND due to stuck port clock_enable ;
-; regd[0]                                 ; Stuck at GND due to stuck port data_in      ;
-; regif[0]                                ; Stuck at GND due to stuck port data_in      ;
-; Total Number of Removed Registers = 57  ;                                             ;
-+-----------------------------------------+---------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                   ;
++--------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                           ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++--------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; dmem:DataMemory|altsyncram:RAM_rtl_0|altsyncram_g8c1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 64           ; 32           ; 64           ; 32           ; 2048 ; None ;
++--------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                       ;
-+-----------------------------------------+--------------------------------+----------------------------------------+
-; Register name                           ; Reason for Removal             ; Registers Removed due to This Register ;
-+-----------------------------------------+--------------------------------+----------------------------------------+
-; RegFile:regfile_decode|Registers[0][31] ; Stuck at GND                   ; regd[0], regif[0]                      ;
-;                                         ; due to stuck port clock_enable ;                                        ;
-+-----------------------------------------+--------------------------------+----------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                        ;
++----------------------------------------------------------------------+----------------------------------------------------+
+; Register name                                                        ; Reason for Removal                                 ;
++----------------------------------------------------------------------+----------------------------------------------------+
+; mips:MIPS|datapath:Datapath|regif[1]                                 ; Merged with mips:MIPS|datapath:Datapath|regif[0]   ;
+; mips:MIPS|datapath:Datapath|regd[1]                                  ; Merged with mips:MIPS|datapath:Datapath|regd[0]    ;
+; mips:MIPS|datapath:Datapath|regex[125]                               ; Merged with mips:MIPS|datapath:Datapath|regex[121] ;
+; mips:MIPS|datapath:Datapath|regex[16..31,41]                         ; Merged with mips:MIPS|datapath:Datapath|regex[15]  ;
+; mips:MIPS|datapath:Datapath|regex[40]                                ; Merged with mips:MIPS|datapath:Datapath|regex[14]  ;
+; mips:MIPS|datapath:Datapath|regex[39]                                ; Merged with mips:MIPS|datapath:Datapath|regex[13]  ;
+; mips:MIPS|datapath:Datapath|regex[38]                                ; Merged with mips:MIPS|datapath:Datapath|regex[12]  ;
+; mips:MIPS|datapath:Datapath|regex[37]                                ; Merged with mips:MIPS|datapath:Datapath|regex[11]  ;
+; mips:MIPS|datapath:Datapath|regex[9]                                 ; Merged with mips:MIPS|datapath:Datapath|regex[35]  ;
+; mips:MIPS|datapath:Datapath|regex[8]                                 ; Merged with mips:MIPS|datapath:Datapath|regex[34]  ;
+; mips:MIPS|datapath:Datapath|regex[7]                                 ; Merged with mips:MIPS|datapath:Datapath|regex[33]  ;
+; mips:MIPS|datapath:Datapath|regex[6]                                 ; Merged with mips:MIPS|datapath:Datapath|regex[32]  ;
+; mips:MIPS|datapath:Datapath|regex[36]                                ; Merged with mips:MIPS|datapath:Datapath|regex[10]  ;
+; mips:MIPS|datapath:Datapath|regd[36..42,46,51,53..56,60,62]          ; Stuck at GND due to stuck port data_in             ;
+; mips:MIPS|datapath:Datapath|regif[0]                                 ; Stuck at GND due to stuck port data_in             ;
+; mips:MIPS|datapath:Datapath|regex[4,5,10,14,32..35,45,47..50]        ; Stuck at GND due to stuck port data_in             ;
+; mips:MIPS|datapath:Datapath|regmem[3]                                ; Stuck at GND due to stuck port data_in             ;
+; mips:MIPS|datapath:Datapath|regwb[3]                                 ; Stuck at GND due to stuck port data_in             ;
+; mips:MIPS|datapath:Datapath|regd[0]                                  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][31] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][31] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][31] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][31] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][31] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][31] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][31] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][31] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][31] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][31] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][31] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][31] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][31] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][31] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][31]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][31]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][30] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][30] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][30] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][30] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][30] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][30] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][30] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][30] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][30] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][30] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][30] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][30] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][30] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][30] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][30]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][30]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][29] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][29] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][29] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][29] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][29] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][29] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][29] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][29] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][29] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][29] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][29] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][29] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][29] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][29] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][29]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][29]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][28] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][28] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][28] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][28] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][28] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][28] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][28] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][28] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][28] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][28] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][28] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][28] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][28] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][28] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][28]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][28]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][27] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][27] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][27] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][27] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][27] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][27] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][27] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][27] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][27] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][27] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][27] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][27] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][27] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][27] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][27]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][27]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][26] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][26] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][26] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][26] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][26] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][26] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][26] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][26] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][26] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][26] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][26] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][26] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][26] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][26] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][26]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][26]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][25] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][25] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][25] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][25] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][25] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][25] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][25] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][25] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][25] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][25] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][25] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][25] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][25] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][25] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][25]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][25]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][24] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][24] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][24] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][24] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][24] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][24] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][24] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][24] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][24] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][24] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][24] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][24] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][24] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][24] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][24]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][24]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][23] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][23] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][23] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][23] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][23] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][23] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][23] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][23] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][23] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][23] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][23] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][23] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][23] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][23] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][23]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][23]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][22] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][22] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][22] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][22] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][22] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][22] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][22] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][22] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][22] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][22] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][22] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][22] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][22] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][22] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][22]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][22]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][21] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][21] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][21] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][21] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][21] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][21] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][21] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][21] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][21] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][21] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][21] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][21] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][21] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][21] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][21]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][21]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][20] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][20] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][20] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][20] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][20] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][20] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][20] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][20] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][20] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][20] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][20] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][20] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][20] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][20] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][20]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][20]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][19] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][19] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][19] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][19] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][19] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][19] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][19] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][19] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][19] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][19] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][19] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][19] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][19] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][19] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][19]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][19]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][18] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][18] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][18] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][18] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][18] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][18] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][18] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][18] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][18] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][18] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][18] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][18] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][18] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][18] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][18]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][18]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][17] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][17] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][17] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][17] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][17] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][17] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][17] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][17] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][17] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][17] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][17] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][17] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][17] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][17] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][17]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][17]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][16] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][16] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][16] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][16] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][16] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][16] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][16] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][16] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][16] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][16] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][16] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][16] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][16] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][16] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][16]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][16]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][15] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][15] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][15] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][15] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][15] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][15] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][15] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][15] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][15] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][15] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][15] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][15] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][15] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][15] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][15]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][15]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][14] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][14] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][14] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][14] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][14] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][14] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][14] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][14] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][14] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][14] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][14] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][14] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][14] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][14] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][14]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][14]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][13] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][13] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][13] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][13] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][13] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][13] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][13] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][13] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][13] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][13] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][13] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][13] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][13] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][13] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][13]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][13]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][12] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][12] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][12] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][12] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][12] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][12] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][12] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][12] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][12] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][12] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][12] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][12] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][12] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][12] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][12]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][12]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][11] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][11] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][11] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][11] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][11] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][11] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][11] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][11] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][11] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][11] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][11] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][11] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][11] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][11] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][11]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][11]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][10] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][10] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][10] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][10] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][10] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][10] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][10] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][10] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][10] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][10] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][10] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][10] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][10] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][10] ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][10]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][10]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][9]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][9]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][9]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][9]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][9]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][9]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][9]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][9]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][9]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][9]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][9]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][9]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][9]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][9]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][9]   ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][9]   ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][8]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][8]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][8]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][8]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][8]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][8]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][8]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][8]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][8]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][8]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][8]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][8]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][8]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][8]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][8]   ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][8]   ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][7]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][7]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][7]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][7]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][7]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][7]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][7]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][7]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][7]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][7]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][7]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][7]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][7]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][7]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][7]   ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][7]   ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][6]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][6]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][6]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][6]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][6]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][6]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][6]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][6]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][6]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][6]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][6]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][6]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][6]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][6]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][6]   ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][6]   ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][5]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][5]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][5]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][5]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][5]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][5]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][5]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][5]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][5]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][5]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][5]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][5]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][5]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][5]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][5]   ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][5]   ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][4]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][4]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][4]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][4]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][4]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][4]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][4]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][4]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][4]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][4]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][4]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][4]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][4]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][4]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][4]   ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][4]   ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][3]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][3]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][3]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][3]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][3]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][3]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][3]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][3]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][3]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][3]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][3]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][3]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][3]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][3]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][3]   ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][3]   ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][2]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][2]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][2]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][2]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][2]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][2]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][2]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][2]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][2]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][2]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][2]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][2]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][2]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][2]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][2]   ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][2]   ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][1]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][1]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][1]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][1]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][1]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][1]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][1]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][1]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][1]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][1]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][1]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][1]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][1]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][1]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][1]   ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][1]   ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][0]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][0]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][0]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][0]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[27][0]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[26][0]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[25][0]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[24][0]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[15][0]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[14][0]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[13][0]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[12][0]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[11][0]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[10][0]  ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[9][0]   ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[8][0]   ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|regd[2..27]                              ; Lost fanout                                        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][6]   ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][7]   ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][8]   ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][9]   ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][10]  ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][11]  ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][12]  ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][13]  ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][14]  ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][15]  ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][16]  ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][17]  ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][2]   ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][3]   ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][4]   ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][5]   ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][31]  ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][18]  ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][19]  ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][20]  ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][21]  ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][22]  ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][23]  ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][24]  ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][25]  ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][26]  ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][27]  ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][28]  ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][29]  ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][30]  ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][1]   ; Stuck at GND due to stuck port clock_enable        ;
+; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[0][0]   ; Stuck at GND due to stuck port clock_enable        ;
+; dmem:DataMemory|RAM_rtl_0_bypass[2]                                  ; Merged with mips:MIPS|datapath:Datapath|regmem[39] ;
+; dmem:DataMemory|RAM_rtl_0_bypass[4]                                  ; Merged with mips:MIPS|datapath:Datapath|regmem[40] ;
+; dmem:DataMemory|RAM_rtl_0_bypass[6]                                  ; Merged with mips:MIPS|datapath:Datapath|regmem[41] ;
+; dmem:DataMemory|RAM_rtl_0_bypass[8]                                  ; Merged with mips:MIPS|datapath:Datapath|regmem[42] ;
+; dmem:DataMemory|RAM_rtl_0_bypass[10]                                 ; Merged with mips:MIPS|datapath:Datapath|regmem[43] ;
+; dmem:DataMemory|RAM_rtl_0_bypass[12]                                 ; Merged with mips:MIPS|datapath:Datapath|regmem[44] ;
+; mips:MIPS|datapath:Datapath|regd[59,63]                              ; Merged with mips:MIPS|datapath:Datapath|regd[58]   ;
+; mips:MIPS|datapath:Datapath|regd[35]                                 ; Merged with mips:MIPS|datapath:Datapath|regd[50]   ;
+; mips:MIPS|datapath:Datapath|regd[47]                                 ; Merged with mips:MIPS|datapath:Datapath|regd[57]   ;
+; mips:MIPS|datapath:Datapath|regd[45]                                 ; Merged with mips:MIPS|datapath:Datapath|regd[33]   ;
+; mips:MIPS|datapath:Datapath|regd[44]                                 ; Merged with mips:MIPS|datapath:Datapath|regd[43]   ;
+; mips:MIPS|datapath:Datapath|regex[15]                                ; Merged with mips:MIPS|datapath:Datapath|regex[51]  ;
+; mips:MIPS|datapath:Datapath|regex[3]                                 ; Merged with mips:MIPS|datapath:Datapath|regex[44]  ;
+; mips:MIPS|datapath:Datapath|regex[12]                                ; Merged with mips:MIPS|datapath:Datapath|regex[11]  ;
+; mips:MIPS|datapath:Datapath|regex[1]                                 ; Merged with mips:MIPS|datapath:Datapath|regex[13]  ;
+; mips:MIPS|datapath:Datapath|regd[28..31]                             ; Lost fanout                                        ;
+; Total Number of Removed Registers = 651                              ;                                                    ;
++----------------------------------------------------------------------+----------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                      ;
++---------------------------------------+---------------------------+------------------------------------------------------------------------------+
+; Register name                         ; Reason for Removal        ; Registers Removed due to This Register                                       ;
++---------------------------------------+---------------------------+------------------------------------------------------------------------------+
+; mips:MIPS|datapath:Datapath|regd[56]  ; Stuck at GND              ; mips:MIPS|datapath:Datapath|regex[50],                                       ;
+;                                       ; due to stuck port data_in ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][31],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][31],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][31],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][31],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][28],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][28],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][28],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][28],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][27],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][27],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][27],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][27],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][26],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][26],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][26],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][26],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][25],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][25],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][25],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][25],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][24],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][24],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][24],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][24],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][23],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][23],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][23],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][23],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][22],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][22],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][22],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][22],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][21],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][21],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][21],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][21],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][20],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][20],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][20],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][20],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][19],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][19],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][19],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][19],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][18],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][18],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][18],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][18],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][17],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][17],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][17],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][17],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][16],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][16],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][16],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][16],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][15],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][15],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][15],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][15],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][14],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][14],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][14],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][14],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][13],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][13],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][13],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][13],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][12],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][12],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][12],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][12],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][11],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][11],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][11],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][11],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][10],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][10],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][10],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][10],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][9],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][9],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][9],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][9],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][8],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][8],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][8],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][8],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][7],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][7],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][7],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][7],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][6],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][6],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][6],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][6],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][5],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][5],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][5],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][5],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][4],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][4],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][4],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][4],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][3],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][3],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][3],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][3],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][2],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][2],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][2],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][2],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][1],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][1],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][1],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][1],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][0],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][0],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][0],         ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][0]          ;
+; mips:MIPS|datapath:Datapath|regd[51]  ; Stuck at GND              ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][30],        ;
+;                                       ; due to stuck port data_in ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][30],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][30],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][30],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[31][29],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[30][29],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[29][29],        ;
+;                                       ;                           ; mips:MIPS|datapath:Datapath|RegFile:regfile_decode|Registers[28][29]         ;
+; mips:MIPS|datapath:Datapath|regd[46]  ; Stuck at GND              ; mips:MIPS|datapath:Datapath|regex[14], mips:MIPS|datapath:Datapath|regd[29], ;
+;                                       ; due to stuck port data_in ; mips:MIPS|datapath:Datapath|regd[30], mips:MIPS|datapath:Datapath|regd[31]   ;
+; mips:MIPS|datapath:Datapath|regex[45] ; Stuck at GND              ; mips:MIPS|datapath:Datapath|regmem[3], mips:MIPS|datapath:Datapath|regwb[3]  ;
+;                                       ; due to stuck port data_in ;                                                                              ;
+; mips:MIPS|datapath:Datapath|regd[55]  ; Stuck at GND              ; mips:MIPS|datapath:Datapath|regex[49]                                        ;
+;                                       ; due to stuck port data_in ;                                                                              ;
+; mips:MIPS|datapath:Datapath|regd[54]  ; Stuck at GND              ; mips:MIPS|datapath:Datapath|regex[48]                                        ;
+;                                       ; due to stuck port data_in ;                                                                              ;
+; mips:MIPS|datapath:Datapath|regd[53]  ; Stuck at GND              ; mips:MIPS|datapath:Datapath|regex[47]                                        ;
+;                                       ; due to stuck port data_in ;                                                                              ;
+; mips:MIPS|datapath:Datapath|regd[42]  ; Stuck at GND              ; mips:MIPS|datapath:Datapath|regex[10]                                        ;
+;                                       ; due to stuck port data_in ;                                                                              ;
+; mips:MIPS|datapath:Datapath|regd[41]  ; Stuck at GND              ; mips:MIPS|datapath:Datapath|regex[35]                                        ;
+;                                       ; due to stuck port data_in ;                                                                              ;
+; mips:MIPS|datapath:Datapath|regd[40]  ; Stuck at GND              ; mips:MIPS|datapath:Datapath|regex[34]                                        ;
+;                                       ; due to stuck port data_in ;                                                                              ;
+; mips:MIPS|datapath:Datapath|regd[39]  ; Stuck at GND              ; mips:MIPS|datapath:Datapath|regex[33]                                        ;
+;                                       ; due to stuck port data_in ;                                                                              ;
+; mips:MIPS|datapath:Datapath|regd[38]  ; Stuck at GND              ; mips:MIPS|datapath:Datapath|regex[32]                                        ;
+;                                       ; due to stuck port data_in ;                                                                              ;
+; mips:MIPS|datapath:Datapath|regd[37]  ; Stuck at GND              ; mips:MIPS|datapath:Datapath|regex[5]                                         ;
+;                                       ; due to stuck port data_in ;                                                                              ;
+; mips:MIPS|datapath:Datapath|regd[36]  ; Stuck at GND              ; mips:MIPS|datapath:Datapath|regex[4]                                         ;
+;                                       ; due to stuck port data_in ;                                                                              ;
++---------------------------------------+---------------------------+------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -277,53 +1011,197 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1325  ;
-; Number of registers using Synchronous Clear  ; 8     ;
-; Number of registers using Synchronous Load   ; 38    ;
-; Number of registers using Asynchronous Clear ; 1325  ;
+; Total registers                              ; 816   ;
+; Number of registers using Synchronous Clear  ; 18    ;
+; Number of registers using Synchronous Load   ; 18    ;
+; Number of registers using Asynchronous Clear ; 745   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1084  ;
+; Number of registers using Clock Enable       ; 553   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------------------------------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                               ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------------------------------------+----------------------------+
-; 3:1                ; 63 bits   ; 126 LEs       ; 63 LEs               ; 63 LEs                 ; |datapath|regd[35]                       ;                            ;
-; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; |datapath|regif[12]                      ;                            ;
-; 17:1               ; 7 bits    ; 77 LEs        ; 56 LEs               ; 21 LEs                 ; |datapath|regmem[55]                     ;                            ;
-; 16:1               ; 7 bits    ; 70 LEs        ; 56 LEs               ; 14 LEs                 ; |datapath|regmem[51]                     ;                            ;
-; 18:1               ; 4 bits    ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; |datapath|regmem[61]                     ;                            ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 32 LEs               ; 12 LEs                 ; |datapath|regmem[44]                     ;                            ;
-; 19:1               ; 2 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; |datapath|regmem[66]                     ;                            ;
-; 18:1               ; 2 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; |datapath|regmem[39]                     ;                            ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; |datapath|writedatae[5]                  ;                            ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; |datapath|srcae[8]                       ;                            ;
-; 33:1               ; 32 bits   ; 704 LEs       ; 704 LEs              ; 0 LEs                  ; |datapath|RegFile:regfile_decode|RD1[19] ;                            ;
-; 33:1               ; 32 bits   ; 704 LEs       ; 704 LEs              ; 0 LEs                  ; |datapath|RegFile:regfile_decode|RD2[4]  ;                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------------------------------------+----------------------------+
++------------------------------------------------------------------+
+; Registers Added for RAM Pass-Through Logic                       ;
++--------------------------------------+---------------------------+
+; Register Name                        ; RAM Name                  ;
++--------------------------------------+---------------------------+
+; dmem:DataMemory|RAM_rtl_0_bypass[0]  ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[1]  ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[2]  ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[3]  ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[4]  ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[5]  ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[6]  ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[7]  ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[8]  ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[9]  ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[10] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[11] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[12] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[13] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[14] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[15] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[16] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[17] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[18] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[19] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[20] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[21] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[22] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[23] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[24] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[25] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[26] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[27] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[28] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[29] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[30] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[31] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[32] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[33] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[34] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[35] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[36] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[37] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[38] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[39] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[40] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[41] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[42] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[43] ; dmem:DataMemory|RAM_rtl_0 ;
+; dmem:DataMemory|RAM_rtl_0_bypass[44] ; dmem:DataMemory|RAM_rtl_0 ;
++--------------------------------------+---------------------------+
 
 
-+--------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ALU:ALU_execute ;
-+----------------+-------+-------------------------------------+
-; Parameter Name ; Value ; Type                                ;
-+----------------+-------+-------------------------------------+
-; N              ; 32    ; Signed Integer                      ;
-+----------------+-------+-------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+--------------------------------------------------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                                             ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+--------------------------------------------------------+----------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; |top|mips:MIPS|datapath:Datapath|regex[86]             ;                            ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; |top|mips:MIPS|datapath:Datapath|regex[118]            ;                            ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; |top|mips:MIPS|datapath:Datapath|regd[57]              ;                            ;
+; 18:1               ; 32 bits   ; 384 LEs       ; 352 LEs              ; 32 LEs                 ; |top|mips:MIPS|datapath:Datapath|regex[71]             ;                            ;
+; 17:1               ; 7 bits    ; 77 LEs        ; 56 LEs               ; 21 LEs                 ; |top|mips:MIPS|datapath:Datapath|regmem[57]            ;                            ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 56 LEs               ; 14 LEs                 ; |top|mips:MIPS|datapath:Datapath|regmem[47]            ;                            ;
+; 18:1               ; 4 bits    ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; |top|mips:MIPS|datapath:Datapath|regmem[62]            ;                            ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; |top|mips:MIPS|datapath:Datapath|regmem[65]            ;                            ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; |top|dmem:DataMemory|RAM                               ;                            ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; |top|mips:MIPS|datapath:Datapath|writedatae[3]         ;                            ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; |top|mips:MIPS|datapath:Datapath|srcae[1]              ;                            ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; |top|mips:MIPS|datapath:Datapath|ALU:ALU_execute|Mux24 ;                            ;
+; 18:1               ; 2 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; |top|mips:MIPS|datapath:Datapath|ALU:ALU_execute|Mux28 ;                            ;
++--------------------+-----------+---------------+----------------------+------------------------+--------------------------------------------------------+----------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Source assignments for dmem:DataMemory|altsyncram:RAM_rtl_0|altsyncram_g8c1:auto_generated ;
++---------------------------------+--------------------+------+------------------------------+
+; Assignment                      ; Value              ; From ; To                           ;
++---------------------------------+--------------------+------+------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                            ;
++---------------------------------+--------------------+------+------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mips:MIPS|datapath:Datapath|ALU:ALU_execute ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------+
-; Port Connectivity Checks: "ALU:ALU_execute"       ;
-+------+--------+----------+------------------------+
-; Port ; Type   ; Severity ; Details                ;
-+------+--------+----------+------------------------+
-; ZF   ; Output ; Info     ; Explicitly unconnected ;
-+------+--------+----------+------------------------+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: dmem:DataMemory|altsyncram:RAM_rtl_0 ;
++------------------------------------+----------------------+---------------------------+
+; Parameter Name                     ; Value                ; Type                      ;
++------------------------------------+----------------------+---------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                   ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY              ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE              ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE            ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                   ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                   ;
+; WIDTH_A                            ; 32                   ; Untyped                   ;
+; WIDTHAD_A                          ; 6                    ; Untyped                   ;
+; NUMWORDS_A                         ; 64                   ; Untyped                   ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                   ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                   ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                   ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                   ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                   ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                   ;
+; WIDTH_B                            ; 32                   ; Untyped                   ;
+; WIDTHAD_B                          ; 6                    ; Untyped                   ;
+; NUMWORDS_B                         ; 64                   ; Untyped                   ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                   ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                   ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                   ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                   ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                   ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                   ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                   ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                   ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                   ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                   ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                   ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                   ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                   ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                   ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                   ;
+; BYTE_SIZE                          ; 8                    ; Untyped                   ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                   ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                   ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                   ;
+; INIT_FILE                          ; UNUSED               ; Untyped                   ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                   ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                   ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                   ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                   ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                   ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                   ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                   ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                   ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                   ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                   ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                   ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                   ;
+; CBXI_PARAMETER                     ; altsyncram_g8c1      ; Untyped                   ;
++------------------------------------+----------------------+---------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                 ;
++-------------------------------------------+--------------------------------------+
+; Name                                      ; Value                                ;
++-------------------------------------------+--------------------------------------+
+; Number of entity instances                ; 1                                    ;
+; Entity Instance                           ; dmem:DataMemory|altsyncram:RAM_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                            ;
+;     -- WIDTH_A                            ; 32                                   ;
+;     -- NUMWORDS_A                         ; 64                                   ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                         ;
+;     -- WIDTH_B                            ; 32                                   ;
+;     -- NUMWORDS_B                         ; 64                                   ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                               ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                         ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                 ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                            ;
++-------------------------------------------+--------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "mips:MIPS|datapath:Datapath|ALU:ALU_execute" ;
++------+--------+----------+----------------------------------------------+
+; Port ; Type   ; Severity ; Details                                      ;
++------+--------+----------+----------------------------------------------+
+; ZF   ; Output ; Info     ; Explicitly unconnected                       ;
++------+--------+----------+----------------------------------------------+
 
 
 +-------------------------------+
@@ -331,7 +1209,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:20     ;
+; Top            ; 00:00:11     ;
 +----------------+--------------+
 
 
@@ -341,9 +1219,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.0 Build 178 05/31/2012 SJ Web Edition
-    Info: Processing started: Sun Dec 13 22:04:04 2015
+    Info: Processing started: Mon Dec 14 00:40:24 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS -c MIPS
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file signext_shamt.v
+    Info (12023): Found entity 1: signExt_shamt
 Info (12021): Found 1 design units, including 1 entities, in source file dmem.v
     Info (12023): Found entity 1: dmem
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
@@ -372,31 +1252,96 @@ Info (12021): Found 1 design units, including 1 entities, in source file top.v
     Info (12023): Found entity 1: top
 Info (12021): Found 1 design units, including 1 entities, in source file testbench.v
     Info (12023): Found entity 1: testbench
-Info (12127): Elaborating entity "datapath" for the top level hierarchy
-Info (12128): Elaborating entity "RegFile" for hierarchy "RegFile:regfile_decode"
+Info (12127): Elaborating entity "top" for the top level hierarchy
+Info (12128): Elaborating entity "mips" for hierarchy "mips:MIPS"
+Info (12128): Elaborating entity "CU" for hierarchy "mips:MIPS|CU:ControlUnit"
+Info (12128): Elaborating entity "MainDec" for hierarchy "mips:MIPS|CU:ControlUnit|MainDec:MainDecoder"
+Info (12128): Elaborating entity "ALUDec" for hierarchy "mips:MIPS|CU:ControlUnit|ALUDec:ALUDecoder"
+Info (12128): Elaborating entity "datapath" for hierarchy "mips:MIPS|datapath:Datapath"
+Info (12128): Elaborating entity "RegFile" for hierarchy "mips:MIPS|datapath:Datapath|RegFile:regfile_decode"
 Warning (10240): Verilog HDL Always Construct warning at RegFile.v(17): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct
-Info (12128): Elaborating entity "SignEx" for hierarchy "SignEx:signex_decode"
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU_execute"
+Info (12128): Elaborating entity "SignEx" for hierarchy "mips:MIPS|datapath:Datapath|SignEx:signex_decode"
+Info (12128): Elaborating entity "ALU" for hierarchy "mips:MIPS|datapath:Datapath|ALU:ALU_execute"
 Warning (10764): Verilog HDL warning at ALU.v(20): converting signed shift amount to unsigned
 Warning (10764): Verilog HDL warning at ALU.v(21): converting signed shift amount to unsigned
 Warning (10764): Verilog HDL warning at ALU.v(22): converting signed shift amount to unsigned
+Info (12128): Elaborating entity "signExt_shamt" for hierarchy "mips:MIPS|datapath:Datapath|signExt_shamt:signExt1"
+Info (12128): Elaborating entity "HazardUnit" for hierarchy "mips:MIPS|HazardUnit:Hazard"
+Info (12128): Elaborating entity "imem" for hierarchy "imem:InstructionMemory"
+Warning (10850): Verilog HDL warning at imem.v(10): number of words (7) in memory file does not match the number of elements in the address range [0:63]
+Warning (10030): Net "RAM.data_a" at imem.v(7) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "RAM.waddr_a" at imem.v(7) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "RAM.we_a" at imem.v(7) has no driver or initial value, using a default initial value '0'
+Info (12128): Elaborating entity "dmem" for hierarchy "dmem:DataMemory"
+Warning (10175): Verilog HDL warning at dmem.v(18): ignoring unsupported system task
+Warning (276020): Inferred RAM node "dmem:DataMemory|RAM_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/db/MIPS.ram0_imem_37c714.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "dmem:DataMemory|RAM_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 6
+        Info (286033): Parameter NUMWORDS_A set to 64
+        Info (286033): Parameter WIDTH_B set to 32
+        Info (286033): Parameter WIDTHAD_B set to 6
+        Info (286033): Parameter NUMWORDS_B set to 64
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+Info (12130): Elaborated megafunction instantiation "dmem:DataMemory|altsyncram:RAM_rtl_0"
+Info (12133): Instantiated megafunction "dmem:DataMemory|altsyncram:RAM_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "32"
+    Info (12134): Parameter "WIDTHAD_A" = "6"
+    Info (12134): Parameter "NUMWORDS_A" = "64"
+    Info (12134): Parameter "WIDTH_B" = "32"
+    Info (12134): Parameter "WIDTHAD_B" = "6"
+    Info (12134): Parameter "NUMWORDS_B" = "64"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_g8c1.tdf
+    Info (12023): Found entity 1: altsyncram_g8c1
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "pc[0]" is stuck at GND
     Warning (13410): Pin "pc[1]" is stuck at GND
+    Warning (13410): Pin "instr[4]" is stuck at GND
+    Warning (13410): Pin "instr[5]" is stuck at GND
+    Warning (13410): Pin "instr[6]" is stuck at GND
+    Warning (13410): Pin "instr[7]" is stuck at GND
+    Warning (13410): Pin "instr[8]" is stuck at GND
+    Warning (13410): Pin "instr[9]" is stuck at GND
+    Warning (13410): Pin "instr[10]" is stuck at GND
+    Warning (13410): Pin "instr[14]" is stuck at GND
+    Warning (13410): Pin "instr[19]" is stuck at GND
+    Warning (13410): Pin "instr[21]" is stuck at GND
+    Warning (13410): Pin "instr[22]" is stuck at GND
+    Warning (13410): Pin "instr[23]" is stuck at GND
+    Warning (13410): Pin "instr[24]" is stuck at GND
+    Warning (13410): Pin "instr[28]" is stuck at GND
+    Warning (13410): Pin "instr[30]" is stuck at GND
+Info (17049): 543 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/output_files/MIPS.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "regwrited"
-Info (21057): Implemented 3985 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 87 input pins
-    Info (21059): Implemented 149 output pins
-    Info (21061): Implemented 3749 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 359 megabytes
-    Info: Processing ended: Sun Dec 13 22:04:25 2015
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:21
+Info (21057): Implemented 2229 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 161 output pins
+    Info (21061): Implemented 2034 logic cells
+    Info (21064): Implemented 32 RAM segments
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 30 warnings
+    Info: Peak virtual memory: 369 megabytes
+    Info: Processing ended: Mon Dec 14 00:40:40 2015
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:13
 
 
 +------------------------------------------+

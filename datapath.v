@@ -5,7 +5,7 @@
 //Pipeline datapath
 module datapath(
 	input clk, reset_n,
-	input regwrited, memtoregd, memwrited, alusrcd, regdstd, branchd_beq, branchd_bne, jumpd,	//from Control unit
+	input regwrited, memtoregd, memwrited, alusrcd, regdstd, branchd_beq, branchd_bne, jumpd,aluselectshilfd,	//from Control unit
 	input [3:0]alucontrold,															//from Control unit
 	input 	[31:0]	instr, 			//from instruction memory
 	input 	[31:0] 	readdatam,		//from data memory
@@ -32,7 +32,7 @@ module datapath(
 //Registers stage
 reg [31:0]regif;
 reg [63:0]regd;
-reg [119:0]regex;
+reg [125:0]regex;
 reg [71:0]regmem;
 reg [70:0]regwb;
 
@@ -52,12 +52,14 @@ wire [31:0]signimmd;
 reg equald;
 wire [31:0]muxrd1,muxrd2;
 wire x,y;
+wire [4:0]shamtD;
 //Execute stage
 wire [3:0]alucontrole;
-wire alusrce,regdste;
+wire alusrce,regdste,aluselectshilfe;
 wire [4:0]mux21towriterege;
-wire [31:0]srcae,srcbe, writedatae;
-wire [31:0]outalue;
+wire [31:0]srcae,srcae1,srcbe, writedatae;
+wire [31:0]outalue, extshamte;
+wire [4:0]shamtE;
 //Data memory stage
 wire memwritem;
 wire [31:0]aluoutm;
@@ -117,6 +119,7 @@ SignEx	signex_decode(
 	.X(instrd[15:0]),
 	.Y(signimmd)
 	);
+assign shamtD = instrd[10:6];
 assign pcbranchd = (signimmd << 2) + pcplus4d;
 assign opinstr = instrd[31:26];
 assign pcjump = {pcplus4d[31:28],instrd[25:0],2'b00};
@@ -138,21 +141,24 @@ assign rtd = instrd[20:16];
 //Execute stage
 always @(posedge clk or negedge reset_n)
 begin
-	if ((!reset_n)) regex <= 120'd0;
-	else 	if (flushe) regex <= 120'd0;
+	if ((!reset_n)) regex <= 126'd0;
+	else 	if (flushe) regex <= 126'd0;
 			else 
 			begin
-				regex <= {regwrited,memtoregd,memwrited,alucontrold,alusrcd,regdstd,rd1,rd2,instrd[25:11],signimmd};
+				regex <= {aluselectshilfd,regwrited,memtoregd,memwrited,alucontrold,alusrcd,regdstd,rd1,rd2,instrd[25:11],shamtD,signimmd};
 			end
 end
-assign alucontrole = regex[116:113];
-assign alusrce = regex[112];
-assign regdste = regex[111];
-assign rse = regex[46:42];
-assign rte = regex[41:37];
-assign mux21towriterege = regdste ? regex[36:32] : regex[41:37];
-assign srcae = (forwardae == 2'b00) ? regex[110:79] : ((forwardae == 2'b01) ? resultw : aluoutm);
-assign writedatae = (forwardbe == 2'b00) ? regex[78:47]  : ((forwardbe == 2'b01) ? resultw : aluoutm);
+assign aluselectshilfe = regex[125];
+assign alucontrole = regex[121:118];
+assign alusrce = regex[117];
+assign regdste = regex[116];
+assign rse = regex[51:47];
+assign rte = regex[46:42];
+assign mux21towriterege = regdste ? regex[41:37] : rte;
+assign shamtE = regex[36:32];
+assign srcae1 = (forwardae == 2'b00) ? regex[115:84] : ((forwardae == 2'b01) ? resultw : aluoutm);
+assign srcae = aluselectshilfe ? extshamte : srcae1;
+assign writedatae = (forwardbe == 2'b00) ? regex[83:52]  : ((forwardbe == 2'b01) ? resultw : aluoutm);
 assign srcbe = alusrce ? regex[31:0] : writedatae;
 assign writerege = mux21towriterege;
 ALU ALU_execute(
@@ -162,14 +168,16 @@ ALU ALU_execute(
 	.Y(outalue), 
 	.ZF()
 	);
-assign regwritee = regex[118];
-assign memtorege = regex[117];
+// extend shamt field for R-type instruction
+signExt_shamt signExt1(.shamt(shamtE), .shamt_out(extshamte));
+assign regwritee = regex[124];
+assign memtorege = regex[123];
 
 //Data memory stage
 always @(posedge clk or negedge reset_n)
 begin
 	if (!reset_n) regmem <= 72'd0;
-	else regmem <= {regex[119:117],outalue,writedatae,mux21towriterege};
+	else regmem <= {regex[124:122],outalue,writedatae,mux21towriterege};
 end
 assign regwritem = regmem[71];
 assign memtoregm = regmem[70];
