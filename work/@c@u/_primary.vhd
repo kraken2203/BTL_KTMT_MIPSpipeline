@@ -6,10 +6,13 @@ entity CU is
         Funct           : in     vl_logic_vector(5 downto 0);
         MemtoReg        : out    vl_logic;
         MemWrite        : out    vl_logic;
-        Branch          : out    vl_logic;
+        Branch_beq      : out    vl_logic;
+        Branch_bne      : out    vl_logic;
         ALUSrc          : out    vl_logic;
         RegDst          : out    vl_logic;
         RegWrite        : out    vl_logic;
-        ALUCtrl         : out    vl_logic_vector(2 downto 0)
+        Jump            : out    vl_logic;
+        BranchD         : out    vl_logic;
+        ALUCtrl         : out    vl_logic_vector(3 downto 0)
     );
 end CU;

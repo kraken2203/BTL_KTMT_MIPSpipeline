@@ -1,5 +1,5 @@
 # Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
-# OpenFile F:/GITHUB/BTL_KTMT_MIPSpipeline/MIPS_tb.mpf 
+# OpenFile {F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MIPS_tb.mpf} 
 # Loading project MIPS_tb
 # Compile of ALU.v was successful.
 # Compile of ALUDec.v was successful.
@@ -17,6 +17,22 @@
 # Compile of top.v was successful.
 # Compile of dmem.v was successful with warnings.
 # 15 compiles, 0 failed with no errors. 
+# Compile of ALU.v was successful.
+# Compile of ALUDec.v was successful.
+# Compile of ALUDec_tb.v was successful.
+# Compile of CU.v was successful.
+# Compile of datapath.v was successful.
+# Compile of HazardUnit.v was successful.
+# Compile of imem.v was successful.
+# Compile of MainDec.v was successful.
+# Compile of mips.v was successful.
+# Compile of MUX4_1.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of SignEx.v was successful.
+# Compile of testbench.v was successful.
+# Compile of top.v was successful.
+# Compile of dmem.v was successful with warnings.
+# 15 compiles, 0 failed with no errors. 
 vsim -voptargs=+acc work.testbench
 # vsim -voptargs=+acc work.testbench 
 # Loading work.testbench
@@ -29,701 +45,168 @@ vsim -voptargs=+acc work.testbench
 # Loading work.RegFile
 # Loading work.SignEx
 # Loading work.ALU
-# Loading work.MUX4_1
 # Loading work.HazardUnit
 # Loading work.imem
 # Loading work.dmem
-run
-#                    0	pcnext = xxxxxxxx, instruction next = xxxxxxxx
-#                    0	current instruction = xxxxxxxx
-#                    0	Disable reset
-#                    5	pcnext = 00000004, instruction next = 20020005
-#                    5	current instruction = 00000000
-#                   15	pcnext = 00000004, instruction next = 20020005
-#                   15	current instruction = 00000000
-#                   25	pcnext = 00000008, instruction next = 2003000c
-#                   25	current instruction = 20020005
-#                   35	pcnext = 0000000c, instruction next = 2067fff7
-#                   35	current instruction = 2003000c
-#                   45	pcnext = 00000010, instruction next = 00e22025
-#                   45	current instruction = 2067fff7
-#                   50	Reg address =  2, Data =          5
-#                   55	pcnext = 00000014, instruction next = 00642824
-#                   55	current instruction = 00e22025
-#                   60	Reg address =  3, Data =         12
-#                   65	pcnext = 00000018, instruction next = 00a42820
-#                   65	current instruction = 00642824
-#                   70	Reg address =  7, Data =          3
-#                   75	pcnext = 0000001c, instruction next = 10a70008
-#                   75	current instruction = 00a42820
-#                   80	Reg address =  4, Data =          7
-#                   85	pcnext = 0000003c, instruction next = 0064202a
-#                   85	current instruction = 10a70008
-#                   90	Reg address =  5, Data =          4
-#                   95	pcnext = 00000020, instruction next = 0064202a
-#                   95	current instruction = 00000000
-#                  100	Reg address =  5, Data =         11
-#                  105	pcnext = 00000024, instruction next = 10800001
-#                  105	current instruction = 0064202a
-#                  115	pcnext = 00000028, instruction next = 20050000
-#                  115	current instruction = 10800001
-#                  125	pcnext = 00000028, instruction next = 20050000
-#                  125	current instruction = 00000000
-#                  130	Reg address =  4, Data =          0
-#                  135	pcnext = 0000002c, instruction next = 00e2202a
-#                  135	current instruction = 20050000
-#                  145	pcnext = 00000030, instruction next = 00853820
-#                  145	current instruction = 00e2202a
-#                  155	pcnext = 00000034, instruction next = 00e23822
-#                  155	current instruction = 00853820
-#                  160	Reg address =  5, Data =          0
-#                  165	pcnext = 00000038, instruction next = ac670044
-#                  165	current instruction = 00e23822
-#                  170	Reg address =  4, Data =          1
-#                  175	pcnext = 0000003c, instruction next = 8c020050
-#                  175	current instruction = ac670044
-#                  180	Reg address =  7, Data =          1
-#                  185	pcnext = 00000040, instruction next = ac020054
-#                  185	current instruction = 8c020050
-#                  190	Reg address =  7, Data = 4294967292
-#                  195	pcnext = 00000044, instruction next = xxxxxxxx
-#                  195	current instruction = ac020054
-#                  195	Write into address:         80 	data: 4294967292
-#                  205	pcnext = 00000044, instruction next = xxxxxxxx
-#                  205	current instruction = ac020054
-#                  210	Reg address =  2, Data = 4294967292
-#                  215	pcnext = 00000048, instruction next = xxxxxxxx
-#                  215	current instruction = xxxxxxxx
-#                  225	pcnext = 00000048, instruction next = xxxxxxxx
-#                  225	current instruction = xxxxxxxx
-#                  225	Write into address:         84 	data: 4294967292
-#                  235	pcnext = 0000004c, instruction next = xxxxxxxx
-#                  235	current instruction = xxxxxxxx
-#                  245	pcnext = 00000050, instruction next = xxxxxxxx
-#                  245	current instruction = xxxxxxxx
-#                  255	pcnext = 00000054, instruction next = xxxxxxxx
-#                  255	current instruction = xxxxxxxx
-#                  265	pcnext = 00000058, instruction next = xxxxxxxx
-#                  265	current instruction = xxxxxxxx
-#                  275	pcnext = 0000005c, instruction next = xxxxxxxx
-#                  275	current instruction = xxxxxxxx
-#                  285	pcnext = 00000060, instruction next = xxxxxxxx
-#                  285	current instruction = xxxxxxxx
-#                  295	pcnext = 00000064, instruction next = xxxxxxxx
-#                  295	current instruction = xxxxxxxx
-#                  305	pcnext = 00000068, instruction next = xxxxxxxx
-#                  305	current instruction = xxxxxxxx
-#                  315	pcnext = 0000006c, instruction next = xxxxxxxx
-#                  315	current instruction = xxxxxxxx
-#                  325	pcnext = 00000070, instruction next = xxxxxxxx
-#                  325	current instruction = xxxxxxxx
-#                  335	pcnext = 00000074, instruction next = xxxxxxxx
-#                  335	current instruction = xxxxxxxx
-#                  345	pcnext = 00000078, instruction next = xxxxxxxx
-#                  345	current instruction = xxxxxxxx
-#                  355	pcnext = 0000007c, instruction next = xxxxxxxx
-#                  355	current instruction = xxxxxxxx
-#                  365	pcnext = 00000080, instruction next = xxxxxxxx
-#                  365	current instruction = xxxxxxxx
-#                  375	pcnext = 00000084, instruction next = xxxxxxxx
-#                  375	current instruction = xxxxxxxx
-#                  385	pcnext = 00000088, instruction next = xxxxxxxx
-#                  385	current instruction = xxxxxxxx
-#                  395	pcnext = 0000008c, instruction next = xxxxxxxx
-#                  395	current instruction = xxxxxxxx
-#                  405	pcnext = 00000090, instruction next = xxxxxxxx
-#                  405	current instruction = xxxxxxxx
-#                  415	pcnext = 00000094, instruction next = xxxxxxxx
-#                  415	current instruction = xxxxxxxx
-#                  425	pcnext = 00000098, instruction next = xxxxxxxx
-#                  425	current instruction = xxxxxxxx
-#                  435	pcnext = 0000009c, instruction next = xxxxxxxx
-#                  435	current instruction = xxxxxxxx
-#                  445	pcnext = 000000a0, instruction next = xxxxxxxx
-#                  445	current instruction = xxxxxxxx
-#                  455	pcnext = 000000a4, instruction next = xxxxxxxx
-#                  455	current instruction = xxxxxxxx
-#                  465	pcnext = 000000a8, instruction next = xxxxxxxx
-#                  465	current instruction = xxxxxxxx
-#                  475	pcnext = 000000ac, instruction next = xxxxxxxx
-#                  475	current instruction = xxxxxxxx
-#                  485	pcnext = 000000b0, instruction next = xxxxxxxx
-#                  485	current instruction = xxxxxxxx
-#                  495	pcnext = 000000b4, instruction next = xxxxxxxx
-#                  495	current instruction = xxxxxxxx
-# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
-#    Time: 500 ps  Iteration: 0  Instance: /testbench
-# 1
-# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
+# ** Warning: (vsim-3015) F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/mips.v(39): [PCDPC] - Port size (3 or 3) does not match connection size (4) for port 'ALUCtrl'. The port definition is at: F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/CU.v(8).
+# 
+#         Region: /testbench/DUT/MIPS/ControlUnit
+# ** Warning: (vsim-3015) F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/CU.v(15): [PCDPC] - Port size (3 or 3) does not match connection size (2) for port 'ALUOp'. The port definition is at: F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec.v(13).
+# 
+#         Region: /testbench/DUT/MIPS/ControlUnit/MainDecoder
+# ** Warning: (vsim-3015) F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/CU.v(17): [PCDPC] - Port size (3 or 3) does not match connection size (2) for port 'ALUOp'. The port definition is at: F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec.v(6).
+# 
+#         Region: /testbench/DUT/MIPS/ControlUnit/ALUDecoder
+# ** Warning: (vsim-3015) F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/CU.v(17): [PCDPC] - Port size (4 or 4) does not match connection size (3) for port 'ALUCtrl'. The port definition is at: F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec.v(7).
+# 
+#         Region: /testbench/DUT/MIPS/ControlUnit/ALUDecoder
+# ** Warning: (vsim-3015) F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/datapath.v(163): [PCDPC] - Port size (4 or 4) does not match connection size (3) for port 'F'. The port definition is at: F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU.v(5).
+# 
+#         Region: /testbench/DUT/MIPS/Datapath/ALU_execute
+# Compile of ALU.v was successful.
+# Compile of ALUDec.v was successful.
+# Compile of ALUDec_tb.v was successful.
+# Compile of CU.v was successful.
+# Compile of datapath.v was successful.
+# Compile of HazardUnit.v was successful.
+# Compile of imem.v was successful.
+# Compile of MainDec.v was successful.
+# Compile of mips.v was successful.
+# Compile of MUX4_1.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of SignEx.v was successful.
+# Compile of testbench.v was successful.
+# Compile of top.v was successful.
+# Compile of dmem.v was successful with warnings.
+# 15 compiles, 0 failed with no errors. 
 restart
+# Loading work.testbench
+# Loading work.top
+# Loading work.mips
+# Loading work.CU
+# Loading work.MainDec
+# Loading work.ALUDec
+# Loading work.datapath
+# Loading work.RegFile
+# Loading work.SignEx
+# Loading work.ALU
+# Loading work.HazardUnit
+# Loading work.imem
+# Loading work.dmem
+# ** Warning: (vsim-3015) F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/mips.v(39): [PCDPC] - Port size (3 or 3) does not match connection size (4) for port 'ALUCtrl'. The port definition is at: F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/CU.v(8).
+# 
+#         Region: /testbench/DUT/MIPS/ControlUnit
+# ** Warning: (vsim-3015) F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/CU.v(15): [PCDPC] - Port size (3 or 3) does not match connection size (2) for port 'ALUOp'. The port definition is at: F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec.v(13).
+# 
+#         Region: /testbench/DUT/MIPS/ControlUnit/MainDecoder
+# ** Warning: (vsim-3015) F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/CU.v(17): [PCDPC] - Port size (3 or 3) does not match connection size (2) for port 'ALUOp'. The port definition is at: F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec.v(6).
+# 
+#         Region: /testbench/DUT/MIPS/ControlUnit/ALUDecoder
+# ** Warning: (vsim-3015) F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/CU.v(17): [PCDPC] - Port size (4 or 4) does not match connection size (3) for port 'ALUCtrl'. The port definition is at: F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec.v(7).
+# 
+#         Region: /testbench/DUT/MIPS/ControlUnit/ALUDecoder
 run
 #                    0	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                    0	current instruction = xxxxxxxx
-#                    0	Disable reset
-#                    5	pcnext = 00000004, instruction next = 20100003
+#                    5	pcnext = 00000004, instruction next = 20100001
 #                    5	current instruction = 00000000
-#                   15	pcnext = 00000004, instruction next = 20100003
+#                   15	pcnext = 00000004, instruction next = 20100001
 #                   15	current instruction = 00000000
-#                   25	pcnext = 00000008, instruction next = 20110003
-#                   25	current instruction = 20100003
-#                   35	pcnext = 0000000c, instruction next = 12110001
-#                   35	current instruction = 20110003
-#                   45	pcnext = 00000010, instruction next = 20130005
-#                   45	current instruction = 12110001
-#                   50	Reg address = 16, Data =          3
-#                   55	pcnext = 00000010, instruction next = 20130005
-#                   55	current instruction = 00000000
-#                   60	Reg address = 17, Data =          3
-#                   65	pcnext = 00000014, instruction next = ac110008
-#                   65	current instruction = 20130005
-#                   75	pcnext = 00000018, instruction next = xxxxxxxx
-#                   75	current instruction = ac110008
-#                   85	pcnext = 0000001c, instruction next = xxxxxxxx
-#                   85	current instruction = xxxxxxxx
-#                   90	Reg address = 19, Data =          5
-#                   95	pcnext = 0000001c, instruction next = xxxxxxxx
+#                   25	pcnext = 00000008, instruction next = 20110002
+#                   25	current instruction = 20100001
+#                   35	pcnext = 0000000c, instruction next = 20120003
+#                   35	current instruction = 20110002
+#                   45	pcnext = 00000010, instruction next = 36530001
+#                   45	current instruction = 20120003
+#                   55	pcnext = 00000014, instruction next = 32140002
+#                   55	current instruction = 36530001
+#                   65	pcnext = 00000018, instruction next = ac130004
+#                   65	current instruction = 32140002
+#                   75	pcnext = 0000001c, instruction next = ac140008
+#                   75	current instruction = ac130004
+#                   85	pcnext = 00000020, instruction next = xxxxxxxx
+#                   85	current instruction = ac140008
+#                   95	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                   95	current instruction = xxxxxxxx
-#                   95	Write into address:          8 	data:          3
-#                  105	pcnext = 00000020, instruction next = xxxxxxxx
+#                  105	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  105	current instruction = xxxxxxxx
-#                  115	pcnext = 00000024, instruction next = xxxxxxxx
+#                  115	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  115	current instruction = xxxxxxxx
-#                  125	pcnext = 00000028, instruction next = xxxxxxxx
+#                  125	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  125	current instruction = xxxxxxxx
-#                  135	pcnext = 0000002c, instruction next = xxxxxxxx
+#                  135	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  135	current instruction = xxxxxxxx
-#                  145	pcnext = 00000030, instruction next = xxxxxxxx
+#                  145	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  145	current instruction = xxxxxxxx
-#                  155	pcnext = 00000034, instruction next = xxxxxxxx
+#                  155	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  155	current instruction = xxxxxxxx
-#                  165	pcnext = 00000038, instruction next = xxxxxxxx
+#                  165	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  165	current instruction = xxxxxxxx
-#                  175	pcnext = 0000003c, instruction next = xxxxxxxx
+#                  175	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  175	current instruction = xxxxxxxx
-#                  185	pcnext = 00000040, instruction next = xxxxxxxx
+#                  185	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  185	current instruction = xxxxxxxx
-#                  195	pcnext = 00000044, instruction next = xxxxxxxx
+#                  195	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  195	current instruction = xxxxxxxx
-#                  205	pcnext = 00000048, instruction next = xxxxxxxx
+#                  205	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  205	current instruction = xxxxxxxx
-#                  215	pcnext = 0000004c, instruction next = xxxxxxxx
+#                  215	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  215	current instruction = xxxxxxxx
-#                  225	pcnext = 00000050, instruction next = xxxxxxxx
+#                  225	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  225	current instruction = xxxxxxxx
-#                  235	pcnext = 00000054, instruction next = xxxxxxxx
+#                  235	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  235	current instruction = xxxxxxxx
-#                  245	pcnext = 00000058, instruction next = xxxxxxxx
+#                  245	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  245	current instruction = xxxxxxxx
-#                  255	pcnext = 0000005c, instruction next = xxxxxxxx
+#                  255	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  255	current instruction = xxxxxxxx
-#                  265	pcnext = 00000060, instruction next = xxxxxxxx
+#                  265	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  265	current instruction = xxxxxxxx
-#                  275	pcnext = 00000064, instruction next = xxxxxxxx
+#                  275	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  275	current instruction = xxxxxxxx
-#                  285	pcnext = 00000068, instruction next = xxxxxxxx
+#                  285	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  285	current instruction = xxxxxxxx
-#                  295	pcnext = 0000006c, instruction next = xxxxxxxx
+#                  295	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  295	current instruction = xxxxxxxx
-#                  305	pcnext = 00000070, instruction next = xxxxxxxx
+#                  305	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  305	current instruction = xxxxxxxx
-#                  315	pcnext = 00000074, instruction next = xxxxxxxx
+#                  315	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  315	current instruction = xxxxxxxx
-#                  325	pcnext = 00000078, instruction next = xxxxxxxx
+#                  325	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  325	current instruction = xxxxxxxx
-#                  335	pcnext = 0000007c, instruction next = xxxxxxxx
+#                  335	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  335	current instruction = xxxxxxxx
-#                  345	pcnext = 00000080, instruction next = xxxxxxxx
+#                  345	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  345	current instruction = xxxxxxxx
-#                  355	pcnext = 00000084, instruction next = xxxxxxxx
+#                  355	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  355	current instruction = xxxxxxxx
-#                  365	pcnext = 00000088, instruction next = xxxxxxxx
+#                  365	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  365	current instruction = xxxxxxxx
-#                  375	pcnext = 0000008c, instruction next = xxxxxxxx
+#                  375	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  375	current instruction = xxxxxxxx
-#                  385	pcnext = 00000090, instruction next = xxxxxxxx
+#                  385	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  385	current instruction = xxxxxxxx
-#                  395	pcnext = 00000094, instruction next = xxxxxxxx
+#                  395	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  395	current instruction = xxxxxxxx
-#                  405	pcnext = 00000098, instruction next = xxxxxxxx
+#                  405	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  405	current instruction = xxxxxxxx
-#                  415	pcnext = 0000009c, instruction next = xxxxxxxx
+#                  415	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  415	current instruction = xxxxxxxx
-#                  425	pcnext = 000000a0, instruction next = xxxxxxxx
+#                  425	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  425	current instruction = xxxxxxxx
-#                  435	pcnext = 000000a4, instruction next = xxxxxxxx
+#                  435	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  435	current instruction = xxxxxxxx
-#                  445	pcnext = 000000a8, instruction next = xxxxxxxx
+#                  445	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  445	current instruction = xxxxxxxx
-#                  455	pcnext = 000000ac, instruction next = xxxxxxxx
+#                  455	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  455	current instruction = xxxxxxxx
-#                  465	pcnext = 000000b0, instruction next = xxxxxxxx
+#                  465	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  465	current instruction = xxxxxxxx
-#                  475	pcnext = 000000b4, instruction next = xxxxxxxx
+#                  475	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  475	current instruction = xxxxxxxx
-#                  485	pcnext = 000000b8, instruction next = xxxxxxxx
+#                  485	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  485	current instruction = xxxxxxxx
-#                  495	pcnext = 000000bc, instruction next = xxxxxxxx
-#                  495	current instruction = xxxxxxxx
-# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
-#    Time: 500 ps  Iteration: 0  Instance: /testbench
-# 1
-# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
-add wave -position insertpoint sim:/testbench/DUT/MIPS/ControlUnit/*
-add wave -position insertpoint sim:/testbench/DUT/MIPS/Hazard/*
-restart
-run
-#                    0	pcnext = xxxxxxxx, instruction next = xxxxxxxx
-#                    0	current instruction = xxxxxxxx
-#                    0	Disable reset
-#                    5	pcnext = 00000004, instruction next = 20100003
-#                    5	current instruction = 00000000
-#                   15	pcnext = 00000004, instruction next = 20100003
-#                   15	current instruction = 00000000
-#                   25	pcnext = 00000008, instruction next = 20110003
-#                   25	current instruction = 20100003
-#                   35	pcnext = 0000000c, instruction next = 12110001
-#                   35	current instruction = 20110003
-#                   45	pcnext = 00000010, instruction next = 20130005
-#                   45	current instruction = 12110001
-#                   50	Reg address = 16, Data =          3
-#                   55	pcnext = 00000010, instruction next = 20130005
-#                   55	current instruction = 00000000
-#                   60	Reg address = 17, Data =          3
-#                   65	pcnext = 00000014, instruction next = ac110008
-#                   65	current instruction = 20130005
-#                   75	pcnext = 00000018, instruction next = xxxxxxxx
-#                   75	current instruction = ac110008
-#                   85	pcnext = 0000001c, instruction next = xxxxxxxx
-#                   85	current instruction = xxxxxxxx
-#                   90	Reg address = 19, Data =          5
-#                   95	pcnext = 0000001c, instruction next = xxxxxxxx
-#                   95	current instruction = xxxxxxxx
-#                   95	Write into address:          8 	data:          3
-#                  105	pcnext = 00000020, instruction next = xxxxxxxx
-#                  105	current instruction = xxxxxxxx
-#                  115	pcnext = 00000024, instruction next = xxxxxxxx
-#                  115	current instruction = xxxxxxxx
-#                  125	pcnext = 00000028, instruction next = xxxxxxxx
-#                  125	current instruction = xxxxxxxx
-#                  135	pcnext = 0000002c, instruction next = xxxxxxxx
-#                  135	current instruction = xxxxxxxx
-#                  145	pcnext = 00000030, instruction next = xxxxxxxx
-#                  145	current instruction = xxxxxxxx
-#                  155	pcnext = 00000034, instruction next = xxxxxxxx
-#                  155	current instruction = xxxxxxxx
-#                  165	pcnext = 00000038, instruction next = xxxxxxxx
-#                  165	current instruction = xxxxxxxx
-#                  175	pcnext = 0000003c, instruction next = xxxxxxxx
-#                  175	current instruction = xxxxxxxx
-#                  185	pcnext = 00000040, instruction next = xxxxxxxx
-#                  185	current instruction = xxxxxxxx
-#                  195	pcnext = 00000044, instruction next = xxxxxxxx
-#                  195	current instruction = xxxxxxxx
-#                  205	pcnext = 00000048, instruction next = xxxxxxxx
-#                  205	current instruction = xxxxxxxx
-#                  215	pcnext = 0000004c, instruction next = xxxxxxxx
-#                  215	current instruction = xxxxxxxx
-#                  225	pcnext = 00000050, instruction next = xxxxxxxx
-#                  225	current instruction = xxxxxxxx
-#                  235	pcnext = 00000054, instruction next = xxxxxxxx
-#                  235	current instruction = xxxxxxxx
-#                  245	pcnext = 00000058, instruction next = xxxxxxxx
-#                  245	current instruction = xxxxxxxx
-#                  255	pcnext = 0000005c, instruction next = xxxxxxxx
-#                  255	current instruction = xxxxxxxx
-#                  265	pcnext = 00000060, instruction next = xxxxxxxx
-#                  265	current instruction = xxxxxxxx
-#                  275	pcnext = 00000064, instruction next = xxxxxxxx
-#                  275	current instruction = xxxxxxxx
-#                  285	pcnext = 00000068, instruction next = xxxxxxxx
-#                  285	current instruction = xxxxxxxx
-#                  295	pcnext = 0000006c, instruction next = xxxxxxxx
-#                  295	current instruction = xxxxxxxx
-#                  305	pcnext = 00000070, instruction next = xxxxxxxx
-#                  305	current instruction = xxxxxxxx
-#                  315	pcnext = 00000074, instruction next = xxxxxxxx
-#                  315	current instruction = xxxxxxxx
-#                  325	pcnext = 00000078, instruction next = xxxxxxxx
-#                  325	current instruction = xxxxxxxx
-#                  335	pcnext = 0000007c, instruction next = xxxxxxxx
-#                  335	current instruction = xxxxxxxx
-#                  345	pcnext = 00000080, instruction next = xxxxxxxx
-#                  345	current instruction = xxxxxxxx
-#                  355	pcnext = 00000084, instruction next = xxxxxxxx
-#                  355	current instruction = xxxxxxxx
-#                  365	pcnext = 00000088, instruction next = xxxxxxxx
-#                  365	current instruction = xxxxxxxx
-#                  375	pcnext = 0000008c, instruction next = xxxxxxxx
-#                  375	current instruction = xxxxxxxx
-#                  385	pcnext = 00000090, instruction next = xxxxxxxx
-#                  385	current instruction = xxxxxxxx
-#                  395	pcnext = 00000094, instruction next = xxxxxxxx
-#                  395	current instruction = xxxxxxxx
-#                  405	pcnext = 00000098, instruction next = xxxxxxxx
-#                  405	current instruction = xxxxxxxx
-#                  415	pcnext = 0000009c, instruction next = xxxxxxxx
-#                  415	current instruction = xxxxxxxx
-#                  425	pcnext = 000000a0, instruction next = xxxxxxxx
-#                  425	current instruction = xxxxxxxx
-#                  435	pcnext = 000000a4, instruction next = xxxxxxxx
-#                  435	current instruction = xxxxxxxx
-#                  445	pcnext = 000000a8, instruction next = xxxxxxxx
-#                  445	current instruction = xxxxxxxx
-#                  455	pcnext = 000000ac, instruction next = xxxxxxxx
-#                  455	current instruction = xxxxxxxx
-#                  465	pcnext = 000000b0, instruction next = xxxxxxxx
-#                  465	current instruction = xxxxxxxx
-#                  475	pcnext = 000000b4, instruction next = xxxxxxxx
-#                  475	current instruction = xxxxxxxx
-#                  485	pcnext = 000000b8, instruction next = xxxxxxxx
-#                  485	current instruction = xxxxxxxx
-#                  495	pcnext = 000000bc, instruction next = xxxxxxxx
-#                  495	current instruction = xxxxxxxx
-# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
-#    Time: 500 ps  Iteration: 0  Instance: /testbench
-# 1
-# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
-add wave -position insertpoint sim:/testbench/*
-restart
-run
-#                    0	pcnext = xxxxxxxx, instruction next = xxxxxxxx
-#                    0	current instruction = xxxxxxxx
-#                    0	Disable reset
-#                    5	pcnext = 00000004, instruction next = 20100003
-#                    5	current instruction = 00000000
-#                   15	pcnext = 00000004, instruction next = 20100003
-#                   15	current instruction = 00000000
-#                   25	pcnext = 00000008, instruction next = 20110003
-#                   25	current instruction = 20100003
-#                   35	pcnext = 0000000c, instruction next = 12110001
-#                   35	current instruction = 20110003
-#                   45	pcnext = 00000010, instruction next = 20130005
-#                   45	current instruction = 12110001
-#                   50	Reg address = 16, Data =          3
-#                   55	pcnext = 00000010, instruction next = 20130005
-#                   55	current instruction = 00000000
-#                   60	Reg address = 17, Data =          3
-#                   65	pcnext = 00000014, instruction next = ac110008
-#                   65	current instruction = 20130005
-#                   75	pcnext = 00000018, instruction next = xxxxxxxx
-#                   75	current instruction = ac110008
-#                   85	pcnext = 0000001c, instruction next = xxxxxxxx
-#                   85	current instruction = xxxxxxxx
-#                   90	Reg address = 19, Data =          5
-#                   95	pcnext = 0000001c, instruction next = xxxxxxxx
-#                   95	current instruction = xxxxxxxx
-#                   95	Write into address:          8 	data:          3
-#                  105	pcnext = 00000020, instruction next = xxxxxxxx
-#                  105	current instruction = xxxxxxxx
-#                  115	pcnext = 00000024, instruction next = xxxxxxxx
-#                  115	current instruction = xxxxxxxx
-#                  125	pcnext = 00000028, instruction next = xxxxxxxx
-#                  125	current instruction = xxxxxxxx
-#                  135	pcnext = 0000002c, instruction next = xxxxxxxx
-#                  135	current instruction = xxxxxxxx
-#                  145	pcnext = 00000030, instruction next = xxxxxxxx
-#                  145	current instruction = xxxxxxxx
-#                  155	pcnext = 00000034, instruction next = xxxxxxxx
-#                  155	current instruction = xxxxxxxx
-#                  165	pcnext = 00000038, instruction next = xxxxxxxx
-#                  165	current instruction = xxxxxxxx
-#                  175	pcnext = 0000003c, instruction next = xxxxxxxx
-#                  175	current instruction = xxxxxxxx
-#                  185	pcnext = 00000040, instruction next = xxxxxxxx
-#                  185	current instruction = xxxxxxxx
-#                  195	pcnext = 00000044, instruction next = xxxxxxxx
-#                  195	current instruction = xxxxxxxx
-#                  205	pcnext = 00000048, instruction next = xxxxxxxx
-#                  205	current instruction = xxxxxxxx
-#                  215	pcnext = 0000004c, instruction next = xxxxxxxx
-#                  215	current instruction = xxxxxxxx
-#                  225	pcnext = 00000050, instruction next = xxxxxxxx
-#                  225	current instruction = xxxxxxxx
-#                  235	pcnext = 00000054, instruction next = xxxxxxxx
-#                  235	current instruction = xxxxxxxx
-#                  245	pcnext = 00000058, instruction next = xxxxxxxx
-#                  245	current instruction = xxxxxxxx
-#                  255	pcnext = 0000005c, instruction next = xxxxxxxx
-#                  255	current instruction = xxxxxxxx
-#                  265	pcnext = 00000060, instruction next = xxxxxxxx
-#                  265	current instruction = xxxxxxxx
-#                  275	pcnext = 00000064, instruction next = xxxxxxxx
-#                  275	current instruction = xxxxxxxx
-#                  285	pcnext = 00000068, instruction next = xxxxxxxx
-#                  285	current instruction = xxxxxxxx
-#                  295	pcnext = 0000006c, instruction next = xxxxxxxx
-#                  295	current instruction = xxxxxxxx
-#                  305	pcnext = 00000070, instruction next = xxxxxxxx
-#                  305	current instruction = xxxxxxxx
-#                  315	pcnext = 00000074, instruction next = xxxxxxxx
-#                  315	current instruction = xxxxxxxx
-#                  325	pcnext = 00000078, instruction next = xxxxxxxx
-#                  325	current instruction = xxxxxxxx
-#                  335	pcnext = 0000007c, instruction next = xxxxxxxx
-#                  335	current instruction = xxxxxxxx
-#                  345	pcnext = 00000080, instruction next = xxxxxxxx
-#                  345	current instruction = xxxxxxxx
-#                  355	pcnext = 00000084, instruction next = xxxxxxxx
-#                  355	current instruction = xxxxxxxx
-#                  365	pcnext = 00000088, instruction next = xxxxxxxx
-#                  365	current instruction = xxxxxxxx
-#                  375	pcnext = 0000008c, instruction next = xxxxxxxx
-#                  375	current instruction = xxxxxxxx
-#                  385	pcnext = 00000090, instruction next = xxxxxxxx
-#                  385	current instruction = xxxxxxxx
-#                  395	pcnext = 00000094, instruction next = xxxxxxxx
-#                  395	current instruction = xxxxxxxx
-#                  405	pcnext = 00000098, instruction next = xxxxxxxx
-#                  405	current instruction = xxxxxxxx
-#                  415	pcnext = 0000009c, instruction next = xxxxxxxx
-#                  415	current instruction = xxxxxxxx
-#                  425	pcnext = 000000a0, instruction next = xxxxxxxx
-#                  425	current instruction = xxxxxxxx
-#                  435	pcnext = 000000a4, instruction next = xxxxxxxx
-#                  435	current instruction = xxxxxxxx
-#                  445	pcnext = 000000a8, instruction next = xxxxxxxx
-#                  445	current instruction = xxxxxxxx
-#                  455	pcnext = 000000ac, instruction next = xxxxxxxx
-#                  455	current instruction = xxxxxxxx
-#                  465	pcnext = 000000b0, instruction next = xxxxxxxx
-#                  465	current instruction = xxxxxxxx
-#                  475	pcnext = 000000b4, instruction next = xxxxxxxx
-#                  475	current instruction = xxxxxxxx
-#                  485	pcnext = 000000b8, instruction next = xxxxxxxx
-#                  485	current instruction = xxxxxxxx
-#                  495	pcnext = 000000bc, instruction next = xxxxxxxx
-#                  495	current instruction = xxxxxxxx
-# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
-#    Time: 500 ps  Iteration: 0  Instance: /testbench
-# 1
-# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
-restart
-run
-#                    0	pcnext = xxxxxxxx, instruction next = xxxxxxxx
-#                    0	current instruction = xxxxxxxx
-#                    0	Disable reset
-#                    5	pcnext = 00000004, instruction next = 20100003
-#                    5	current instruction = 00000000
-#                   15	pcnext = 00000004, instruction next = 20100003
-#                   15	current instruction = 00000000
-#                   25	pcnext = 00000008, instruction next = 20110003
-#                   25	current instruction = 20100003
-#                   35	pcnext = 0000000c, instruction next = 12110003
-#                   35	current instruction = 20110003
-#                   45	pcnext = 00000018, instruction next = 20130005
-#                   45	current instruction = 12110003
-#                   50	Reg address = 16, Data =          3
-#                   55	pcnext = 00000010, instruction next = 20130005
-#                   55	current instruction = 00000000
-#                   60	Reg address = 17, Data =          3
-#                   65	pcnext = 00000014, instruction next = 22730005
-#                   65	current instruction = 20130005
-#                   75	pcnext = 00000018, instruction next = 22730005
-#                   75	current instruction = 22730005
-#                   85	pcnext = 0000001c, instruction next = ac110008
-#                   85	current instruction = 22730005
-#                   90	Reg address = 19, Data =          5
-#                   95	pcnext = 00000020, instruction next = xxxxxxxx
-#                   95	current instruction = ac110008
-#                  100	Reg address = 19, Data =         10
-#                  105	pcnext = 00000024, instruction next = xxxxxxxx
-#                  105	current instruction = xxxxxxxx
-#                  110	Reg address = 19, Data =         15
-#                  115	pcnext = 00000024, instruction next = xxxxxxxx
-#                  115	current instruction = xxxxxxxx
-#                  115	Write into address:          8 	data:          3
-#                  125	pcnext = 00000028, instruction next = xxxxxxxx
-#                  125	current instruction = xxxxxxxx
-#                  135	pcnext = 0000002c, instruction next = xxxxxxxx
-#                  135	current instruction = xxxxxxxx
-#                  145	pcnext = 00000030, instruction next = xxxxxxxx
-#                  145	current instruction = xxxxxxxx
-#                  155	pcnext = 00000034, instruction next = xxxxxxxx
-#                  155	current instruction = xxxxxxxx
-#                  165	pcnext = 00000038, instruction next = xxxxxxxx
-#                  165	current instruction = xxxxxxxx
-#                  175	pcnext = 0000003c, instruction next = xxxxxxxx
-#                  175	current instruction = xxxxxxxx
-#                  185	pcnext = 00000040, instruction next = xxxxxxxx
-#                  185	current instruction = xxxxxxxx
-#                  195	pcnext = 00000044, instruction next = xxxxxxxx
-#                  195	current instruction = xxxxxxxx
-#                  205	pcnext = 00000048, instruction next = xxxxxxxx
-#                  205	current instruction = xxxxxxxx
-#                  215	pcnext = 0000004c, instruction next = xxxxxxxx
-#                  215	current instruction = xxxxxxxx
-#                  225	pcnext = 00000050, instruction next = xxxxxxxx
-#                  225	current instruction = xxxxxxxx
-#                  235	pcnext = 00000054, instruction next = xxxxxxxx
-#                  235	current instruction = xxxxxxxx
-#                  245	pcnext = 00000058, instruction next = xxxxxxxx
-#                  245	current instruction = xxxxxxxx
-#                  255	pcnext = 0000005c, instruction next = xxxxxxxx
-#                  255	current instruction = xxxxxxxx
-#                  265	pcnext = 00000060, instruction next = xxxxxxxx
-#                  265	current instruction = xxxxxxxx
-#                  275	pcnext = 00000064, instruction next = xxxxxxxx
-#                  275	current instruction = xxxxxxxx
-#                  285	pcnext = 00000068, instruction next = xxxxxxxx
-#                  285	current instruction = xxxxxxxx
-#                  295	pcnext = 0000006c, instruction next = xxxxxxxx
-#                  295	current instruction = xxxxxxxx
-#                  305	pcnext = 00000070, instruction next = xxxxxxxx
-#                  305	current instruction = xxxxxxxx
-#                  315	pcnext = 00000074, instruction next = xxxxxxxx
-#                  315	current instruction = xxxxxxxx
-#                  325	pcnext = 00000078, instruction next = xxxxxxxx
-#                  325	current instruction = xxxxxxxx
-#                  335	pcnext = 0000007c, instruction next = xxxxxxxx
-#                  335	current instruction = xxxxxxxx
-#                  345	pcnext = 00000080, instruction next = xxxxxxxx
-#                  345	current instruction = xxxxxxxx
-#                  355	pcnext = 00000084, instruction next = xxxxxxxx
-#                  355	current instruction = xxxxxxxx
-#                  365	pcnext = 00000088, instruction next = xxxxxxxx
-#                  365	current instruction = xxxxxxxx
-#                  375	pcnext = 0000008c, instruction next = xxxxxxxx
-#                  375	current instruction = xxxxxxxx
-#                  385	pcnext = 00000090, instruction next = xxxxxxxx
-#                  385	current instruction = xxxxxxxx
-#                  395	pcnext = 00000094, instruction next = xxxxxxxx
-#                  395	current instruction = xxxxxxxx
-#                  405	pcnext = 00000098, instruction next = xxxxxxxx
-#                  405	current instruction = xxxxxxxx
-#                  415	pcnext = 0000009c, instruction next = xxxxxxxx
-#                  415	current instruction = xxxxxxxx
-#                  425	pcnext = 000000a0, instruction next = xxxxxxxx
-#                  425	current instruction = xxxxxxxx
-#                  435	pcnext = 000000a4, instruction next = xxxxxxxx
-#                  435	current instruction = xxxxxxxx
-#                  445	pcnext = 000000a8, instruction next = xxxxxxxx
-#                  445	current instruction = xxxxxxxx
-#                  455	pcnext = 000000ac, instruction next = xxxxxxxx
-#                  455	current instruction = xxxxxxxx
-#                  465	pcnext = 000000b0, instruction next = xxxxxxxx
-#                  465	current instruction = xxxxxxxx
-#                  475	pcnext = 000000b4, instruction next = xxxxxxxx
-#                  475	current instruction = xxxxxxxx
-#                  485	pcnext = 000000b8, instruction next = xxxxxxxx
-#                  485	current instruction = xxxxxxxx
-#                  495	pcnext = 000000bc, instruction next = xxxxxxxx
-#                  495	current instruction = xxxxxxxx
-# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
-#    Time: 500 ps  Iteration: 0  Instance: /testbench
-# 1
-# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
-add wave -position insertpoint sim:/testbench/DUT/MIPS/Datapath/*
-add wave -position insertpoint sim:/testbench/DUT/MIPS/Datapath/ALU_execute/*
-restart
-run
-#                    0	pcnext = xxxxxxxx, instruction next = xxxxxxxx
-#                    0	current instruction = xxxxxxxx
-#                    0	Disable reset
-#                    5	pcnext = 00000004, instruction next = 20100003
-#                    5	current instruction = 00000000
-#                   15	pcnext = 00000004, instruction next = 20100003
-#                   15	current instruction = 00000000
-#                   25	pcnext = 00000008, instruction next = 20110003
-#                   25	current instruction = 20100003
-#                   35	pcnext = 0000000c, instruction next = 12110003
-#                   35	current instruction = 20110003
-#                   45	pcnext = 00000018, instruction next = 20130005
-#                   45	current instruction = 12110003
-#                   50	Reg address = 16, Data =          3
-#                   55	pcnext = 00000010, instruction next = 20130005
-#                   55	current instruction = 00000000
-#                   60	Reg address = 17, Data =          3
-#                   65	pcnext = 00000014, instruction next = 22730005
-#                   65	current instruction = 20130005
-#                   75	pcnext = 00000018, instruction next = 22730005
-#                   75	current instruction = 22730005
-#                   85	pcnext = 0000001c, instruction next = ac110008
-#                   85	current instruction = 22730005
-#                   90	Reg address = 19, Data =          5
-#                   95	pcnext = 00000020, instruction next = xxxxxxxx
-#                   95	current instruction = ac110008
-#                  100	Reg address = 19, Data =         10
-#                  105	pcnext = 00000024, instruction next = xxxxxxxx
-#                  105	current instruction = xxxxxxxx
-#                  110	Reg address = 19, Data =         15
-#                  115	pcnext = 00000024, instruction next = xxxxxxxx
-#                  115	current instruction = xxxxxxxx
-#                  115	Write into address:          8 	data:          3
-#                  125	pcnext = 00000028, instruction next = xxxxxxxx
-#                  125	current instruction = xxxxxxxx
-#                  135	pcnext = 0000002c, instruction next = xxxxxxxx
-#                  135	current instruction = xxxxxxxx
-#                  145	pcnext = 00000030, instruction next = xxxxxxxx
-#                  145	current instruction = xxxxxxxx
-#                  155	pcnext = 00000034, instruction next = xxxxxxxx
-#                  155	current instruction = xxxxxxxx
-#                  165	pcnext = 00000038, instruction next = xxxxxxxx
-#                  165	current instruction = xxxxxxxx
-#                  175	pcnext = 0000003c, instruction next = xxxxxxxx
-#                  175	current instruction = xxxxxxxx
-#                  185	pcnext = 00000040, instruction next = xxxxxxxx
-#                  185	current instruction = xxxxxxxx
-#                  195	pcnext = 00000044, instruction next = xxxxxxxx
-#                  195	current instruction = xxxxxxxx
-#                  205	pcnext = 00000048, instruction next = xxxxxxxx
-#                  205	current instruction = xxxxxxxx
-#                  215	pcnext = 0000004c, instruction next = xxxxxxxx
-#                  215	current instruction = xxxxxxxx
-#                  225	pcnext = 00000050, instruction next = xxxxxxxx
-#                  225	current instruction = xxxxxxxx
-#                  235	pcnext = 00000054, instruction next = xxxxxxxx
-#                  235	current instruction = xxxxxxxx
-#                  245	pcnext = 00000058, instruction next = xxxxxxxx
-#                  245	current instruction = xxxxxxxx
-#                  255	pcnext = 0000005c, instruction next = xxxxxxxx
-#                  255	current instruction = xxxxxxxx
-#                  265	pcnext = 00000060, instruction next = xxxxxxxx
-#                  265	current instruction = xxxxxxxx
-#                  275	pcnext = 00000064, instruction next = xxxxxxxx
-#                  275	current instruction = xxxxxxxx
-#                  285	pcnext = 00000068, instruction next = xxxxxxxx
-#                  285	current instruction = xxxxxxxx
-#                  295	pcnext = 0000006c, instruction next = xxxxxxxx
-#                  295	current instruction = xxxxxxxx
-#                  305	pcnext = 00000070, instruction next = xxxxxxxx
-#                  305	current instruction = xxxxxxxx
-#                  315	pcnext = 00000074, instruction next = xxxxxxxx
-#                  315	current instruction = xxxxxxxx
-#                  325	pcnext = 00000078, instruction next = xxxxxxxx
-#                  325	current instruction = xxxxxxxx
-#                  335	pcnext = 0000007c, instruction next = xxxxxxxx
-#                  335	current instruction = xxxxxxxx
-#                  345	pcnext = 00000080, instruction next = xxxxxxxx
-#                  345	current instruction = xxxxxxxx
-#                  355	pcnext = 00000084, instruction next = xxxxxxxx
-#                  355	current instruction = xxxxxxxx
-#                  365	pcnext = 00000088, instruction next = xxxxxxxx
-#                  365	current instruction = xxxxxxxx
-#                  375	pcnext = 0000008c, instruction next = xxxxxxxx
-#                  375	current instruction = xxxxxxxx
-#                  385	pcnext = 00000090, instruction next = xxxxxxxx
-#                  385	current instruction = xxxxxxxx
-#                  395	pcnext = 00000094, instruction next = xxxxxxxx
-#                  395	current instruction = xxxxxxxx
-#                  405	pcnext = 00000098, instruction next = xxxxxxxx
-#                  405	current instruction = xxxxxxxx
-#                  415	pcnext = 0000009c, instruction next = xxxxxxxx
-#                  415	current instruction = xxxxxxxx
-#                  425	pcnext = 000000a0, instruction next = xxxxxxxx
-#                  425	current instruction = xxxxxxxx
-#                  435	pcnext = 000000a4, instruction next = xxxxxxxx
-#                  435	current instruction = xxxxxxxx
-#                  445	pcnext = 000000a8, instruction next = xxxxxxxx
-#                  445	current instruction = xxxxxxxx
-#                  455	pcnext = 000000ac, instruction next = xxxxxxxx
-#                  455	current instruction = xxxxxxxx
-#                  465	pcnext = 000000b0, instruction next = xxxxxxxx
-#                  465	current instruction = xxxxxxxx
-#                  475	pcnext = 000000b4, instruction next = xxxxxxxx
-#                  475	current instruction = xxxxxxxx
-#                  485	pcnext = 000000b8, instruction next = xxxxxxxx
-#                  485	current instruction = xxxxxxxx
-#                  495	pcnext = 000000bc, instruction next = xxxxxxxx
+#                  495	pcnext = xxxxxxxx, instruction next = xxxxxxxx
 #                  495	current instruction = xxxxxxxx
 # ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
 #    Time: 500 ps  Iteration: 0  Instance: /testbench
@@ -745,22 +228,48 @@ run
 # Compile of top.v was successful.
 # Compile of dmem.v was successful with warnings.
 # 15 compiles, 0 failed with no errors. 
-quit -sim
+vsim -voptargs=+acc work.testbench
+# vsim -voptargs=+acc work.testbench 
+# Loading work.testbench
+# Loading work.top
+# Loading work.mips
+# Loading work.CU
+# Loading work.MainDec
+# Loading work.ALUDec
+# Loading work.datapath
+# Loading work.RegFile
+# Loading work.SignEx
+# Loading work.ALU
+# Loading work.HazardUnit
+# Loading work.imem
+# Loading work.dmem
+# ** Warning: (vsim-3015) F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/mips.v(39): [PCDPC] - Port size (3 or 3) does not match connection size (4) for port 'ALUCtrl'. The port definition is at: F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/CU.v(8).
+# 
+#         Region: /testbench/DUT/MIPS/ControlUnit
+# ** Warning: (vsim-3015) F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/CU.v(15): [PCDPC] - Port size (3 or 3) does not match connection size (2) for port 'ALUOp'. The port definition is at: F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec.v(13).
+# 
+#         Region: /testbench/DUT/MIPS/ControlUnit/MainDecoder
+# ** Warning: (vsim-3015) F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/CU.v(17): [PCDPC] - Port size (3 or 3) does not match connection size (2) for port 'ALUOp'. The port definition is at: F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec.v(6).
+# 
+#         Region: /testbench/DUT/MIPS/ControlUnit/ALUDecoder
+# ** Warning: (vsim-3015) F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/CU.v(17): [PCDPC] - Port size (4 or 4) does not match connection size (3) for port 'ALUCtrl'. The port definition is at: F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec.v(7).
+# 
+#         Region: /testbench/DUT/MIPS/ControlUnit/ALUDecoder
 # Compile of ALU.v was successful.
 # Compile of ALUDec.v was successful.
+# Compile of ALUDec_tb.v was successful.
 # Compile of CU.v was successful.
 # Compile of datapath.v was successful.
-# Compile of dmem.v was successful with warnings.
 # Compile of HazardUnit.v was successful.
 # Compile of imem.v was successful.
 # Compile of MainDec.v was successful.
 # Compile of mips.v was successful.
 # Compile of MUX4_1.v was successful.
 # Compile of RegFile.v was successful.
-# Compile of shift2left.v was successful.
 # Compile of SignEx.v was successful.
 # Compile of testbench.v was successful.
 # Compile of top.v was successful.
+# Compile of dmem.v was successful with warnings.
 # 15 compiles, 0 failed with no errors. 
 vsim -voptargs=+acc work.testbench
 # vsim -voptargs=+acc work.testbench 
@@ -774,50 +283,33 @@ vsim -voptargs=+acc work.testbench
 # Loading work.RegFile
 # Loading work.SignEx
 # Loading work.ALU
-# Loading work.MUX4_1
 # Loading work.HazardUnit
 # Loading work.imem
 # Loading work.dmem
-run
-# reg address = 16, data =          3
-# reg address = 17, data =          3
-# reg address = 19, data =          5
-# reg address = 19, data =         10
-# reg address = 19, data =         15
-#                  115	Write into address:          8 	data:          3
-# ** Note: $finish    : F:/GITHUB/BTL_KTMT_MIPSpipeline/testbench.v(42)
-#    Time: 200 ps  Iteration: 0  Instance: /testbench
-# 1
-# Break in Module testbench at F:/GITHUB/BTL_KTMT_MIPSpipeline/testbench.v line 42
-restart
-run
-# reg address = 16, data =          3
-# reg address = 17, data =          3
-# reg address = 19, data =          5
-# reg address = 19, data =         10
-# reg address = 19, data =         15
-#                  115	Write into address:          8 	data:          3
-# ** Note: $finish    : F:/GITHUB/BTL_KTMT_MIPSpipeline/testbench.v(42)
-#    Time: 200 ps  Iteration: 0  Instance: /testbench
-# 1
-# Break in Module testbench at F:/GITHUB/BTL_KTMT_MIPSpipeline/testbench.v line 42
+# ** Warning: (vsim-3015) F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/mips.v(39): [PCDPC] - Port size (3 or 3) does not match connection size (4) for port 'ALUCtrl'. The port definition is at: F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/CU.v(8).
+# 
+#         Region: /testbench/DUT/MIPS/ControlUnit
+# ** Warning: (vsim-3015) F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/CU.v(17): [PCDPC] - Port size (4 or 4) does not match connection size (3) for port 'ALUCtrl'. The port definition is at: F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec.v(7).
+# 
+#         Region: /testbench/DUT/MIPS/ControlUnit/ALUDecoder
 # Compile of ALU.v was successful.
 # Compile of ALUDec.v was successful.
+# Compile of ALUDec_tb.v was successful.
 # Compile of CU.v was successful.
 # Compile of datapath.v was successful.
-# Compile of dmem.v was successful with warnings.
 # Compile of HazardUnit.v was successful.
 # Compile of imem.v was successful.
 # Compile of MainDec.v was successful.
 # Compile of mips.v was successful.
 # Compile of MUX4_1.v was successful.
 # Compile of RegFile.v was successful.
-# Compile of shift2left.v was successful.
 # Compile of SignEx.v was successful.
 # Compile of testbench.v was successful.
 # Compile of top.v was successful.
+# Compile of dmem.v was successful with warnings.
 # 15 compiles, 0 failed with no errors. 
-restart
+vsim -voptargs=+acc work.testbench
+# vsim -voptargs=+acc work.testbench 
 # Loading work.testbench
 # Loading work.top
 # Loading work.mips
@@ -828,235 +320,1403 @@ restart
 # Loading work.RegFile
 # Loading work.SignEx
 # Loading work.ALU
-# Loading work.MUX4_1
 # Loading work.HazardUnit
 # Loading work.imem
 # Loading work.dmem
 run
-#                    0	Register execute = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                    5	Register execute = 000000000000000000000000000000
-#                   15	Register execute = 000000000000000000000000000000
-#                   25	Register execute = 448000000000000000000000000000
-#                   35	Register execute = 450000000000000000020000000003
-#                   45	Register execute = 450000000000000000022000000003
-# reg address = 16, data =          3
-#                   55	Register execute = 000000000000000000000000000000
-# reg address = 17, data =          3
-#                   65	Register execute = 448000000000000000000000000000
-#                   75	Register execute = 450000000000000000026000000005
-#                   85	Register execute = 4500000000000000004e6000000005
-# reg address = 19, data =          5
-#                   95	Register execute = 4500000000000000004e6000000005
-# reg address = 19, data =         10
-#                  105	Register execute = X5X000000000000001822000000008
-# reg address = 19, data =         15
-#                  115	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  115	Write into address:          8 	data:          3
-#                  125	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  135	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  145	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  155	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  165	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  175	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  185	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  195	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# ** Note: $finish    : F:/GITHUB/BTL_KTMT_MIPSpipeline/testbench.v(42)
-#    Time: 200 ps  Iteration: 0  Instance: /testbench
-# 1
-# Break in Module testbench at F:/GITHUB/BTL_KTMT_MIPSpipeline/testbench.v line 42
-# Compile of ALU.v was successful.
-# Compile of ALUDec.v was successful.
-# Compile of CU.v was successful.
-# Compile of datapath.v was successful.
-# Compile of dmem.v was successful with warnings.
-# Compile of HazardUnit.v was successful.
-# Compile of imem.v was successful.
-# Compile of MainDec.v was successful.
-# Compile of mips.v was successful.
-# Compile of MUX4_1.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of shift2left.v was successful.
-# Compile of SignEx.v was successful.
-# Compile of testbench.v was successful.
-# Compile of top.v was successful.
-# 15 compiles, 0 failed with no errors. 
-restart
-# Loading work.testbench
-# Loading work.top
-# Loading work.mips
-# Loading work.CU
-# Loading work.MainDec
-# Loading work.ALUDec
-# Loading work.datapath
-# Loading work.RegFile
-# Loading work.SignEx
-# Loading work.ALU
-# Loading work.MUX4_1
-# Loading work.HazardUnit
-# Loading work.imem
-# Loading work.dmem
-run
-#                    0	Register execute = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                    5	Register execute = 000000000000000000000000000000
-#                   15	Register execute = 000000000000000000000000000000
-#                   25	Register execute = 448000000000000000000000000000
-#                   35	Register execute = 450000000000000000020000000003
-#                   45	Register execute = 450000000000000000022000000003
-# reg address = 16, data =          3
-#                   55	Register execute = 000000000000000000000000000000
-# reg address = 17, data =          3
-#                   65	Register execute = XcX000000180000000422000000003
-#                   75	Register execute = 448000000000000000000000000000
-#                   85	Register execute = X5X000000000000001822000000008
-#                   95	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                   95	Write into address:          8 	data:          3
-#                  105	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  115	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  125	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  135	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  145	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  155	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  165	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  175	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  185	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  195	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# ** Note: $finish    : F:/GITHUB/BTL_KTMT_MIPSpipeline/testbench.v(42)
-#    Time: 200 ps  Iteration: 0  Instance: /testbench
-# 1
-# Break in Module testbench at F:/GITHUB/BTL_KTMT_MIPSpipeline/testbench.v line 42
-restart
-run
-#                    0	Register execute = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                    5	Register execute = 000000000000000000000000000000
-#                   15	Register execute = 000000000000000000000000000000
-#                   25	Register execute = 448000000000000000000000000000
-#                   35	Register execute = 450000000000000000004000000005
-#                   45	Register execute = 45000000000000000000600000000c
-# reg address =  2, data =          5
-#                   55	Register execute = 4500000000000000000cfffffffff7
-# reg address =  3, data =         12
-#                   65	Register execute = 4280000000000000029c4400002025
-# reg address =  7, data =          3
-#                   75	Register execute = 4080000006000000000c8500002824
-# reg address =  4, data =          7
-#                   85	Register execute = 448000000000000000148500002820
-# reg address =  5, data =          4
-#                   95	Register execute = 000000000000000000000000000000
-# reg address =  5, data =         11
-#                  105	Register execute = XcX00000020000000194e000000008
-#                  115	Register execute = 4e80000006000000038c840000202a
-#                  125	Register execute = 000000000000000000000000000000
-# reg address =  4, data =          0
-#                  135	Register execute = XcX000000380000000100000000001
-#                  145	Register execute = 448000000000000000000000000000
-#                  155	Register execute = 448000000000000000000000000000
-#                  165	Register execute = 4e80000001800000029c440000202a
-#                  175	Register execute = 44800000000000000590a700003820
-# reg address =  4, data =          1
-#                  185	Register execute = 4c80000001800000029c4700003822
-# reg address =  7, data =         12
-#                  195	Register execute = X5X0000006000000018ce000000044
-# ** Note: $finish    : F:/GITHUB/BTL_KTMT_MIPSpipeline/testbench.v(42)
-#    Time: 200 ps  Iteration: 0  Instance: /testbench
-# 1
-# Break in Module testbench at F:/GITHUB/BTL_KTMT_MIPSpipeline/testbench.v line 42
-# Compile of ALU.v was successful.
-# Compile of ALUDec.v was successful.
-# Compile of CU.v was successful.
-# Compile of datapath.v was successful.
-# Compile of dmem.v was successful with warnings.
-# Compile of HazardUnit.v was successful.
-# Compile of imem.v was successful.
-# Compile of MainDec.v was successful.
-# Compile of mips.v was successful.
-# Compile of MUX4_1.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of shift2left.v was successful.
-# Compile of SignEx.v was successful.
-# Compile of testbench.v was successful.
-# Compile of top.v was successful.
-# 15 compiles, 0 failed with no errors. 
-restart
-# Loading work.testbench
-# Loading work.top
-# Loading work.mips
-# Loading work.CU
-# Loading work.MainDec
-# Loading work.ALUDec
-# Loading work.datapath
-# Loading work.RegFile
-# Loading work.SignEx
-# Loading work.ALU
-# Loading work.MUX4_1
-# Loading work.HazardUnit
-# Loading work.imem
-# Loading work.dmem
-run
-#                    0	Register execute = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                    5	Register execute = 000000000000000000000000000000
-#                   15	Register execute = 000000000000000000000000000000
-#                   25	Register execute = 448000000000000000000000000000
-#                   35	Register execute = 450000000000000000004000000005
-#                   45	Register execute = 45000000000000000000600000000c
-# reg address =  2, data =          5
-#                   55	Register execute = 4500000000000000000cfffffffff7
-# reg address =  3, data =         12
-#                   65	Register execute = 4280000000000000029c4400002025
-# reg address =  7, data =          3
-#                   75	Register execute = 4080000006000000000c8500002824
-# reg address =  4, data =          7
-#                   85	Register execute = 448000000000000000148500002820
-# reg address =  5, data =          4
-#                   95	Register execute = 000000000000000000000000000000
-# reg address =  5, data =         11
-#                  105	Register execute = XcX00000020000000194e000000008
-#                  115	Register execute = 4e80000006000000038c840000202a
-#                  125	Register execute = 000000000000000000000000000000
-# reg address =  4, data =          0
-#                  135	Register execute = XcX000000380000000100000000001
-#                  145	Register execute = 448000000000000000000000000000
-#                  155	Register execute = 448000000000000000000000000000
-#                  165	Register execute = 4e80000001800000029c440000202a
-#                  175	Register execute = 44800000000000000590a700003820
-# reg address =  4, data =          1
-#                  185	Register execute = 4c80000001800000029c4700003822
-# reg address =  7, data =         12
-#                  195	Register execute = X5X0000006000000018ce000000044
-# reg address =  7, data =          7
-#                  205	Register execute = 650000000000000002804000000050
-#                  205	Write into address:         80 	data:          7
-#                  215	Register execute = 000000000000000000000000000000
-# reg address =  2, data =          7
-#                  225	Register execute = X5X000000000000002804000000054
-#                  235	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  235	Write into address:         84 	data:          7
-#                  245	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  255	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  265	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  275	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  285	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  295	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  305	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  315	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  325	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  335	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  345	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  355	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  365	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  375	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  385	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  395	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  405	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  415	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  425	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  435	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  445	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  455	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  465	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  475	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  485	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#                  495	Register execute = 44Xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# ** Note: $finish    : F:/GITHUB/BTL_KTMT_MIPSpipeline/testbench.v(42)
+#                    0	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                    0	current instruction = xxxxxxxx
+#                    5	pcnext = 00000004, instruction next = 20100001
+#                    5	current instruction = 00000000
+#                   15	pcnext = 00000004, instruction next = 20100001
+#                   15	current instruction = 00000000
+#                   25	pcnext = 00000008, instruction next = 20110002
+#                   25	current instruction = 20100001
+#                   35	pcnext = 0000000c, instruction next = 20120003
+#                   35	current instruction = 20110002
+#                   35	Write into address:          0 	data:          0
+#                   45	pcnext = 00000010, instruction next = 36530001
+#                   45	current instruction = 20120003
+#                   55	pcnext = 00000014, instruction next = 32140002
+#                   55	current instruction = 36530001
+#                   65	pcnext = 00000018, instruction next = ac130004
+#                   65	current instruction = 32140002
+#                   75	pcnext = 0000001c, instruction next = ac140008
+#                   75	current instruction = ac130004
+#                   85	pcnext = 00000020, instruction next = xxxxxxxx
+#                   85	current instruction = ac140008
+#                   95	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                   95	current instruction = xxxxxxxx
+#                  105	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  105	current instruction = xxxxxxxx
+#                  115	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  115	current instruction = xxxxxxxx
+#                  125	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  125	current instruction = xxxxxxxx
+#                  135	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  135	current instruction = xxxxxxxx
+#                  145	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  145	current instruction = xxxxxxxx
+#                  155	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  155	current instruction = xxxxxxxx
+#                  165	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  165	current instruction = xxxxxxxx
+#                  175	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  175	current instruction = xxxxxxxx
+#                  185	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  185	current instruction = xxxxxxxx
+#                  195	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  195	current instruction = xxxxxxxx
+#                  205	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  205	current instruction = xxxxxxxx
+#                  215	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  215	current instruction = xxxxxxxx
+#                  225	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  225	current instruction = xxxxxxxx
+#                  235	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  235	current instruction = xxxxxxxx
+#                  245	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  245	current instruction = xxxxxxxx
+#                  255	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  255	current instruction = xxxxxxxx
+#                  265	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  265	current instruction = xxxxxxxx
+#                  275	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  275	current instruction = xxxxxxxx
+#                  285	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  285	current instruction = xxxxxxxx
+#                  295	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  295	current instruction = xxxxxxxx
+#                  305	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  305	current instruction = xxxxxxxx
+#                  315	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  315	current instruction = xxxxxxxx
+#                  325	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  325	current instruction = xxxxxxxx
+#                  335	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  335	current instruction = xxxxxxxx
+#                  345	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  345	current instruction = xxxxxxxx
+#                  355	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  355	current instruction = xxxxxxxx
+#                  365	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  365	current instruction = xxxxxxxx
+#                  375	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  375	current instruction = xxxxxxxx
+#                  385	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  385	current instruction = xxxxxxxx
+#                  395	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  395	current instruction = xxxxxxxx
+#                  405	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  405	current instruction = xxxxxxxx
+#                  415	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  415	current instruction = xxxxxxxx
+#                  425	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  425	current instruction = xxxxxxxx
+#                  435	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  435	current instruction = xxxxxxxx
+#                  445	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  445	current instruction = xxxxxxxx
+#                  455	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  455	current instruction = xxxxxxxx
+#                  465	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  465	current instruction = xxxxxxxx
+#                  475	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  475	current instruction = xxxxxxxx
+#                  485	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  485	current instruction = xxxxxxxx
+#                  495	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  495	current instruction = xxxxxxxx
+# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
 #    Time: 500 ps  Iteration: 0  Instance: /testbench
 # 1
-# Break in Module testbench at F:/GITHUB/BTL_KTMT_MIPSpipeline/testbench.v line 42
+# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
+# Compile of ALU.v was successful.
+# Compile of ALUDec.v was successful.
+# Compile of ALUDec_tb.v was successful.
+# Compile of CU.v was successful.
+# Compile of datapath.v was successful.
+# Compile of HazardUnit.v was successful.
+# Compile of imem.v was successful.
+# Compile of MainDec.v was successful.
+# Compile of mips.v was successful.
+# Compile of MUX4_1.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of SignEx.v was successful.
+# Compile of testbench.v was successful.
+# Compile of top.v was successful.
+# Compile of dmem.v was successful with warnings.
+# 15 compiles, 0 failed with no errors. 
+restart
+# Loading work.testbench
+# Loading work.top
+# Loading work.mips
+# Loading work.CU
+# Loading work.MainDec
+# Loading work.ALUDec
+# Loading work.datapath
+# Loading work.RegFile
+# Loading work.SignEx
+# Loading work.ALU
+# Loading work.HazardUnit
+# Loading work.imem
+# Loading work.dmem
+vsim -voptargs=+acc work.testbench
+# vsim -voptargs=+acc work.testbench 
+# Loading work.testbench
+# Loading work.top
+# Loading work.mips
+# Loading work.CU
+# Loading work.MainDec
+# Loading work.ALUDec
+# Loading work.datapath
+# Loading work.RegFile
+# Loading work.SignEx
+# Loading work.ALU
+# Loading work.HazardUnit
+# Loading work.imem
+# Loading work.dmem
+run
+#                    0	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                    0	current instruction = xxxxxxxx
+#                    5	pcnext = 00000004, instruction next = 20100001
+#                    5	current instruction = 00000000
+#                   15	pcnext = 00000004, instruction next = 20100001
+#                   15	current instruction = 00000000
+#                   25	pcnext = 00000008, instruction next = 20110002
+#                   25	current instruction = 20100001
+#                   35	pcnext = 0000000c, instruction next = 20120003
+#                   35	current instruction = 20110002
+#                   45	pcnext = 00000010, instruction next = 36530001
+#                   45	current instruction = 20120003
+#                   50	Write Data:          1 -> register address = 16
+#                   55	pcnext = 00000014, instruction next = 32140002
+#                   55	current instruction = 36530001
+#                   60	Write Data:          2 -> register address = 17
+#                   65	pcnext = 00000018, instruction next = ac130004
+#                   65	current instruction = 32140002
+#                   70	Write Data:          3 -> register address = 18
+#                   75	pcnext = 0000001c, instruction next = ac140008
+#                   75	current instruction = ac130004
+#                   80	Write Data:          3 -> register address = 19
+#                   85	pcnext = 00000020, instruction next = xxxxxxxx
+#                   85	current instruction = ac140008
+#                   90	Write Data:          0 -> register address = 20
+#                   95	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                   95	current instruction = xxxxxxxx
+#                   95	Write into address:          4 	data:          3
+#                  105	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  105	current instruction = xxxxxxxx
+#                  105	Write into address:          8 	data:          0
+#                  115	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  115	current instruction = xxxxxxxx
+#                  125	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  125	current instruction = xxxxxxxx
+#                  135	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  135	current instruction = xxxxxxxx
+#                  145	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  145	current instruction = xxxxxxxx
+#                  155	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  155	current instruction = xxxxxxxx
+#                  165	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  165	current instruction = xxxxxxxx
+#                  175	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  175	current instruction = xxxxxxxx
+#                  185	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  185	current instruction = xxxxxxxx
+#                  195	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  195	current instruction = xxxxxxxx
+#                  205	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  205	current instruction = xxxxxxxx
+#                  215	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  215	current instruction = xxxxxxxx
+#                  225	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  225	current instruction = xxxxxxxx
+#                  235	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  235	current instruction = xxxxxxxx
+#                  245	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  245	current instruction = xxxxxxxx
+#                  255	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  255	current instruction = xxxxxxxx
+#                  265	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  265	current instruction = xxxxxxxx
+#                  275	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  275	current instruction = xxxxxxxx
+#                  285	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  285	current instruction = xxxxxxxx
+#                  295	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  295	current instruction = xxxxxxxx
+#                  305	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  305	current instruction = xxxxxxxx
+#                  315	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  315	current instruction = xxxxxxxx
+#                  325	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  325	current instruction = xxxxxxxx
+#                  335	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  335	current instruction = xxxxxxxx
+#                  345	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  345	current instruction = xxxxxxxx
+#                  355	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  355	current instruction = xxxxxxxx
+#                  365	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  365	current instruction = xxxxxxxx
+#                  375	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  375	current instruction = xxxxxxxx
+#                  385	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  385	current instruction = xxxxxxxx
+#                  395	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  395	current instruction = xxxxxxxx
+#                  405	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  405	current instruction = xxxxxxxx
+#                  415	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  415	current instruction = xxxxxxxx
+#                  425	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  425	current instruction = xxxxxxxx
+#                  435	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  435	current instruction = xxxxxxxx
+#                  445	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  445	current instruction = xxxxxxxx
+#                  455	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  455	current instruction = xxxxxxxx
+#                  465	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  465	current instruction = xxxxxxxx
+#                  475	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  475	current instruction = xxxxxxxx
+#                  485	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  485	current instruction = xxxxxxxx
+#                  495	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  495	current instruction = xxxxxxxx
+# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
+#    Time: 500 ps  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
+run
+#                  505	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  505	current instruction = xxxxxxxx
+#                  515	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  515	current instruction = xxxxxxxx
+#                  525	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  525	current instruction = xxxxxxxx
+#                  535	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  535	current instruction = xxxxxxxx
+#                  545	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  545	current instruction = xxxxxxxx
+#                  555	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  555	current instruction = xxxxxxxx
+#                  565	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  565	current instruction = xxxxxxxx
+#                  575	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  575	current instruction = xxxxxxxx
+#                  585	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  585	current instruction = xxxxxxxx
+#                  595	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  595	current instruction = xxxxxxxx
+#                  605	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  605	current instruction = xxxxxxxx
+#                  615	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  615	current instruction = xxxxxxxx
+#                  625	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  625	current instruction = xxxxxxxx
+#                  635	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  635	current instruction = xxxxxxxx
+#                  645	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  645	current instruction = xxxxxxxx
+#                  655	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  655	current instruction = xxxxxxxx
+#                  665	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  665	current instruction = xxxxxxxx
+#                  675	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  675	current instruction = xxxxxxxx
+#                  685	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  685	current instruction = xxxxxxxx
+#                  695	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  695	current instruction = xxxxxxxx
+#                  705	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  705	current instruction = xxxxxxxx
+#                  715	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  715	current instruction = xxxxxxxx
+#                  725	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  725	current instruction = xxxxxxxx
+#                  735	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  735	current instruction = xxxxxxxx
+#                  745	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  745	current instruction = xxxxxxxx
+#                  755	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  755	current instruction = xxxxxxxx
+#                  765	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  765	current instruction = xxxxxxxx
+#                  775	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  775	current instruction = xxxxxxxx
+#                  785	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  785	current instruction = xxxxxxxx
+#                  795	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  795	current instruction = xxxxxxxx
+#                  805	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  805	current instruction = xxxxxxxx
+#                  815	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  815	current instruction = xxxxxxxx
+#                  825	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  825	current instruction = xxxxxxxx
+#                  835	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  835	current instruction = xxxxxxxx
+#                  845	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  845	current instruction = xxxxxxxx
+#                  855	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  855	current instruction = xxxxxxxx
+#                  865	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  865	current instruction = xxxxxxxx
+#                  875	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  875	current instruction = xxxxxxxx
+#                  885	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  885	current instruction = xxxxxxxx
+#                  895	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  895	current instruction = xxxxxxxx
+#                  905	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  905	current instruction = xxxxxxxx
+#                  915	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  915	current instruction = xxxxxxxx
+#                  925	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  925	current instruction = xxxxxxxx
+#                  935	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  935	current instruction = xxxxxxxx
+#                  945	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  945	current instruction = xxxxxxxx
+#                  955	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  955	current instruction = xxxxxxxx
+#                  965	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  965	current instruction = xxxxxxxx
+#                  975	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  975	current instruction = xxxxxxxx
+#                  985	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  985	current instruction = xxxxxxxx
+#                  995	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  995	current instruction = xxxxxxxx
+#                 1005	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1005	current instruction = xxxxxxxx
+#                 1015	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1015	current instruction = xxxxxxxx
+#                 1025	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1025	current instruction = xxxxxxxx
+#                 1035	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1035	current instruction = xxxxxxxx
+#                 1045	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1045	current instruction = xxxxxxxx
+#                 1055	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1055	current instruction = xxxxxxxx
+#                 1065	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1065	current instruction = xxxxxxxx
+#                 1075	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1075	current instruction = xxxxxxxx
+#                 1085	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1085	current instruction = xxxxxxxx
+#                 1095	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1095	current instruction = xxxxxxxx
+#                 1105	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1105	current instruction = xxxxxxxx
+#                 1115	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1115	current instruction = xxxxxxxx
+#                 1125	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1125	current instruction = xxxxxxxx
+#                 1135	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1135	current instruction = xxxxxxxx
+#                 1145	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1145	current instruction = xxxxxxxx
+#                 1155	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1155	current instruction = xxxxxxxx
+#                 1165	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1165	current instruction = xxxxxxxx
+#                 1175	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1175	current instruction = xxxxxxxx
+#                 1185	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1185	current instruction = xxxxxxxx
+#                 1195	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1195	current instruction = xxxxxxxx
+#                 1205	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1205	current instruction = xxxxxxxx
+#                 1215	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1215	current instruction = xxxxxxxx
+#                 1225	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1225	current instruction = xxxxxxxx
+#                 1235	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1235	current instruction = xxxxxxxx
+#                 1245	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1245	current instruction = xxxxxxxx
+#                 1255	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1255	current instruction = xxxxxxxx
+#                 1265	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1265	current instruction = xxxxxxxx
+#                 1275	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1275	current instruction = xxxxxxxx
+#                 1285	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1285	current instruction = xxxxxxxx
+#                 1295	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1295	current instruction = xxxxxxxx
+#                 1305	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1305	current instruction = xxxxxxxx
+#                 1315	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1315	current instruction = xxxxxxxx
+#                 1325	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1325	current instruction = xxxxxxxx
+#                 1335	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1335	current instruction = xxxxxxxx
+#                 1345	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1345	current instruction = xxxxxxxx
+#                 1355	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1355	current instruction = xxxxxxxx
+#                 1365	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1365	current instruction = xxxxxxxx
+#                 1375	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1375	current instruction = xxxxxxxx
+#                 1385	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1385	current instruction = xxxxxxxx
+#                 1395	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1395	current instruction = xxxxxxxx
+#                 1405	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1405	current instruction = xxxxxxxx
+#                 1415	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1415	current instruction = xxxxxxxx
+#                 1425	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1425	current instruction = xxxxxxxx
+#                 1435	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1435	current instruction = xxxxxxxx
+#                 1445	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1445	current instruction = xxxxxxxx
+#                 1455	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1455	current instruction = xxxxxxxx
+#                 1465	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1465	current instruction = xxxxxxxx
+#                 1475	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1475	current instruction = xxxxxxxx
+#                 1485	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1485	current instruction = xxxxxxxx
+#                 1495	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1495	current instruction = xxxxxxxx
+restart
+run
+#                    0	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                    0	current instruction = xxxxxxxx
+#                    5	pcnext = 00000004, instruction next = 20100001
+#                    5	current instruction = 00000000
+#                   15	pcnext = 00000004, instruction next = 20100001
+#                   15	current instruction = 00000000
+#                   25	pcnext = 00000008, instruction next = 20110002
+#                   25	current instruction = 20100001
+#                   35	pcnext = 0000000c, instruction next = 20120003
+#                   35	current instruction = 20110002
+#                   45	pcnext = 00000010, instruction next = 36330001
+#                   45	current instruction = 20120003
+#                   50	Write Data:          1 -> register address = 16
+#                   55	pcnext = 00000014, instruction next = 32140002
+#                   55	current instruction = 36330001
+#                   60	Write Data:          2 -> register address = 17
+#                   65	pcnext = 00000018, instruction next = ac130004
+#                   65	current instruction = 32140002
+#                   70	Write Data:          3 -> register address = 18
+#                   75	pcnext = 0000001c, instruction next = ac140008
+#                   75	current instruction = ac130004
+#                   80	Write Data:          3 -> register address = 19
+#                   85	pcnext = 00000020, instruction next = xxxxxxxx
+#                   85	current instruction = ac140008
+#                   90	Write Data:          0 -> register address = 20
+#                   95	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                   95	current instruction = xxxxxxxx
+#                   95	Write into address:          4 	data:          3
+#                  105	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  105	current instruction = xxxxxxxx
+#                  105	Write into address:          8 	data:          0
+#                  115	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  115	current instruction = xxxxxxxx
+#                  125	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  125	current instruction = xxxxxxxx
+#                  135	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  135	current instruction = xxxxxxxx
+#                  145	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  145	current instruction = xxxxxxxx
+#                  155	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  155	current instruction = xxxxxxxx
+#                  165	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  165	current instruction = xxxxxxxx
+#                  175	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  175	current instruction = xxxxxxxx
+#                  185	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  185	current instruction = xxxxxxxx
+#                  195	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  195	current instruction = xxxxxxxx
+#                  205	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  205	current instruction = xxxxxxxx
+#                  215	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  215	current instruction = xxxxxxxx
+#                  225	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  225	current instruction = xxxxxxxx
+#                  235	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  235	current instruction = xxxxxxxx
+#                  245	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  245	current instruction = xxxxxxxx
+#                  255	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  255	current instruction = xxxxxxxx
+#                  265	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  265	current instruction = xxxxxxxx
+#                  275	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  275	current instruction = xxxxxxxx
+#                  285	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  285	current instruction = xxxxxxxx
+#                  295	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  295	current instruction = xxxxxxxx
+#                  305	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  305	current instruction = xxxxxxxx
+#                  315	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  315	current instruction = xxxxxxxx
+#                  325	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  325	current instruction = xxxxxxxx
+#                  335	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  335	current instruction = xxxxxxxx
+#                  345	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  345	current instruction = xxxxxxxx
+#                  355	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  355	current instruction = xxxxxxxx
+#                  365	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  365	current instruction = xxxxxxxx
+#                  375	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  375	current instruction = xxxxxxxx
+#                  385	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  385	current instruction = xxxxxxxx
+#                  395	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  395	current instruction = xxxxxxxx
+#                  405	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  405	current instruction = xxxxxxxx
+#                  415	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  415	current instruction = xxxxxxxx
+#                  425	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  425	current instruction = xxxxxxxx
+#                  435	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  435	current instruction = xxxxxxxx
+#                  445	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  445	current instruction = xxxxxxxx
+#                  455	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  455	current instruction = xxxxxxxx
+#                  465	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  465	current instruction = xxxxxxxx
+#                  475	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  475	current instruction = xxxxxxxx
+#                  485	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  485	current instruction = xxxxxxxx
+#                  495	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  495	current instruction = xxxxxxxx
+# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
+#    Time: 500 ps  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
+# Compile of ALU.v was successful.
+# Compile of ALUDec.v was successful.
+# Compile of ALUDec_tb.v was successful.
+# Compile of CU.v was successful.
+# Compile of datapath.v was successful.
+# Compile of HazardUnit.v was successful.
+# Compile of imem.v was successful.
+# Compile of MainDec.v was successful.
+# Compile of mips.v was successful.
+# Compile of MUX4_1.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of SignEx.v was successful.
+# Compile of testbench.v was successful.
+# Compile of top.v was successful.
+# Compile of dmem.v was successful with warnings.
+# 15 compiles, 0 failed with no errors. 
+vsim -voptargs=+acc work.testbench
+# vsim -voptargs=+acc work.testbench 
+# Loading work.testbench
+# Loading work.top
+# Loading work.mips
+# Loading work.CU
+# Loading work.MainDec
+# Loading work.ALUDec
+# Loading work.datapath
+# Loading work.RegFile
+# Loading work.SignEx
+# Loading work.ALU
+# Loading work.HazardUnit
+# Loading work.imem
+# Loading work.dmem
+# ** Error: (vsim-PLI-3071) F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/dmem.v(14): $display : Too few arguments.
+# 
+#         Region: /testbench
+# Error loading design
+# Compile of ALU.v was successful.
+# Compile of ALUDec.v was successful.
+# Compile of ALUDec_tb.v was successful.
+# Compile of CU.v was successful.
+# Compile of datapath.v was successful.
+# Compile of HazardUnit.v was successful.
+# Compile of imem.v was successful.
+# Compile of MainDec.v was successful.
+# Compile of mips.v was successful.
+# Compile of MUX4_1.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of SignEx.v was successful.
+# Compile of testbench.v was successful.
+# Compile of top.v was successful.
+# Compile of dmem.v was successful with warnings.
+# 15 compiles, 0 failed with no errors. 
+vsim -voptargs=+acc work.testbench
+# vsim -voptargs=+acc work.testbench 
+# Loading work.testbench
+# Loading work.top
+# Loading work.mips
+# Loading work.CU
+# Loading work.MainDec
+# Loading work.ALUDec
+# Loading work.datapath
+# Loading work.RegFile
+# Loading work.SignEx
+# Loading work.ALU
+# Loading work.HazardUnit
+# Loading work.imem
+# Loading work.dmem
+run
+#                    0	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                    0	current instruction = xxxxxxxx
+#                    5	pcnext = 00000004, instruction next = 20100001
+#                    5	current instruction = 00000000
+#                   15	pcnext = 00000004, instruction next = 20100001
+#                   15	current instruction = 00000000
+#                   25	pcnext = 00000008, instruction next = 20110002
+#                   25	current instruction = 20100001
+#                   35	pcnext = 0000000c, instruction next = 20120003
+#                   35	current instruction = 20110002
+#                   45	pcnext = 00000010, instruction next = 3633000f
+#                   45	current instruction = 20120003
+#                   50	Write Data:          1 -> register address = 16
+#                   55	pcnext = 00000014, instruction next = 32140002
+#                   55	current instruction = 3633000f
+#                   60	Write Data:          2 -> register address = 17
+#                   65	pcnext = 00000018, instruction next = ac130004
+#                   65	current instruction = 32140002
+#                   70	Write Data:          3 -> register address = 18
+#                   75	pcnext = 0000001c, instruction next = ac140008
+#                   75	current instruction = ac130004
+#                   80	Write Data:         15 -> register address = 19
+#                   85	pcnext = 00000020, instruction next = xxxxxxxx
+#                   85	current instruction = ac140008
+#                   90	Write Data:          0 -> register address = 20
+#                   95	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                   95	current instruction = xxxxxxxx
+#                   95	Write data         15 -> Address:          4
+#                  105	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  105	current instruction = xxxxxxxx
+#                  105	Write data          0 -> Address:          8
+#                  115	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  115	current instruction = xxxxxxxx
+#                  125	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  125	current instruction = xxxxxxxx
+#                  135	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  135	current instruction = xxxxxxxx
+#                  145	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  145	current instruction = xxxxxxxx
+#                  155	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  155	current instruction = xxxxxxxx
+#                  165	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  165	current instruction = xxxxxxxx
+#                  175	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  175	current instruction = xxxxxxxx
+#                  185	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  185	current instruction = xxxxxxxx
+#                  195	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  195	current instruction = xxxxxxxx
+#                  205	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  205	current instruction = xxxxxxxx
+#                  215	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  215	current instruction = xxxxxxxx
+#                  225	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  225	current instruction = xxxxxxxx
+#                  235	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  235	current instruction = xxxxxxxx
+#                  245	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  245	current instruction = xxxxxxxx
+#                  255	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  255	current instruction = xxxxxxxx
+#                  265	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  265	current instruction = xxxxxxxx
+#                  275	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  275	current instruction = xxxxxxxx
+#                  285	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  285	current instruction = xxxxxxxx
+#                  295	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  295	current instruction = xxxxxxxx
+#                  305	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  305	current instruction = xxxxxxxx
+#                  315	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  315	current instruction = xxxxxxxx
+#                  325	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  325	current instruction = xxxxxxxx
+#                  335	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  335	current instruction = xxxxxxxx
+#                  345	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  345	current instruction = xxxxxxxx
+#                  355	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  355	current instruction = xxxxxxxx
+#                  365	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  365	current instruction = xxxxxxxx
+#                  375	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  375	current instruction = xxxxxxxx
+#                  385	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  385	current instruction = xxxxxxxx
+#                  395	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  395	current instruction = xxxxxxxx
+#                  405	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  405	current instruction = xxxxxxxx
+#                  415	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  415	current instruction = xxxxxxxx
+#                  425	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  425	current instruction = xxxxxxxx
+#                  435	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  435	current instruction = xxxxxxxx
+#                  445	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  445	current instruction = xxxxxxxx
+#                  455	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  455	current instruction = xxxxxxxx
+#                  465	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  465	current instruction = xxxxxxxx
+#                  475	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  475	current instruction = xxxxxxxx
+#                  485	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  485	current instruction = xxxxxxxx
+#                  495	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  495	current instruction = xxxxxxxx
+# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
+#    Time: 500 ps  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
+# Compile of ALU.v was successful.
+# Compile of ALUDec.v was successful.
+# Compile of ALUDec_tb.v was successful.
+# Compile of CU.v was successful.
+# Compile of datapath.v was successful.
+# Compile of HazardUnit.v was successful.
+# Compile of imem.v was successful.
+# Compile of MainDec.v was successful.
+# Compile of mips.v was successful.
+# Compile of MUX4_1.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of SignEx.v was successful.
+# Compile of testbench.v was successful.
+# Compile of top.v was successful.
+# Compile of dmem.v was successful with warnings.
+# 15 compiles, 0 failed with no errors. 
+run
+#                  505	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  505	current instruction = xxxxxxxx
+#                  515	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  515	current instruction = xxxxxxxx
+#                  525	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  525	current instruction = xxxxxxxx
+#                  535	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  535	current instruction = xxxxxxxx
+#                  545	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  545	current instruction = xxxxxxxx
+#                  555	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  555	current instruction = xxxxxxxx
+#                  565	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  565	current instruction = xxxxxxxx
+#                  575	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  575	current instruction = xxxxxxxx
+#                  585	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  585	current instruction = xxxxxxxx
+#                  595	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  595	current instruction = xxxxxxxx
+#                  605	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  605	current instruction = xxxxxxxx
+#                  615	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  615	current instruction = xxxxxxxx
+#                  625	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  625	current instruction = xxxxxxxx
+#                  635	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  635	current instruction = xxxxxxxx
+#                  645	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  645	current instruction = xxxxxxxx
+#                  655	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  655	current instruction = xxxxxxxx
+#                  665	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  665	current instruction = xxxxxxxx
+#                  675	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  675	current instruction = xxxxxxxx
+#                  685	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  685	current instruction = xxxxxxxx
+#                  695	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  695	current instruction = xxxxxxxx
+#                  705	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  705	current instruction = xxxxxxxx
+#                  715	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  715	current instruction = xxxxxxxx
+#                  725	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  725	current instruction = xxxxxxxx
+#                  735	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  735	current instruction = xxxxxxxx
+#                  745	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  745	current instruction = xxxxxxxx
+#                  755	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  755	current instruction = xxxxxxxx
+#                  765	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  765	current instruction = xxxxxxxx
+#                  775	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  775	current instruction = xxxxxxxx
+#                  785	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  785	current instruction = xxxxxxxx
+#                  795	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  795	current instruction = xxxxxxxx
+#                  805	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  805	current instruction = xxxxxxxx
+#                  815	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  815	current instruction = xxxxxxxx
+#                  825	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  825	current instruction = xxxxxxxx
+#                  835	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  835	current instruction = xxxxxxxx
+#                  845	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  845	current instruction = xxxxxxxx
+#                  855	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  855	current instruction = xxxxxxxx
+#                  865	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  865	current instruction = xxxxxxxx
+#                  875	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  875	current instruction = xxxxxxxx
+#                  885	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  885	current instruction = xxxxxxxx
+#                  895	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  895	current instruction = xxxxxxxx
+#                  905	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  905	current instruction = xxxxxxxx
+#                  915	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  915	current instruction = xxxxxxxx
+#                  925	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  925	current instruction = xxxxxxxx
+#                  935	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  935	current instruction = xxxxxxxx
+#                  945	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  945	current instruction = xxxxxxxx
+#                  955	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  955	current instruction = xxxxxxxx
+#                  965	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  965	current instruction = xxxxxxxx
+#                  975	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  975	current instruction = xxxxxxxx
+#                  985	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  985	current instruction = xxxxxxxx
+#                  995	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  995	current instruction = xxxxxxxx
+#                 1005	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1005	current instruction = xxxxxxxx
+#                 1015	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1015	current instruction = xxxxxxxx
+#                 1025	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1025	current instruction = xxxxxxxx
+#                 1035	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1035	current instruction = xxxxxxxx
+#                 1045	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1045	current instruction = xxxxxxxx
+#                 1055	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1055	current instruction = xxxxxxxx
+#                 1065	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1065	current instruction = xxxxxxxx
+#                 1075	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1075	current instruction = xxxxxxxx
+#                 1085	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1085	current instruction = xxxxxxxx
+#                 1095	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1095	current instruction = xxxxxxxx
+#                 1105	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1105	current instruction = xxxxxxxx
+#                 1115	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1115	current instruction = xxxxxxxx
+#                 1125	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1125	current instruction = xxxxxxxx
+#                 1135	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1135	current instruction = xxxxxxxx
+#                 1145	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1145	current instruction = xxxxxxxx
+#                 1155	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1155	current instruction = xxxxxxxx
+#                 1165	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1165	current instruction = xxxxxxxx
+#                 1175	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1175	current instruction = xxxxxxxx
+#                 1185	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1185	current instruction = xxxxxxxx
+#                 1195	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1195	current instruction = xxxxxxxx
+#                 1205	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1205	current instruction = xxxxxxxx
+#                 1215	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1215	current instruction = xxxxxxxx
+#                 1225	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1225	current instruction = xxxxxxxx
+#                 1235	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1235	current instruction = xxxxxxxx
+#                 1245	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1245	current instruction = xxxxxxxx
+#                 1255	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1255	current instruction = xxxxxxxx
+#                 1265	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1265	current instruction = xxxxxxxx
+#                 1275	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1275	current instruction = xxxxxxxx
+#                 1285	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1285	current instruction = xxxxxxxx
+#                 1295	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1295	current instruction = xxxxxxxx
+#                 1305	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1305	current instruction = xxxxxxxx
+#                 1315	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1315	current instruction = xxxxxxxx
+#                 1325	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1325	current instruction = xxxxxxxx
+#                 1335	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1335	current instruction = xxxxxxxx
+#                 1345	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1345	current instruction = xxxxxxxx
+#                 1355	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1355	current instruction = xxxxxxxx
+#                 1365	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1365	current instruction = xxxxxxxx
+#                 1375	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1375	current instruction = xxxxxxxx
+#                 1385	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1385	current instruction = xxxxxxxx
+#                 1395	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1395	current instruction = xxxxxxxx
+#                 1405	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1405	current instruction = xxxxxxxx
+#                 1415	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1415	current instruction = xxxxxxxx
+#                 1425	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1425	current instruction = xxxxxxxx
+#                 1435	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1435	current instruction = xxxxxxxx
+#                 1445	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1445	current instruction = xxxxxxxx
+#                 1455	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1455	current instruction = xxxxxxxx
+#                 1465	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1465	current instruction = xxxxxxxx
+#                 1475	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1475	current instruction = xxxxxxxx
+#                 1485	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1485	current instruction = xxxxxxxx
+#                 1495	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                 1495	current instruction = xxxxxxxx
+restart
+# Loading work.testbench
+# Loading work.top
+# Loading work.mips
+# Loading work.CU
+# Loading work.MainDec
+# Loading work.ALUDec
+# Loading work.datapath
+# Loading work.RegFile
+# Loading work.SignEx
+# Loading work.ALU
+# Loading work.HazardUnit
+# Loading work.imem
+# Loading work.dmem
+run
+#                    0	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                    0	current instruction = xxxxxxxx
+#                    5	pcnext = 00000004, instruction next = 20100001
+#                    5	current instruction = 00000000
+#                   15	pcnext = 00000004, instruction next = 20100001
+#                   15	current instruction = 00000000
+#                   25	pcnext = 00000008, instruction next = 20110005
+#                   25	current instruction = 20100001
+#                   35	pcnext = 0000000c, instruction next = 20120005
+#                   35	current instruction = 20110005
+#                   45	pcnext = 00000010, instruction next = 02329826
+#                   45	current instruction = 20120005
+#                   50	Write Data:          1 -> Register File address = 16
+#                   55	pcnext = 00000014, instruction next = 0211a027
+#                   55	current instruction = 02329826
+#                   60	Write Data:          5 -> Register File address = 17
+#                   65	pcnext = 00000018, instruction next = ac130004
+#                   65	current instruction = 0211a027
+#                   70	Write Data:          5 -> Register File address = 18
+#                   75	pcnext = 0000001c, instruction next = ac140008
+#                   75	current instruction = ac130004
+#                   80	Write Data:          0 -> Register File address = 19
+#                   85	pcnext = 00000020, instruction next = xxxxxxxx
+#                   85	current instruction = ac140008
+#                   90	Write Data: 4294967290 -> Register File address = 20
+#                   95	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                   95	current instruction = xxxxxxxx
+#                   95	Write Data          0 -> Memory address:          4
+#                  105	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  105	current instruction = xxxxxxxx
+#                  105	Write Data 4294967290 -> Memory address:          8
+#                  115	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  115	current instruction = xxxxxxxx
+#                  125	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  125	current instruction = xxxxxxxx
+#                  135	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  135	current instruction = xxxxxxxx
+#                  145	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  145	current instruction = xxxxxxxx
+#                  155	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  155	current instruction = xxxxxxxx
+#                  165	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  165	current instruction = xxxxxxxx
+#                  175	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  175	current instruction = xxxxxxxx
+#                  185	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  185	current instruction = xxxxxxxx
+#                  195	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  195	current instruction = xxxxxxxx
+#                  205	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  205	current instruction = xxxxxxxx
+#                  215	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  215	current instruction = xxxxxxxx
+#                  225	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  225	current instruction = xxxxxxxx
+#                  235	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  235	current instruction = xxxxxxxx
+#                  245	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  245	current instruction = xxxxxxxx
+#                  255	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  255	current instruction = xxxxxxxx
+#                  265	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  265	current instruction = xxxxxxxx
+#                  275	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  275	current instruction = xxxxxxxx
+#                  285	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  285	current instruction = xxxxxxxx
+#                  295	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  295	current instruction = xxxxxxxx
+#                  305	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  305	current instruction = xxxxxxxx
+#                  315	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  315	current instruction = xxxxxxxx
+#                  325	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  325	current instruction = xxxxxxxx
+#                  335	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  335	current instruction = xxxxxxxx
+#                  345	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  345	current instruction = xxxxxxxx
+#                  355	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  355	current instruction = xxxxxxxx
+#                  365	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  365	current instruction = xxxxxxxx
+#                  375	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  375	current instruction = xxxxxxxx
+#                  385	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  385	current instruction = xxxxxxxx
+#                  395	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  395	current instruction = xxxxxxxx
+#                  405	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  405	current instruction = xxxxxxxx
+#                  415	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  415	current instruction = xxxxxxxx
+#                  425	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  425	current instruction = xxxxxxxx
+#                  435	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  435	current instruction = xxxxxxxx
+#                  445	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  445	current instruction = xxxxxxxx
+#                  455	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  455	current instruction = xxxxxxxx
+#                  465	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  465	current instruction = xxxxxxxx
+#                  475	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  475	current instruction = xxxxxxxx
+#                  485	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  485	current instruction = xxxxxxxx
+#                  495	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  495	current instruction = xxxxxxxx
+# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
+#    Time: 500 ps  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
+# A time value could not be extracted from the current line
+# Compile of ALU.v was successful.
+# Compile of ALUDec.v was successful.
+# Compile of ALUDec_tb.v was successful.
+# Compile of CU.v was successful.
+# Compile of datapath.v was successful.
+# Compile of HazardUnit.v was successful.
+# Compile of imem.v was successful.
+# Compile of MainDec.v was successful.
+# Compile of mips.v was successful.
+# Compile of MUX4_1.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of SignEx.v was successful.
+# Compile of testbench.v was successful.
+# Compile of top.v was successful.
+# Compile of dmem.v was successful with warnings.
+# 15 compiles, 0 failed with no errors. 
+restart
+# Loading work.testbench
+# Loading work.top
+# Loading work.mips
+# Loading work.CU
+# Loading work.MainDec
+# Loading work.ALUDec
+# Loading work.datapath
+# Loading work.RegFile
+# Loading work.SignEx
+# Loading work.ALU
+# Loading work.HazardUnit
+# Loading work.imem
+# Loading work.dmem
+run
+#                    0	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                    0	current instruction = xxxxxxxx
+#                    5	pcnext = 00000004, instruction next = 20100001
+#                    5	current instruction = 00000000
+#                   15	pcnext = 00000004, instruction next = 20100001
+#                   15	current instruction = 00000000
+#                   25	pcnext = 00000008, instruction next = 20110005
+#                   25	current instruction = 20100001
+#                   35	pcnext = 0000000c, instruction next = 20120005
+#                   35	current instruction = 20110005
+#                   45	pcnext = 00000010, instruction next = 00119840
+#                   45	current instruction = 20120005
+#                   50	Write Data:          1 -> Register File address = 16
+#                   55	pcnext = 00000014, instruction next = 0012a042
+#                   55	current instruction = 00119840
+#                   60	Write Data:          5 -> Register File address = 17
+#                   65	pcnext = 00000018, instruction next = ac130004
+#                   65	current instruction = 0012a042
+#                   70	Write Data:          5 -> Register File address = 18
+#                   75	pcnext = 0000001c, instruction next = ac140008
+#                   75	current instruction = ac130004
+#                   80	Write Data:          5 -> Register File address = 19
+#                   85	pcnext = 00000020, instruction next = xxxxxxxx
+#                   85	current instruction = ac140008
+#                   90	Write Data:          5 -> Register File address = 20
+#                   95	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                   95	current instruction = xxxxxxxx
+#                   95	Write Data          5 -> Memory address:          4
+#                  105	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  105	current instruction = xxxxxxxx
+#                  105	Write Data          5 -> Memory address:          8
+#                  115	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  115	current instruction = xxxxxxxx
+#                  125	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  125	current instruction = xxxxxxxx
+#                  135	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  135	current instruction = xxxxxxxx
+#                  145	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  145	current instruction = xxxxxxxx
+#                  155	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  155	current instruction = xxxxxxxx
+#                  165	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  165	current instruction = xxxxxxxx
+#                  175	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  175	current instruction = xxxxxxxx
+#                  185	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  185	current instruction = xxxxxxxx
+#                  195	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  195	current instruction = xxxxxxxx
+#                  205	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  205	current instruction = xxxxxxxx
+#                  215	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  215	current instruction = xxxxxxxx
+#                  225	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  225	current instruction = xxxxxxxx
+#                  235	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  235	current instruction = xxxxxxxx
+#                  245	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  245	current instruction = xxxxxxxx
+#                  255	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  255	current instruction = xxxxxxxx
+#                  265	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  265	current instruction = xxxxxxxx
+#                  275	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  275	current instruction = xxxxxxxx
+#                  285	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  285	current instruction = xxxxxxxx
+#                  295	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  295	current instruction = xxxxxxxx
+#                  305	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  305	current instruction = xxxxxxxx
+#                  315	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  315	current instruction = xxxxxxxx
+#                  325	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  325	current instruction = xxxxxxxx
+#                  335	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  335	current instruction = xxxxxxxx
+#                  345	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  345	current instruction = xxxxxxxx
+#                  355	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  355	current instruction = xxxxxxxx
+#                  365	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  365	current instruction = xxxxxxxx
+#                  375	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  375	current instruction = xxxxxxxx
+#                  385	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  385	current instruction = xxxxxxxx
+#                  395	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  395	current instruction = xxxxxxxx
+#                  405	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  405	current instruction = xxxxxxxx
+#                  415	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  415	current instruction = xxxxxxxx
+#                  425	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  425	current instruction = xxxxxxxx
+#                  435	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  435	current instruction = xxxxxxxx
+#                  445	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  445	current instruction = xxxxxxxx
+#                  455	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  455	current instruction = xxxxxxxx
+#                  465	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  465	current instruction = xxxxxxxx
+#                  475	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  475	current instruction = xxxxxxxx
+#                  485	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  485	current instruction = xxxxxxxx
+#                  495	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  495	current instruction = xxxxxxxx
+# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
+#    Time: 500 ps  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42
+# Compile of ALU.v was successful.
+# Compile of ALUDec.v was successful.
+# Compile of ALUDec_tb.v was successful.
+# Compile of CU.v was successful.
+# Compile of datapath.v was successful.
+# Compile of HazardUnit.v was successful.
+# Compile of imem.v was successful.
+# Compile of MainDec.v was successful.
+# Compile of mips.v was successful.
+# Compile of MUX4_1.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of SignEx.v was successful.
+# Compile of testbench.v was successful.
+# Compile of top.v was successful.
+# Compile of dmem.v was successful with warnings.
+# 15 compiles, 0 failed with no errors. 
+restart
+# Loading work.testbench
+# Loading work.top
+# Loading work.mips
+# Loading work.CU
+# Loading work.MainDec
+# Loading work.ALUDec
+# Loading work.datapath
+# Loading work.RegFile
+# Loading work.SignEx
+# Loading work.ALU
+# Loading work.HazardUnit
+# Loading work.imem
+# Loading work.dmem
+run
+#                    0	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                    0	current instruction = xxxxxxxx
+#                    5	pcnext = 00000004, instruction next = 20100001
+#                    5	current instruction = 00000000
+#                   15	pcnext = 00000004, instruction next = 20100001
+#                   15	current instruction = 00000000
+#                   25	pcnext = 00000008, instruction next = 20110005
+#                   25	current instruction = 20100001
+#                   35	pcnext = 0000000c, instruction next = 20120005
+#                   35	current instruction = 20110005
+#                   45	pcnext = 00000010, instruction next = 00119840
+#                   45	current instruction = 20120005
+#                   50	Write Data:          1 -> Register File address = 16
+#                   55	pcnext = 00000014, instruction next = 0012a042
+#                   55	current instruction = 00119840
+#                   60	Write Data:          5 -> Register File address = 17
+#                   65	pcnext = 00000018, instruction next = ac130004
+#                   65	current instruction = 0012a042
+#                   70	Write Data:          5 -> Register File address = 18
+#                   75	pcnext = 0000001c, instruction next = ac140008
+#                   75	current instruction = ac130004
+#                   80	Write Data:          5 -> Register File address = 19
+#                   85	pcnext = 00000020, instruction next = xxxxxxxx
+#                   85	current instruction = ac140008
+#                   90	Write Data:          5 -> Register File address = 20
+#                   95	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                   95	current instruction = xxxxxxxx
+#                   95	Write Data          5 -> Memory address:          4
+#                  105	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  105	current instruction = xxxxxxxx
+#                  105	Write Data          5 -> Memory address:          8
+#                  115	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  115	current instruction = xxxxxxxx
+#                  125	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  125	current instruction = xxxxxxxx
+#                  135	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  135	current instruction = xxxxxxxx
+#                  145	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  145	current instruction = xxxxxxxx
+#                  155	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  155	current instruction = xxxxxxxx
+#                  165	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  165	current instruction = xxxxxxxx
+#                  175	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  175	current instruction = xxxxxxxx
+#                  185	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  185	current instruction = xxxxxxxx
+#                  195	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  195	current instruction = xxxxxxxx
+#                  205	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  205	current instruction = xxxxxxxx
+#                  215	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  215	current instruction = xxxxxxxx
+#                  225	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  225	current instruction = xxxxxxxx
+#                  235	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  235	current instruction = xxxxxxxx
+#                  245	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  245	current instruction = xxxxxxxx
+#                  255	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  255	current instruction = xxxxxxxx
+#                  265	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  265	current instruction = xxxxxxxx
+#                  275	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  275	current instruction = xxxxxxxx
+#                  285	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  285	current instruction = xxxxxxxx
+#                  295	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  295	current instruction = xxxxxxxx
+#                  305	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  305	current instruction = xxxxxxxx
+#                  315	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  315	current instruction = xxxxxxxx
+#                  325	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  325	current instruction = xxxxxxxx
+#                  335	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  335	current instruction = xxxxxxxx
+#                  345	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  345	current instruction = xxxxxxxx
+#                  355	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  355	current instruction = xxxxxxxx
+#                  365	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  365	current instruction = xxxxxxxx
+#                  375	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  375	current instruction = xxxxxxxx
+#                  385	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  385	current instruction = xxxxxxxx
+#                  395	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  395	current instruction = xxxxxxxx
+#                  405	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  405	current instruction = xxxxxxxx
+#                  415	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  415	current instruction = xxxxxxxx
+#                  425	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  425	current instruction = xxxxxxxx
+#                  435	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  435	current instruction = xxxxxxxx
+#                  445	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  445	current instruction = xxxxxxxx
+#                  455	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  455	current instruction = xxxxxxxx
+#                  465	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  465	current instruction = xxxxxxxx
+#                  475	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  475	current instruction = xxxxxxxx
+#                  485	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  485	current instruction = xxxxxxxx
+#                  495	pcnext = xxxxxxxx, instruction next = xxxxxxxx
+#                  495	current instruction = xxxxxxxx
+# ** Note: $finish    : F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v(42)
+#    Time: 500 ps  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v line 42

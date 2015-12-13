@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS
-Wed Dec 02 00:19:20 2015
+Sun Dec 13 22:04:25 2015
 Quartus II 32-bit Version 12.0 Build 178 05/31/2012 SJ Web Edition
 
 
@@ -10,7 +10,18 @@ Quartus II 32-bit Version 12.0 Build 178 05/31/2012 SJ Web Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: ALU:ALU_execute
+ 13. Port Connectivity Checks: "ALU:ALU_execute"
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+ 16. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -36,20 +47,20 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +------------------------------------+------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Wed Dec 02 00:19:20 2015        ;
+; Analysis & Synthesis Status        ; Successful - Sun Dec 13 22:04:25 2015    ;
 ; Quartus II 32-bit Version          ; 12.0 Build 178 05/31/2012 SJ Web Edition ;
 ; Revision Name                      ; MIPS                                     ;
-; Top-level Entity Name              ; top                                      ;
+; Top-level Entity Name              ; datapath                                 ;
 ; Family                             ; Cyclone II                               ;
-; Total logic elements               ; N/A until Partition Merge                ;
-;     Total combinational functions  ; N/A until Partition Merge                ;
-;     Dedicated logic registers      ; N/A until Partition Merge                ;
-; Total registers                    ; N/A until Partition Merge                ;
-; Total pins                         ; N/A until Partition Merge                ;
-; Total virtual pins                 ; N/A until Partition Merge                ;
-; Total memory bits                  ; N/A until Partition Merge                ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                ;
-; Total PLLs                         ; N/A until Partition Merge                ;
+; Total logic elements               ; 3,680                                    ;
+;     Total combinational functions  ; 2,646                                    ;
+;     Dedicated logic registers      ; 1,325                                    ;
+; Total registers                    ; 1325                                     ;
+; Total pins                         ; 236                                      ;
+; Total virtual pins                 ; 0                                        ;
+; Total memory bits                  ; 0                                        ;
+; Embedded Multiplier 9-bit elements ; 0                                        ;
+; Total PLLs                         ; 0                                        ;
 +------------------------------------+------------------------------------------+
 
 
@@ -59,7 +70,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C35F672C6       ;                    ;
-; Top-level entity name                                                      ; top                ; MIPS               ;
+; Top-level entity name                                                      ; datapath           ; MIPS               ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -148,17 +159,191 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                             ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
+; ALU.v                            ; yes             ; User Verilog HDL File  ; F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU.v      ;         ;
+; SignEx.v                         ; yes             ; User Verilog HDL File  ; F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/SignEx.v   ;         ;
+; RegFile.v                        ; yes             ; User Verilog HDL File  ; F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/RegFile.v  ;         ;
+; datapath.v                       ; yes             ; User Verilog HDL File  ; F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/datapath.v ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 3,680 ;
+;                                             ;       ;
+; Total combinational functions               ; 2646  ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 2121  ;
+;     -- 3 input functions                    ; 436   ;
+;     -- <=2 input functions                  ; 89    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 2525  ;
+;     -- arithmetic mode                      ; 121   ;
+;                                             ;       ;
+; Total registers                             ; 1325  ;
+;     -- Dedicated logic registers            ; 1325  ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 236   ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 1325  ;
+; Total fan-out                               ; 15259 ;
+; Average fan-out                             ; 3.63  ;
++---------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                       ;
++-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
+; Compilation Hierarchy Node  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name              ; Library Name ;
++-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
+; |datapath                   ; 2646 (642)        ; 1325 (333)   ; 0           ; 0            ; 0       ; 0         ; 236  ; 0            ; |datapath                        ;              ;
+;    |ALU:ALU_execute|        ; 686 (686)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALU_execute        ;              ;
+;    |RegFile:regfile_decode| ; 1318 (1318)       ; 992 (992)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RegFile:regfile_decode ;              ;
++-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                    ;
++-----------------------------------------+---------------------------------------------+
+; Register name                           ; Reason for Removal                          ;
++-----------------------------------------+---------------------------------------------+
+; regif[1]                                ; Merged with regif[0]                        ;
+; regd[1]                                 ; Merged with regd[0]                         ;
+; regex[16..31,36]                        ; Merged with regex[15]                       ;
+; regex[35]                               ; Merged with regex[14]                       ;
+; regex[34]                               ; Merged with regex[13]                       ;
+; regex[33]                               ; Merged with regex[12]                       ;
+; regex[32]                               ; Merged with regex[11]                       ;
+; RegFile:regfile_decode|Registers[0][31] ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][30] ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][29] ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][28] ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][27] ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][26] ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][25] ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][24] ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][23] ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][22] ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][21] ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][20] ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][19] ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][18] ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][17] ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][16] ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][15] ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][14] ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][13] ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][12] ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][11] ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][10] ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][9]  ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][8]  ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][7]  ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][6]  ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][5]  ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][4]  ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][3]  ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][2]  ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][1]  ; Stuck at GND due to stuck port clock_enable ;
+; RegFile:regfile_decode|Registers[0][0]  ; Stuck at GND due to stuck port clock_enable ;
+; regd[0]                                 ; Stuck at GND due to stuck port data_in      ;
+; regif[0]                                ; Stuck at GND due to stuck port data_in      ;
+; Total Number of Removed Registers = 57  ;                                             ;
++-----------------------------------------+---------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                       ;
++-----------------------------------------+--------------------------------+----------------------------------------+
+; Register name                           ; Reason for Removal             ; Registers Removed due to This Register ;
++-----------------------------------------+--------------------------------+----------------------------------------+
+; RegFile:regfile_decode|Registers[0][31] ; Stuck at GND                   ; regd[0], regif[0]                      ;
+;                                         ; due to stuck port clock_enable ;                                        ;
++-----------------------------------------+--------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1325  ;
+; Number of registers using Synchronous Clear  ; 8     ;
+; Number of registers using Synchronous Load   ; 38    ;
+; Number of registers using Asynchronous Clear ; 1325  ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 1084  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------------------------------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                               ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------------------------------------+----------------------------+
+; 3:1                ; 63 bits   ; 126 LEs       ; 63 LEs               ; 63 LEs                 ; |datapath|regd[35]                       ;                            ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; |datapath|regif[12]                      ;                            ;
+; 17:1               ; 7 bits    ; 77 LEs        ; 56 LEs               ; 21 LEs                 ; |datapath|regmem[55]                     ;                            ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 56 LEs               ; 14 LEs                 ; |datapath|regmem[51]                     ;                            ;
+; 18:1               ; 4 bits    ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; |datapath|regmem[61]                     ;                            ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 32 LEs               ; 12 LEs                 ; |datapath|regmem[44]                     ;                            ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; |datapath|regmem[66]                     ;                            ;
+; 18:1               ; 2 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; |datapath|regmem[39]                     ;                            ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; |datapath|writedatae[5]                  ;                            ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; |datapath|srcae[8]                       ;                            ;
+; 33:1               ; 32 bits   ; 704 LEs       ; 704 LEs              ; 0 LEs                  ; |datapath|RegFile:regfile_decode|RD1[19] ;                            ;
+; 33:1               ; 32 bits   ; 704 LEs       ; 704 LEs              ; 0 LEs                  ; |datapath|RegFile:regfile_decode|RD2[4]  ;                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------------------------------------+----------------------------+
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU_execute ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; N              ; 32    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "ALU:ALU_execute"       ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; ZF   ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:20     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.0 Build 178 05/31/2012 SJ Web Edition
-    Info: Processing started: Wed Dec 02 00:19:17 2015
+    Info: Processing started: Sun Dec 13 22:04:04 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS -c MIPS
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
-    Info (12023): Found entity 1: datapath
 Info (12021): Found 1 design units, including 1 entities, in source file dmem.v
     Info (12023): Found entity 1: dmem
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
@@ -179,90 +364,44 @@ Info (12021): Found 1 design units, including 1 entities, in source file imem.v
     Info (12023): Found entity 1: imem
 Info (12021): Found 1 design units, including 1 entities, in source file hazardunit.v
     Info (12023): Found entity 1: HazardUnit
+Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
+    Info (12023): Found entity 1: datapath
 Info (12021): Found 1 design units, including 1 entities, in source file mips.v
     Info (12023): Found entity 1: mips
 Info (12021): Found 1 design units, including 1 entities, in source file top.v
     Info (12023): Found entity 1: top
 Info (12021): Found 1 design units, including 1 entities, in source file testbench.v
     Info (12023): Found entity 1: testbench
-Info (12127): Elaborating entity "top" for the top level hierarchy
-Info (12128): Elaborating entity "mips" for hierarchy "mips:MIPS"
-Info (12128): Elaborating entity "CU" for hierarchy "mips:MIPS|CU:ControlUnit"
-Info (12128): Elaborating entity "MainDec" for hierarchy "mips:MIPS|CU:ControlUnit|MainDec:MainDecoder"
-Info (12128): Elaborating entity "ALUDec" for hierarchy "mips:MIPS|CU:ControlUnit|ALUDec:ALUDecoder"
-Info (12128): Elaborating entity "datapath" for hierarchy "mips:MIPS|datapath:Datapath"
-Error (10200): Verilog HDL Conditional Statement error at datapath.v(80): cannot match operand(s) in the condition to the corresponding edges in the enclosing event control of the always construct File: F:/GITHUB/BTL_KTMT_MIPSpipeline/datapath.v Line: 80
-Warning (10240): Verilog HDL Always Construct warning at datapath.v(78): inferring latch(es) for variable "regd", which holds its previous value in one or more paths through the always construct
-Error (10200): Verilog HDL Conditional Statement error at datapath.v(113): cannot match operand(s) in the condition to the corresponding edges in the enclosing event control of the always construct File: F:/GITHUB/BTL_KTMT_MIPSpipeline/datapath.v Line: 113
-Info (10041): Inferred latch for "regd[0]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[1]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[2]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[3]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[4]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[5]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[6]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[7]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[8]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[9]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[10]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[11]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[12]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[13]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[14]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[15]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[16]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[17]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[18]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[19]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[20]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[21]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[22]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[23]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[24]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[25]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[26]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[27]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[28]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[29]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[30]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[31]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[32]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[33]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[34]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[35]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[36]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[37]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[38]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[39]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[40]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[41]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[42]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[43]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[44]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[45]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[46]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[47]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[48]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[49]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[50]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[51]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[52]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[53]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[54]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[55]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[56]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[57]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[58]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[59]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[60]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[61]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[62]" at datapath.v(78)
-Info (10041): Inferred latch for "regd[63]" at datapath.v(78)
-Error (12152): Can't elaborate user hierarchy "mips:MIPS|datapath:Datapath" File: F:/GITHUB/BTL_KTMT_MIPSpipeline/mips.v Line: 75
-Error: Quartus II 32-bit Analysis & Synthesis was unsuccessful. 3 errors, 2 warnings
-    Error: Peak virtual memory: 345 megabytes
-    Error: Processing ended: Wed Dec 02 00:19:20 2015
-    Error: Elapsed time: 00:00:03
-    Error: Total CPU time (on all processors): 00:00:04
+Info (12127): Elaborating entity "datapath" for the top level hierarchy
+Info (12128): Elaborating entity "RegFile" for hierarchy "RegFile:regfile_decode"
+Warning (10240): Verilog HDL Always Construct warning at RegFile.v(17): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct
+Info (12128): Elaborating entity "SignEx" for hierarchy "SignEx:signex_decode"
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU_execute"
+Warning (10764): Verilog HDL warning at ALU.v(20): converting signed shift amount to unsigned
+Warning (10764): Verilog HDL warning at ALU.v(21): converting signed shift amount to unsigned
+Warning (10764): Verilog HDL warning at ALU.v(22): converting signed shift amount to unsigned
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "pc[0]" is stuck at GND
+    Warning (13410): Pin "pc[1]" is stuck at GND
+Info (144001): Generated suppressed messages file F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/output_files/MIPS.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "regwrited"
+Info (21057): Implemented 3985 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 87 input pins
+    Info (21059): Implemented 149 output pins
+    Info (21061): Implemented 3749 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 359 megabytes
+    Info: Processing ended: Sun Dec 13 22:04:25 2015
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:21
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/output_files/MIPS.map.smsg.
 
 

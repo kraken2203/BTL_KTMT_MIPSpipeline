@@ -3,26 +3,26 @@
  *		author: Nguyen Van Cao
  */
 module ALU #(parameter N = 32) (A, B, F, Y, ZF);
-//General ALU block 
-//Using F[2:0] as control signal 
-//Function: Add, Subtract, AND, OR, SLT 
-//Ref: Digital design & Computer Architecture p.243
-input 	[N-1:0] A,B ;
-input [2:0]F; 
-output [N-1:0] Y;
+input signed [N-1:0] A,B ;
+input [3:0]F; 
+output reg [N-1:0] Y;
 output ZF;
-wire [N-1:0] BB; 
-wire [N-1:0] M0, M1, M2, M3; 
-wire C_in; 
 
-assign C_in = F[2]; 
-assign BB = F[2]? ~B:B;
-assign M0 = A&BB; 				//00
-assign M1 = A | BB; 				//01
-assign M2 = A + BB + C_in; 	//10
-assign M3 = {30'b0, M2[31]}; 	//11
-
-assign ZF = (Y==0)? 1'b1 : 1'b0;
-MUX4_1 mux(M0, M1, M2, M3, F[1:0], Y); 
+always @(A, B, F) begin
+    case (F)
+      4'b0000 : Y = A & B;  // and
+      4'b0001 : Y = A | B;  // or
+      4'b0010 : Y = A + B;  // add
+      4'b0011 : Y = A ^ B;  // xor
+      4'b0100 : Y = ~ (A | B);  // nor
+      4'b0110 : Y = A - B;  // sub
+      4'b0111 : Y = (A < B) ? 1:0;  // slt
+      4'b1000 : Y = (B << A); // shift left logic
+      4'b1001 : Y = (B >> A); // shift right logic
+      4'b1010 : Y = (B >>> A);// shift right arithmetic
+      default : Y = 32'bx;
+    endcase
+  end // end always
+assign ZF = (Y==0);
 endmodule 
 

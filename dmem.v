@@ -11,10 +11,10 @@ always @ (posedge clk)
 	if (we) 
 	begin
 		RAM[a[31:2]] <= wd;
-		$display($time,"\tWrite into address: %d 	data: %d", a, wd);
+		$display($time,"\tWrite Data %d -> Memory address: %d", wd, a);
 	end  
 always @ (RAM)
 	begin
 	    $writememh("DataMem.dat",RAM);
-	end   
+	end
 endmodule

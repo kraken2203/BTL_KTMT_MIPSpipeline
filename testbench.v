@@ -38,7 +38,7 @@ initial begin
 end
 	//End simulation
 	initial begin
-		#500 
+		#500
 		$finish;
 	end
 endmodule

@@ -1,5 +1,5 @@
 Flow report for MIPS
-Wed Dec 02 00:19:20 2015
+Sun Dec 13 22:04:25 2015
 Quartus II 32-bit Version 12.0 Build 178 05/31/2012 SJ Web Edition
 
 
@@ -38,22 +38,22 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +------------------------------------+------------------------------------------+
-; Flow Status                        ; Flow Failed - Wed Dec 02 00:19:20 2015   ;
+; Flow Status                        ; Successful - Sun Dec 13 22:04:25 2015    ;
 ; Quartus II 32-bit Version          ; 12.0 Build 178 05/31/2012 SJ Web Edition ;
 ; Revision Name                      ; MIPS                                     ;
-; Top-level Entity Name              ; top                                      ;
+; Top-level Entity Name              ; datapath                                 ;
 ; Family                             ; Cyclone II                               ;
 ; Device                             ; EP2C35F672C6                             ;
 ; Timing Models                      ; Final                                    ;
-; Total logic elements               ; N/A until Partition Merge                ;
-;     Total combinational functions  ; N/A until Partition Merge                ;
-;     Dedicated logic registers      ; N/A until Partition Merge                ;
-; Total registers                    ; N/A until Partition Merge                ;
-; Total pins                         ; N/A until Partition Merge                ;
-; Total virtual pins                 ; N/A until Partition Merge                ;
-; Total memory bits                  ; N/A until Partition Merge                ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                ;
-; Total PLLs                         ; N/A until Partition Merge                ;
+; Total logic elements               ; 3,680                                    ;
+;     Total combinational functions  ; 2,646                                    ;
+;     Dedicated logic registers      ; 1,325                                    ;
+; Total registers                    ; 1325                                     ;
+; Total pins                         ; 236                                      ;
+; Total virtual pins                 ; 0                                        ;
+; Total memory bits                  ; 0                                        ;
+; Embedded Multiplier 9-bit elements ; 0                                        ;
+; Total PLLs                         ; 0                                        ;
 +------------------------------------+------------------------------------------+
 
 
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/02/2015 00:19:20 ;
+; Start date & time ; 12/13/2015 22:04:07 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MIPS                ;
 +-------------------+---------------------+
@@ -73,19 +73,19 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 345052807176.144899035906216          ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 345052807176.145001904606236          ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                           ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ns                                  ; --            ; --          ; eda_simulation ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                              ; --            ; top         ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; top         ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; top         ; Top            ;
+; PARTITION_COLOR                     ; 16764057                              ; --            ; datapath    ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; datapath    ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; datapath    ; Top            ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                    ; top                                   ; MIPS          ; --          ; --             ;
+; TOP_LEVEL_ENTITY                    ; datapath                              ; MIPS          ; --          ; --             ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 
 
@@ -94,8 +94,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:03     ; 1.0                     ; 343 MB              ; 00:00:04                           ;
-; Total                ; 00:00:03     ; --                      ; --                  ; 00:00:04                           ;
+; Analysis & Synthesis ; 00:00:20     ; 1.0                     ; 355 MB              ; 00:00:20                           ;
+; Total                ; 00:00:20     ; --                      ; --                  ; 00:00:20                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

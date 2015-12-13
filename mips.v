@@ -12,11 +12,11 @@ module mips(
 	input [31:0] readdata
 );
 //Tin hieu trung gian cho khoi Control Unit
-wire RegWriteD,MemtoRegD,MemWriteD,ALUSrcD,RegDstD,BranchD;
-wire [2:0]ALUCtrlD;
+wire RegWriteD,MemtoRegD,MemWriteD,ALUSrcD,RegDstD,BranchD_beq,BranchD_bne,JumpD;
+wire [3:0]ALUCtrlD;
 wire [5:0]Opcode,Funct;
 //Tin hieu trung gian cho Hazard Unit
-wire FlushE, ForwardAD, ForwardBD;
+wire FlushE, ForwardAD, ForwardBD, BranchD;
 wire [1:0] ForwardAE, ForwardBE;
 wire MemtoRegE, MemtoRegM, RegWriteE, RegWriteM, RegWriteW;
 wire [4:0] RsD, RtD, RsE, RtE;
@@ -30,16 +30,23 @@ CU ControlUnit (
 	.ALUCtrl(ALUCtrlD),
 	.ALUSrc(ALUSrcD),
 	.RegDst(RegDstD),
-	.Branch(BranchD),
+	.Branch_beq(BranchD_beq),
+	.Branch_bne(BranchD_bne),
 	.Opcode(Opcode),
-	.Funct(Funct)
+	.Funct(Funct),
+	.Jump(JumpD),
+	.BranchD(BranchD)
 );
+
+//assign BranchD = BranchD_beq | BranchD_bne;
 
 datapath Datapath ( 
 	.alucontrold(ALUCtrlD),
 	.aluoutmtodm(aluout),
 	.alusrcd(ALUSrcD),
-	.branchd(BranchD),
+	.branchd_beq(BranchD_beq),
+	.branchd_bne(BranchD_bne),
+	//.branchd(BranchD),
 	.clk(clk),
 	.flushe(FlushE),
 	.forwardad(ForwardAD),
@@ -48,6 +55,7 @@ datapath Datapath (
 	.forwardbe(ForwardBE),
 	.functinstr(Funct),
 	.instr(instr),
+	.jumpd(JumpD),
 	.memtoregd(MemtoRegD),
 	.memtorege(MemtoRegE),
 	.memtoregm(MemtoRegM),
@@ -94,6 +102,7 @@ HazardUnit Hazard(
 	.StallF(StallF),
 	.WriteRegE(WriteRegE),
 	.WriteRegM(WriteRegM),
-	.WriteRegW(WriteRegW)
+	.WriteRegW(WriteRegW),
+	.JumpD(JumpD)
 );
 endmodule

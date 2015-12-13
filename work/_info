@@ -4,355 +4,336 @@ K3
 cModel Technology
 Z0 dC:\altera\13.0sp1
 vALU
-Z1 !s100 TmIkXYG3G=db_X_96kCKB1
-Z2 IXI5KOE[cM6@84L>Ogk76M0
-Z3 Vn>X2d7nR;5lakj36mdanl1
-Z4 dF:\GITHUB\BTL_KTMT_MIPSpipeline
-Z5 w1448368919
-Z6 8F:/GITHUB/BTL_KTMT_MIPSpipeline/ALU.v
-Z7 FF:/GITHUB/BTL_KTMT_MIPSpipeline/ALU.v
+Z1 !s100 kAIHFJL>8m7SCGVg30hoC1
+Z2 I^Iamh^PlNU_71:`idlDQ71
+Z3 V9Y5GZUQlC7XHYd_85ThB`2
+Z4 dF:\Google Drive\SET Document\SET\Term 7\Kien truc may tinh\MIPS
+Z5 w1450021668
+Z6 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU.v
+Z7 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU.v
 L0 5
 Z8 OV;L;10.1d;51
 r1
 31
-Z9 !s90 -reportprogress|300|-work|work|F:/GITHUB/BTL_KTMT_MIPSpipeline/ALU.v|
+Z9 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU.v|
 Z10 o-work work -O0
 Z11 n@a@l@u
-Z12 !s108 1449029953.233000
-Z13 !s107 F:/GITHUB/BTL_KTMT_MIPSpipeline/ALU.v|
+Z12 !s108 1450022478.593000
+Z13 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vALU_tb
 Z14 I3<]IOjRiV?=8d<HCNH<;W2
 Z15 VE`_QLbcAmOeKZDFMXUl3B3
-Z16 dF:\Google Drive\SET Document\SET\Term 7\Kien truc may tinh\MIPS
-Z17 w1444809844
-Z18 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU_tb.v
-Z19 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU_tb.v
+R4
+Z16 w1444809844
+Z17 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU_tb.v
+Z18 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU_tb.v
 L0 2
 R8
 r1
 31
 R10
-Z20 n@a@l@u_tb
-Z21 !s100 RX4J]J`i<FONAizlFibTe0
-Z22 !s108 1447733897.385000
-Z23 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU_tb.v|
-Z24 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU_tb.v|
+Z19 n@a@l@u_tb
+Z20 !s100 RX4J]J`i<FONAizlFibTe0
+Z21 !s108 1447733897.385000
+Z22 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU_tb.v|
+Z23 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALU_tb.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vALUDec
-Z25 !s100 LgVCDW>0lJXji7>gWd7gh2
-Z26 I[<^4VHME9AH2[[2G3OJLk3
-Z27 VZH?dF@m]W4GHQIHCDaN;g0
+Z24 ILn;ccPF<]BzMB[NFJaYTd3
+Z25 V`Iz3d7X8_0aJIcSeP]IUY1
 R4
-Z28 w1448368949
-Z29 8F:/GITHUB/BTL_KTMT_MIPSpipeline/ALUDec.v
-Z30 FF:/GITHUB/BTL_KTMT_MIPSpipeline/ALUDec.v
+Z26 w1450022161
+Z27 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec.v
+Z28 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec.v
 L0 5
 R8
 r1
 31
-Z31 !s90 -reportprogress|300|-work|work|F:/GITHUB/BTL_KTMT_MIPSpipeline/ALUDec.v|
+Z29 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec.v|
 R10
-Z32 n@a@l@u@dec
-Z33 !s108 1449029953.475000
-Z34 !s107 F:/GITHUB/BTL_KTMT_MIPSpipeline/ALUDec.v|
+Z30 n@a@l@u@dec
+Z31 !s100 lO[iE0AGiDi^95M=SzW`C3
+Z32 !s108 1450022478.792000
+Z33 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vALUDec_tb
-Z35 !s100 _[eo@oH3RZzW_LTA>McSa2
-Z36 Ia7eDl^FBEn@a5z3N[I2Xe3
-Z37 V9@ocJ0Ol]UkHeUJ:M2l`J3
+Z34 !s100 _[eo@oH3RZzW_LTA>McSa2
+Z35 Ia7eDl^FBEn@a5z3N[I2Xe3
+Z36 V9@ocJ0Ol]UkHeUJ:M2l`J3
 R4
-Z38 w1444808658
-Z39 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec_tb.v
-Z40 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec_tb.v
+Z37 w1444808658
+Z38 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec_tb.v
+Z39 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec_tb.v
 L0 2
 R8
 r1
 31
-Z41 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec_tb.v|
+Z40 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec_tb.v|
 R10
-Z42 n@a@l@u@dec_tb
-Z43 !s108 1449026737.651000
-Z44 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec_tb.v|
+Z41 n@a@l@u@dec_tb
+Z42 !s108 1450022478.973000
+Z43 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/ALUDec_tb.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vCU
-Z45 !s100 PajQCgF1>z@Hh^[MTcfIA3
-Z46 IWe[50[946aKF0@KbHXhd`1
-Z47 VSG0oWM9=_bWR=SfSiQ?O<2
+Z44 !s100 >d^1jKGZMZCCoKXjX@Ic92
+Z45 I2Ele:Admo=Vz<WXIJ^KVD0
+Z46 VfIT^>EmLkd16K>X3BMbNN0
 R4
-Z48 w1448368961
-Z49 8F:/GITHUB/BTL_KTMT_MIPSpipeline/CU.v
-Z50 FF:/GITHUB/BTL_KTMT_MIPSpipeline/CU.v
+Z47 w1450019259
+Z48 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/CU.v
+Z49 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/CU.v
 L0 6
 R8
 r1
 31
-Z51 !s90 -reportprogress|300|-work|work|F:/GITHUB/BTL_KTMT_MIPSpipeline/CU.v|
+Z50 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/CU.v|
 R10
 n@c@u
-Z52 !s108 1449029953.639000
-Z53 !s107 F:/GITHUB/BTL_KTMT_MIPSpipeline/CU.v|
+Z51 !s108 1450022479.236000
+Z52 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/CU.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vdatapath
-Z54 !s100 0:V>>H1<<i3Db9E?cWL9V3
-Z55 IdmWWCn7YjK>NTNgQTR]490
-Z56 V?3R_4;m^1QlPH^7Y4S?ES3
+Z53 !s100 ;dBm`IjhVOM:92;gkeU8N1
+Z54 IeGYKIT>aUBbWn<P<o?;C62
+Z55 VH[U3S8JhG@TK8cb<z;CWa2
 R4
-Z57 w1449029498
-Z58 8F:/GITHUB/BTL_KTMT_MIPSpipeline/datapath.v
-Z59 FF:/GITHUB/BTL_KTMT_MIPSpipeline/datapath.v
+Z56 w1450019696
+Z57 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/datapath.v
+Z58 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/datapath.v
 L0 6
 R8
 r1
 31
-Z60 !s90 -reportprogress|300|-work|work|F:/GITHUB/BTL_KTMT_MIPSpipeline/datapath.v|
+Z59 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/datapath.v|
 R10
-Z61 !s108 1449029953.805000
-Z62 !s107 F:/GITHUB/BTL_KTMT_MIPSpipeline/datapath.v|
+Z60 !s108 1450022479.405000
+Z61 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/datapath.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vdmem
-Z63 !s100 e1NPOIV0K^<E9CRTEE>>[0
-Z64 IliHKf?LZ7cfM@Xk8l4`b=3
-Z65 V09OGzlPeaYS`EJSH7=l6?2
-R4
-Z66 w1448990596
-Z67 8F:/GITHUB/BTL_KTMT_MIPSpipeline/dmem.v
-Z68 FF:/GITHUB/BTL_KTMT_MIPSpipeline/dmem.v
-L0 5
-R8
-r1
-31
-Z69 !s90 -reportprogress|300|-work|work|F:/GITHUB/BTL_KTMT_MIPSpipeline/dmem.v|
-R10
-Z70 !s108 1449029954.012000
-Z71 !s107 F:/GITHUB/BTL_KTMT_MIPSpipeline/dmem.v|
 !i10b 1
-!s85 0
-!s101 -O0
-vHazardUnit
-Z72 !s100 =iKm[B^e>of;1ZOc_XcTI1
-Z73 IS6S=PB7>DQXQABFh_k3Rz2
-Z74 V7Kkof_DYhPKT:97oHFeGD3
+Z62 !s100 cFKn[8>jbcmai_FCgLJMi2
+Z63 I<>h0?`Nbf6dYz8K_M4Slk1
+Z64 V09OGzlPeaYS`EJSH7=l6?2
 R4
-Z75 w1448369004
-Z76 8F:/GITHUB/BTL_KTMT_MIPSpipeline/HazardUnit.v
-Z77 FF:/GITHUB/BTL_KTMT_MIPSpipeline/HazardUnit.v
+Z65 w1450020126
+Z66 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/dmem.v
+Z67 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/dmem.v
+L0 5
+R8
+r1
+!s85 0
+31
+!s108 1450022481.226000
+!s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/dmem.v|
+Z68 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/dmem.v|
+!s101 -O0
+R10
+vHazardUnit
+Z69 !s100 @0AMQK_BN8bc2BP@FakJ=1
+Z70 IQ9a3HzMN>:>9FBM<k_k2B1
+Z71 VU?7=HUom7MZ]2H^aJ6Sm70
+R4
+Z72 w1449330027
+Z73 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/HazardUnit.v
+Z74 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/HazardUnit.v
 L0 5
 R8
 r1
 31
-Z78 !s90 -reportprogress|300|-work|work|F:/GITHUB/BTL_KTMT_MIPSpipeline/HazardUnit.v|
+Z75 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/HazardUnit.v|
 R10
-Z79 n@hazard@unit
-Z80 !s108 1449029954.169000
-Z81 !s107 F:/GITHUB/BTL_KTMT_MIPSpipeline/HazardUnit.v|
+Z76 n@hazard@unit
+Z77 !s108 1450022479.615000
+Z78 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/HazardUnit.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vimem
-Z82 !s100 FhP[5gTl3O7W`]7eUCGm?3
-Z83 IYKL^k>A6BbKAjg?QeVd<V1
-Z84 V_eezcn[fFK3m2C;IUCfT<1
+Z79 !s100 03X[g2dzN05mEV16E@@Xo1
+Z80 IK3nTS404SWgS9gYFK2bRE1
+Z81 V_eezcn[fFK3m2C;IUCfT<1
 R4
-Z85 w1448368993
-Z86 8F:/GITHUB/BTL_KTMT_MIPSpipeline/imem.v
-Z87 FF:/GITHUB/BTL_KTMT_MIPSpipeline/imem.v
+Z82 w1448368993
+Z83 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/imem.v
+Z84 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/imem.v
 L0 5
 R8
 r1
 31
-Z88 !s90 -reportprogress|300|-work|work|F:/GITHUB/BTL_KTMT_MIPSpipeline/imem.v|
+Z85 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/imem.v|
 R10
-Z89 !s108 1449029954.508000
-Z90 !s107 F:/GITHUB/BTL_KTMT_MIPSpipeline/imem.v|
+Z86 !s108 1450022479.773000
+Z87 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/imem.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vMainDec
-Z91 !s100 BZD^jX?7ZWES0J>@j97R?1
-Z92 IAm?UY=N`ebDRCI:h3U3En2
-Z93 V9G7PCJK;mP]MUK05J4ACQ3
+Z88 !s100 oUlAF^=oOZElV]F9F>8M92
+Z89 I7SAz`QKXHHnm?<?LIO^Ga1
+Z90 VWTdAX;7i=1[CV5URDPBMe0
 R4
-Z94 w1448368941
-Z95 8F:/GITHUB/BTL_KTMT_MIPSpipeline/MainDec.v
-Z96 FF:/GITHUB/BTL_KTMT_MIPSpipeline/MainDec.v
+Z91 w1450017904
+Z92 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec.v
+Z93 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec.v
 L0 5
 R8
 r1
 31
-Z97 !s90 -reportprogress|300|-work|work|F:/GITHUB/BTL_KTMT_MIPSpipeline/MainDec.v|
+Z94 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec.v|
 R10
-Z98 n@main@dec
-Z99 !s108 1449029954.716000
-Z100 !s107 F:/GITHUB/BTL_KTMT_MIPSpipeline/MainDec.v|
+Z95 n@main@dec
+Z96 !s108 1450022479.939000
+Z97 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vMainDec_tb
-Z101 I@j]0B@=b0F<=3GAaFi@M72
-Z102 Vn9ZZiTJ7Q4^JA3==OSiMI1
-R16
-Z103 w1444807854
-Z104 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec_tb.v
-Z105 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec_tb.v
+Z98 I@j]0B@=b0F<=3GAaFi@M72
+Z99 Vn9ZZiTJ7Q4^JA3==OSiMI1
+R4
+Z100 w1444807854
+Z101 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec_tb.v
+Z102 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec_tb.v
 L0 2
 R8
 r1
 31
 R10
-Z106 n@main@dec_tb
-Z107 !s100 L2nZdKLdPN:RX3SiTEASc2
-Z108 !s108 1447733899.037000
-Z109 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec_tb.v|
-Z110 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec_tb.v|
+Z103 n@main@dec_tb
+Z104 !s100 L2nZdKLdPN:RX3SiTEASc2
+Z105 !s108 1447733899.037000
+Z106 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec_tb.v|
+Z107 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MainDec_tb.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vmips
-Z111 !s100 4FnBl5jPI^0^<l1C7TO@@2
-Z112 IPelhEBLiz[3W19aeNc^4o2
-Z113 VNTVBiVGIVg;hC5]5>B:>H1
+Z108 !s100 Q31iQ]9D;^CP[mKQaRh@00
+Z109 IO5?cYiACPVZBkzFlH?K`:3
+Z110 VNTVBiVGIVg;hC5]5>B:>H1
 R4
-Z114 w1448369021
-Z115 8F:/GITHUB/BTL_KTMT_MIPSpipeline/mips.v
-Z116 FF:/GITHUB/BTL_KTMT_MIPSpipeline/mips.v
+Z111 w1450018256
+Z112 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/mips.v
+Z113 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/mips.v
 L0 6
 R8
 r1
 31
-Z117 !s90 -reportprogress|300|-work|work|F:/GITHUB/BTL_KTMT_MIPSpipeline/mips.v|
+Z114 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/mips.v|
 R10
-Z118 !s108 1449029954.889000
-Z119 !s107 F:/GITHUB/BTL_KTMT_MIPSpipeline/mips.v|
+Z115 !s108 1450022480.099000
+Z116 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/mips.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vMUX4_1
-Z120 !s100 cLC5fOGOA^eRFOfM0@ET;1
-Z121 I:@Ah?K:PPSY`Yf9;B`5dW2
-Z122 VKc>Zb`T16ekA1zfg0:2dI0
+Z117 !s100 7CjjI]1M9>bk252ilY[hS2
+Z118 Im8Qf90[g9ncMn@LbZcQ2z0
+Z119 VKc>Zb`T16ekA1zfg0:2dI0
 R4
-Z123 w1448368929
-Z124 8F:/GITHUB/BTL_KTMT_MIPSpipeline/MUX4_1.v
-Z125 FF:/GITHUB/BTL_KTMT_MIPSpipeline/MUX4_1.v
+Z120 w1448368929
+Z121 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MUX4_1.v
+Z122 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MUX4_1.v
 L0 5
 R8
 r1
 31
-Z126 !s90 -reportprogress|300|-work|work|F:/GITHUB/BTL_KTMT_MIPSpipeline/MUX4_1.v|
+Z123 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MUX4_1.v|
 R10
-Z127 n@m@u@x4_1
-Z128 !s108 1449029955.068000
-Z129 !s107 F:/GITHUB/BTL_KTMT_MIPSpipeline/MUX4_1.v|
+Z124 n@m@u@x4_1
+Z125 !s108 1450022480.278000
+Z126 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/MUX4_1.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vRegFile
-Z130 !s100 Z9@8SIQ8aGMZGnWcehd7L3
-Z131 IP88P880cdV;c^[^9TnFY;2
-Z132 ViESiZij[mVE7l<O=3JLj:3
+Z127 !s100 eDXXe@dXGz<a[6VRA?@2_2
+Z128 I_DBm<@:P:d]5GAnVz4aTz1
+Z129 ViESiZij[mVE7l<O=3JLj:3
 R4
-Z133 w1448431176
-Z134 8F:/GITHUB/BTL_KTMT_MIPSpipeline/RegFile.v
-Z135 FF:/GITHUB/BTL_KTMT_MIPSpipeline/RegFile.v
+Z130 w1450020121
+Z131 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/RegFile.v
+Z132 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/RegFile.v
 L0 5
 R8
 r1
 31
-Z136 !s90 -reportprogress|300|-work|work|F:/GITHUB/BTL_KTMT_MIPSpipeline/RegFile.v|
+Z133 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/RegFile.v|
 R10
-Z137 n@reg@file
-Z138 !s108 1449029955.252000
-Z139 !s107 F:/GITHUB/BTL_KTMT_MIPSpipeline/RegFile.v|
-!i10b 1
-!s85 0
-!s101 -O0
-vshift2left
-Z140 !s100 H[TjXaD[VCN>g0:6?eK_81
-Z141 I0oIa^hPUjKF689DjhjdLT3
-Z142 VAgo9nA;A_FYN0hkBc[Bie2
-R4
-Z143 w1444812389
-Z144 8F:/GITHUB/BTL_KTMT_MIPSpipeline/shift2left.v
-Z145 FF:/GITHUB/BTL_KTMT_MIPSpipeline/shift2left.v
-L0 1
-R8
-r1
-31
-Z146 !s90 -reportprogress|300|-work|work|F:/GITHUB/BTL_KTMT_MIPSpipeline/shift2left.v|
-R10
-Z147 !s108 1449029955.399000
-Z148 !s107 F:/GITHUB/BTL_KTMT_MIPSpipeline/shift2left.v|
+Z134 n@reg@file
+Z135 !s108 1450022480.535000
+Z136 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/RegFile.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vSignEx
-Z149 !s100 ehD`nK[0Cc6?M23@=Z]Mj1
-Z150 I]9H=Zg3Fd1V;Fa14:hCTk3
-Z151 VYh3OOhHjRkT^FX;41;z1d3
+Z137 !s100 hX3WLCR>P:aR76`=?98D^1
+Z138 IDFJWIf41AcfV:g6;JWQRM0
+Z139 VYh3OOhHjRkT^FX;41;z1d3
 R4
-Z152 w1448368970
-Z153 8F:/GITHUB/BTL_KTMT_MIPSpipeline/SignEx.v
-Z154 FF:/GITHUB/BTL_KTMT_MIPSpipeline/SignEx.v
+Z140 w1448368970
+Z141 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/SignEx.v
+Z142 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/SignEx.v
 L0 5
 R8
 r1
 31
-Z155 !s90 -reportprogress|300|-work|work|F:/GITHUB/BTL_KTMT_MIPSpipeline/SignEx.v|
+Z143 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/SignEx.v|
 R10
-Z156 n@sign@ex
-Z157 !s108 1449029955.589000
-Z158 !s107 F:/GITHUB/BTL_KTMT_MIPSpipeline/SignEx.v|
+Z144 n@sign@ex
+Z145 !s108 1450022480.699000
+Z146 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/SignEx.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vtestbench
-Z159 IfO>DQ14nj:9Dg2O5YD3>P2
-Z160 VhGfW:390DM[oDMzegDH9`2
+Z147 !s100 2`fU>R?<z]R1WTbnRDmSJ3
+Z148 IkdHVlX3fl2S`UOW7XiP7]2
+Z149 VhGfW:390DM[oDMzegDH9`2
 R4
-Z161 w1449029945
-Z162 8F:/GITHUB/BTL_KTMT_MIPSpipeline/testbench.v
-Z163 FF:/GITHUB/BTL_KTMT_MIPSpipeline/testbench.v
+Z150 w1448902267
+Z151 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v
+Z152 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v
 L0 6
 R8
 r1
 31
-Z164 !s90 -reportprogress|300|-work|work|F:/GITHUB/BTL_KTMT_MIPSpipeline/testbench.v|
+Z153 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v|
 R10
+Z154 !s108 1450022480.882000
+Z155 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/testbench.v|
 !i10b 1
-Z165 !s100 e0^gDZQd8`a^7[40cSFMO1
 !s85 0
-Z166 !s108 1449029955.928000
-Z167 !s107 F:/GITHUB/BTL_KTMT_MIPSpipeline/testbench.v|
 !s101 -O0
 vtop
-!i10b 1
-Z168 !s100 IJU9ZB_aQX91LIkchAMMJ1
-Z169 IkIOhBiUSGIIR;Kbf99P:j0
-Z170 VZc`[W[cmX=ej<8j86lk?81
+Z156 !s100 HZdf@A[Ucj`8QfOHhUK>53
+Z157 IAiW;<cF5;j2ooSgHGhLl[1
+Z158 VZc`[W[cmX=ej<8j86lk?81
 R4
-Z171 w1448426405
-Z172 8F:/GITHUB/BTL_KTMT_MIPSpipeline/top.v
-Z173 FF:/GITHUB/BTL_KTMT_MIPSpipeline/top.v
+Z159 w1448426405
+Z160 8F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/top.v
+Z161 FF:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/top.v
 L0 5
 R8
 r1
-!s85 0
 31
-!s108 1449029956.113000
-!s107 F:/GITHUB/BTL_KTMT_MIPSpipeline/top.v|
-Z174 !s90 -reportprogress|300|-work|work|F:/GITHUB/BTL_KTMT_MIPSpipeline/top.v|
-!s101 -O0
+Z162 !s90 -reportprogress|300|-work|work|F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/top.v|
 R10
+!i10b 1
+!s85 0
+Z163 !s108 1450022481.041000
+Z164 !s107 F:/Google Drive/SET Document/SET/Term 7/Kien truc may tinh/MIPS/top.v|
+!s101 -O0

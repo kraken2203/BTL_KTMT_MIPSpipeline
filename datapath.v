@@ -5,8 +5,8 @@
 //Pipeline datapath
 module datapath(
 	input clk, reset_n,
-	input regwrited, memtoregd, memwrited, alusrcd, regdstd, branchd,	//from Control unit
-	input [2:0]alucontrold,															//from Control unit
+	input regwrited, memtoregd, memwrited, alusrcd, regdstd, branchd_beq, branchd_bne, jumpd,	//from Control unit
+	input [3:0]alucontrold,															//from Control unit
 	input 	[31:0]	instr, 			//from instruction memory
 	input 	[31:0] 	readdatam,		//from data memory
 	//input from hazard unit
@@ -15,6 +15,7 @@ module datapath(
 	input flushe,
 	input [1:0]forwardae, forwardbe,
 	//output to hazard unit
+	//output branchd,
 	output [4:0]	rsd,rtd,
 	output [4:0]	rse,rte,writerege,
 	output 			memtorege, regwritee,
@@ -31,24 +32,28 @@ module datapath(
 //Registers stage
 reg [31:0]regif;
 reg [63:0]regd;
-reg [118:0]regex;
+reg [119:0]regex;
 reg [71:0]regmem;
 reg [70:0]regwb;
 
-wire [31:0]pcnext;
+reg [31:0]pcnext;
 wire [31:0]pcplus4f;
+wire [31:0]pcjump;
 
 //Decode stage
 wire [31:0]pcbranchd;
-wire pcsrcd;
+wire pcsrcdtmp;
+wire [1:0]pcsrcd;
+wire pcsrcd_clr;
 wire [31:0]instrd;
 wire [31:0]pcplus4d;
 wire [31:0]rd1,rd2;
 wire [31:0]signimmd;
-wire equald;
+reg equald;
 wire [31:0]muxrd1,muxrd2;
+wire x,y;
 //Execute stage
-wire [2:0]alucontrole;
+wire [3:0]alucontrole;
 wire alusrce,regdste;
 wire [4:0]mux21towriterege;
 wire [31:0]srcae,srcbe, writedatae;
@@ -61,12 +66,18 @@ wire [31:0]resultw;
 wire [4:0]writeregw;
 wire regwritew, memtoregw;
 
-
-assign pcnext = pcsrcd ? pcbranchd : pcplus4f;
+always @(*)
+begin
+	if (pcsrcd == 2'd0) pcnext = pcplus4f;
+	else if (pcsrcd == 2'd1) pcnext = pcbranchd;
+	else if (pcsrcd == 2'd2) pcnext = pcjump;
+	else pcnext = 32'bx;
+end
 
 //Fetch stage
 always @(posedge clk or negedge reset_n)
 begin
+	$display($time,"\tpcnext = %h, instruction next = %h",pcnext, instr);
 	if(!reset_n) regif <= 32'd0;
 	else 	if (!stallf)	regif <= pcnext;
 			else regif <= regif;
@@ -77,7 +88,8 @@ assign pcplus4f = regif + 32'd4;
 //Decode stage
 always @(posedge clk or negedge reset_n)
 begin
-	if ((!reset_n) || pcsrcd) regd <= 64'd0;
+	if ((!reset_n)) regd <= 64'd0;
+	else if (pcsrcd_clr) regd <= 64'd0;
 	else 	if (!stalld)
 			begin
 				regd <= {instr,pcplus4f};
@@ -86,6 +98,7 @@ begin
 			begin
 				regd <= regd;
 			end
+	$display($time,"\tcurrent instruction = %h", instrd);
 end
 assign instrd = regd[63:32];
 assign pcplus4d = regd[31:0];
@@ -104,24 +117,35 @@ SignEx	signex_decode(
 	.X(instrd[15:0]),
 	.Y(signimmd)
 	);
-assign pcbranchd = {signimmd[29:0],2'b00} + pcplus4d;
+assign pcbranchd = (signimmd << 2) + pcplus4d;
 assign opinstr = instrd[31:26];
+assign pcjump = {pcplus4d[31:28],instrd[25:0],2'b00};
 assign functinstr = instrd[5:0];
-assign pcsrcd = branchd & equald;
 assign muxrd1 = forwardad ? aluoutm : rd1;
 assign muxrd2 = forwardbd ? aluoutm : rd2;
-
+always @(*)
+begin
+	if (muxrd1 == muxrd2) equald = 1'b1;
+	else equald = 1'b0;
+end
+assign x = branchd_beq & equald;
+assign y = branchd_bne & ~equald;
+assign pcsrcdtmp = x | y;
+assign pcsrcd = {jumpd,pcsrcdtmp};
+assign pcsrcd_clr = pcsrcd[0] | pcsrcd[1];
 assign rsd = instrd[25:21];
 assign rtd = instrd[20:16];
-assign equald = (muxrd1 == muxrd2) ? 1'b1 : 1'b0;
 //Execute stage
 always @(posedge clk or negedge reset_n)
 begin
-	if ((!reset_n) || flushe) regex <= 119'd0;
-	else regex <= {regwrited,memtoregd,memwrited,alucontrold,alusrcd,regdstd,rd1,rd2,instrd[25:11],signimmd};
-	$display($time,"\tRegister execute = %h", regex);
+	if ((!reset_n)) regex <= 120'd0;
+	else 	if (flushe) regex <= 120'd0;
+			else 
+			begin
+				regex <= {regwrited,memtoregd,memwrited,alucontrold,alusrcd,regdstd,rd1,rd2,instrd[25:11],signimmd};
+			end
 end
-assign alucontrole = regex[115:113];
+assign alucontrole = regex[116:113];
 assign alusrce = regex[112];
 assign regdste = regex[111];
 assign rse = regex[46:42];
@@ -145,7 +169,7 @@ assign memtorege = regex[117];
 always @(posedge clk or negedge reset_n)
 begin
 	if (!reset_n) regmem <= 72'd0;
-	else regmem <= {regex[118:116],outalue,writedatae,mux21towriterege};
+	else regmem <= {regex[119:117],outalue,writedatae,mux21towriterege};
 end
 assign regwritem = regmem[71];
 assign memtoregm = regmem[70];
